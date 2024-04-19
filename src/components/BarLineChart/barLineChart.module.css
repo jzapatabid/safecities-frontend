@@ -1,0 +1,40 @@
+.y_axis_label {
+    text-anchor: middle;
+    fill: white;
+    transform: rotate(-90deg);
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.x_axis_label {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.y_axis {
+    transform: translate(5px, 0px);
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.y_axis .tick {
+    fill: red;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}

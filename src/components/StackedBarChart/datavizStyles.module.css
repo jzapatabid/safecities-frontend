@@ -1,0 +1,82 @@
+#dataViz {
+    position: relative;
+    background-color: #2b323b;
+    width: max-content;
+  }
+
+ 
+  .axisLine {
+    font-size: 12px;
+  }
+
+  .line {
+    fill: white;
+  }
+
+  .tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #253245;
+    color: #fff;
+    padding: 5px;
+    opacity: 0;
+    pointer-events: none;
+    height: 30px;
+    padding: 0px 8.95px;
+
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    min-width: 35px;
+    width: max-content;
+  }
+
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+
+  .tooltip:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 99%;
+    margin-top: -9px;
+    border-width: 9px;
+    border-style: solid;
+    border-color: transparent #253245 transparent transparent;
+  }
+
+  .y_axis_label {
+    text-anchor: start;
+    fill: white;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: left;
+
+  }
+
+  .tick_text {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-align: right;
+  }

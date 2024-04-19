@@ -1,0 +1,71 @@
+.rectDiv {
+  color: white;
+  border: 0.5px solid white;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  /* overflow: auto; */
+}
+
+/* Add some styling for the tooltips */
+.tooltip {
+  padding: 0px 10px;
+  position: fixed;
+  background-color: #2b323b;
+  border: 1px solid #fff;
+  padding: 6px;
+  pointer-events: none;
+  opacity: 1;
+  border-radius: 5px;
+
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: white;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5.5px;
+  border-top-width: 6px;
+  border-left-width: 8px;
+  border-right-width: 8px;
+  border-bottom-width: 6px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+.tooltip:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 98%;
+  margin-top: -5.5px;
+  border-top-width: 6px;
+  border-left-width: 8px;
+  border-right-width: 8px;
+  border-bottom-width: 6px;
+  border-style: solid;
+  border-color: transparent #253245 transparent transparent;
+}
+
+.labels {
+  font-family: Poppins;
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0em;
+  text-align: left;
+}

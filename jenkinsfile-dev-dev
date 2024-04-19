@@ -1,0 +1,82 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'REMOTE_DEV_SERVER', defaultValue: '192.168.12.5', description: 'Remote server IP')
+        string(name: 'REMOTE_USER', defaultValue: 'pmf_admin', description: 'Remote server user')
+        string(name: 'IMAGE_NAME', defaultValue: 'safe-cities-front', description: 'Docker image name')
+        string(name: 'TAR_FILE', defaultValue: 'safe-cities-front.tar', description: 'Tar file name for Docker image')
+	string(name: 'SSH_CREDENTIALS_ID', defaultValue: '~/.ssh/Floripa_prod', description: 'SSH ID')
+	string(name: 'REMOTE_PATH', defaultValue: '/var/docker', description: 'Path in the server')
+    }
+
+     stages {
+      	stage('Clean Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
+
+        stage('Checkout Code') {
+    steps {
+        checkout scm
+            }
+        }
+        stage('Build Docker Dev Image') {
+            steps {
+                script {
+                    def dockerTag = "safe-cities-front-dev:${env.BUILD_NUMBER}"
+
+		    sh "docker system prune -a --volumes -f"
+		    sh "docker image prune -a -f"
+
+                    sh "docker build -t ${dockerTag} -f Dockerfile_dev ."
+                    sh "docker tag ${dockerTag} safe-cities-front-dev:latest"
+                }
+            }
+        }
+
+        stage('Save Dev Docker Image') {
+            steps {
+                script {
+                    sh "docker save safe-cities-front-dev:latest -o safe-cities-front-dev-latest.tar"
+                }
+            }
+        }
+
+        stage ('Delete old image') {
+            steps {
+                script {
+                    sh """
+                    ssh -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null pmf_admin@${params.REMOTE_DEV_SERVER} "
+                        docker stop safe-cities-frontend-dev || true
+                        docker rm  safe-cities-frontend-dev || true
+                        docker rmi safe-cities-front-dev || true
+                        "
+                    """
+                }
+            }
+        }
+
+        stage('SCP Dev Docker Image to Remote Dev Server') {
+            steps {
+                script {
+                    sh "scp -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null safe-cities-front-dev-latest.tar pmf_admin@${params.REMOTE_DEV_SERVER}:${params.REMOTE_PATH}"
+                }
+            }
+        }
+
+        stage('Deploy Docker Container on Remote Dev Server') {
+            steps {
+                script {
+                    sh """
+                        ssh -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null pmf_admin@${params.REMOTE_DEV_SERVER} "
+                            docker load < ${params.REMOTE_PATH}/safe-cities-front-dev-latest.tar
+                            docker run --name safe-cities-frontend-dev --network safe_cities -d -p 80:3000 safe-cities-front-dev:latest
+                        "
+                    """
+                }
+            }
+        }
+    }
+}

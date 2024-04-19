@@ -1,0 +1,62 @@
+import { SELECT_TABLE_FIRST_COLUMN } from 'enums/Global'
+
+export enum CAUSE {
+  ID = 'id',
+  NAME = 'name',
+  ASSOCIATED_CAUSES = 'total_causes',
+  PRIORITIZED_ASSOCIATED_CAUSES = 'total_prioritized_causes',
+  TYPE = 'type',
+  AUTHOR_NAME = 'authorName',
+  JUSTIFICATION = 'justification',
+  LAST_UPDATED = 'last_updated',
+  TREND = 'trend',
+  PRIORITIZED = 'prioritized'
+}
+
+export enum CAUSES_SUMMARY_FIELDS_ACCESSOR {
+  TOTAL_MAPPED_CAUSES = 'totalCauses',
+  TOTAL_RELEVANT_CAUSES = 'totalRelevantCauses',
+  TOTAL_PRIORITIZED_CAUSES = 'totalPrioritizedCauses'
+}
+
+export enum CAUSES_SUMMARY_FIELDS_CRITICALITY_VARIANT {
+  NORMAL = ''
+}
+
+enum CAUSES_TABLE_VER_CAUSES_COLUMN {
+  SHOW_CAUSES = ''
+}
+
+export const {
+  ID: DO_NOT_USE_ID,
+  TYPE: DO_NOT_USE_TYPE,
+  AUTHOR_NAME: DO_NOT_USE_AUTHOR_NAME,
+  JUSTIFICATION: DO_NOT_USE_JUSTIFICATION,
+  LAST_UPDATED: DO_NOT_USE_LAST_UPDATED,
+  TREND: DO_NOT_USE_TREND,
+  PRIORITIZED: DO_NOT_USE_PRIORITIZED,
+  ...CAUSES_TABLE_COLUMNS_IDS
+} = {
+  ...CAUSE,
+  ...CAUSES_TABLE_VER_CAUSES_COLUMN
+}
+
+export const {
+  ID,
+  AUTHOR_NAME,
+  JUSTIFICATION,
+  LAST_UPDATED,
+  ASSOCIATED_CAUSES,
+  PRIORITIZED_ASSOCIATED_CAUSES,
+  ...ASSOCIATED_CAUSES_TABLE_COLUMNS_IDS
+} = { ...SELECT_TABLE_FIRST_COLUMN, ...CAUSE }
+
+export enum CAUSES_ACTION {
+  PRIORITIZE = 'prioritize',
+  DEPRIORITIZE = 'deprioritize'
+}
+
+export enum CAUSE_TYPE_ACCESSOR {
+  PERSONALIZED = 'custom_cause',
+  DEFAULT = 'default_cause'
+}

@@ -1,0 +1,85 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'REMOTE_TEST_SERVER', defaultValue: '192.168.12.6', description: 'Remote server IP')
+        string(name: 'REMOTE_USER', defaultValue: 'pmf_admin', description: 'Remote server user')
+        string(name: 'IMAGE_NAME', defaultValue: 'safe-cities-front', description: 'Docker image name')
+        string(name: 'TAR_FILE', defaultValue: 'safe-cities-front.tar', description: 'Tar file name for Docker image')
+	string(name: 'SSH_CREDENTIALS_ID', defaultValue: '~/.ssh/Floripa_prod', description: 'SSH ID')
+	string(name: 'REMOTE_PATH', defaultValue: '/var/docker', description: 'Path in the server')
+    }
+
+     stages {
+      	stage('Clean Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
+
+        stage('Checkout Code') {
+    steps {
+        checkout scm
+            }
+        }
+
+        stage('Build Docker Test Image') {
+            steps {
+                script {
+                    def dockerTag = "safe-cities-front-test:${env.BUILD_NUMBER}"
+
+                    sh "docker system prune -a --volumes -f"
+		    sh "docker image prune -a -f"
+
+                    sh "docker build -t ${dockerTag} -f Dockerfile_test ."
+                    sh "docker tag ${dockerTag} safe-cities-front-test:latest"
+                }
+            }
+        }
+
+        stage('Save Test Docker Image') {
+            steps {
+                script {
+                    sh "docker save safe-cities-front-test:latest -o safe-cities-front-test-latest.tar"
+                }
+            }
+        }
+
+        stage ('Delete old image') {
+            steps {
+                script {
+                    sh """
+                    ssh -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null pmf_admin@${params.REMOTE_DEV_SERVER} "
+                        docker stop safe-cities-frontend-test || true
+                        docker rm  safe-cities-frontend-test || true
+                        docker rmi safe-cities-front-test || true
+                        "
+                    """
+                }
+            }
+        }
+
+        stage('SCP Test Docker Image to Remote Test Server') {
+            steps {
+                script {
+                     sh "scp -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null safe-cities-front-test-latest.tar pmf_admin@${params.REMOTE_DEV_SERVER}:${params.REMOTE_PATH}"
+                }
+            }
+        }
+
+        stage('Deploy Docker Container on Remote Test Server') {
+            steps {
+                script {
+                    sh """
+                        ssh -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null pmf_admin@${params.REMOTE_TEST_SERVER} "
+                            docker load < ${params.REMOTE_PATH}/safe-cities-front-test-latest.tar
+                            docker run --name safe-cities-frontend-test --network safe_cities -d -p 80:3000 safe-cities-front-test:latest
+                        "
+                    """
+                }
+            }
+        }
+
+
+    }
+}

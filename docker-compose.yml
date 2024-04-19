@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  next:
+    image: bid-frontend:latest
+    container_name: bid-frontend-container
+    build:
+      context: .
+      dockerfile: Dockerfile
