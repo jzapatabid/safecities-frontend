@@ -25,7 +25,7 @@ const ButtonV2: React.FC<ButtonProps> = ({
     >
       {LeadingIcon && (
         <S.IconWrapper>
-          <LeadingIcon height={22} width={22}/>
+          <LeadingIcon height={22} width={22} />
         </S.IconWrapper>
       )}
       {href ? (
@@ -43,7 +43,7 @@ const ButtonV2: React.FC<ButtonProps> = ({
       )}
       {TrailingIcon && (
         <S.IconWrapper>
-          <TrailingIcon/>
+          <TrailingIcon />
         </S.IconWrapper>
       )}
     </S.Button>

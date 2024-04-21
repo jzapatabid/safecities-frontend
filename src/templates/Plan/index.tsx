@@ -173,16 +173,16 @@ const Plans = () => {
     
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <S.NavBarWrapper>
-          <NavBar links={PLAN_NAV_LINKS} variant="small"/>
+          <NavBar links={PLAN_NAV_LINKS} variant="small" />
         </S.NavBarWrapper>
         <S.SectionWrapper>
           <S.DetailAndNewPlanWrapper>
             <S.DisclaimerWrapper>
               <S.Title>{DISCLAIMER_TITLE}</S.Title>
-              <Disclaimer withTitle={true} data={CONSTRUCT_PLAN_DISCLAIMER}/>
+              <Disclaimer withTitle={true} data={CONSTRUCT_PLAN_DISCLAIMER} />
             </S.DisclaimerWrapper>
             {/* <ButtonV2
               loading={false}
@@ -191,14 +191,14 @@ const Plans = () => {
               onClick={() =>
                 router.push('/planejamento/plan-basic-information')
               }
-           /> */}
+            /> */}
           </S.DetailAndNewPlanWrapper>
         </S.SectionWrapper>
         <S.StatsWrapper>
           <S.Title>{<FormattedMessage id={STATS_TITLE}/>}</S.Title>
           <S.Wrapper>
             {PLANS_TEMP_SUMMARY_FIELDS.map(({ key, ...stats }, idx) => (
-              <StatCard key={idx} count={plansState.summary[key]} {...stats}/>
+              <StatCard key={idx} count={plansState.summary[key]} {...stats} />
             ))}
           </S.Wrapper>
         </S.StatsWrapper>
@@ -212,7 +212,7 @@ const Plans = () => {
                 variant="outline"
                 LeadingIcon={DownloadIcon}
                 onClick={generatePDF}
-             />
+              />
             </S.DownloadBtnWrapper>
           </S.TitleAndDownloadWrapper>
           <S.PlanProgressCardsWrapper>
@@ -221,14 +221,14 @@ const Plans = () => {
                 key={idx}
                 detail={detail}
                 data={plansState[detail.dataKey]}
-             />
+              />
             ))}
           </S.PlanProgressCardsWrapper>
         </S.SectionWrapper>
         <S.Text>{`última atualização: ${date} de ${
           PORTUGESE_MONTH_MAPPING[month] as string
         } de ${year}`}</S.Text>
-        <Footer/>
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

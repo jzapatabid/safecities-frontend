@@ -392,13 +392,13 @@ const PlanStrategyFocusObjectives = ({
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <NavigateBack
           normalText="plan.basic.info.go.back"
           linkText="plan.basic.info.link.text"
           url="/planejamento/construir-plano"
-       />
+        />
         <S.SectionWrapper>
           <S.PlanName>
             {basic_information?.title || `[Título do plano]`}
@@ -416,7 +416,7 @@ const PlanStrategyFocusObjectives = ({
                 }
               })}
               variant="small"
-           />
+            />
           </S.NavBarWrapper>
         </S.SectionWrapper>
         <S.SectionWrapperNoBottomUnderline>
@@ -428,19 +428,19 @@ const PlanStrategyFocusObjectives = ({
                 }
               })}
               variant="small"
-           />
+            />
           </S.NavBarWrapperWithUnderline>
         </S.SectionWrapperNoBottomUnderline>
         <S.ContentSection>
           <S.TitleWrapper>
-            <S.Title><FormattedMessage id="macro.objectives.description.title"/></S.Title>
+            <S.Title><FormattedMessage id="macro.objectives.description.title" /></S.Title>
             <S.AddNewMacroObjective>
               <TextButton
                 text="add.new.macro"
                 LeadingIcon={PlusSignIcon}
                 onClick={() => null}
                 disabled
-             />
+              />
             </S.AddNewMacroObjective>
           </S.TitleWrapper>
           <S.Description>
@@ -458,10 +458,10 @@ const PlanStrategyFocusObjectives = ({
                     <MacroObjectiveHeader
                       data={item}
                       hasSummary={Boolean(item.goals.length) && !item.open}
-                   />
+                    />
                   ),
                   summary: item.goals.length ? (
-                    <FocusObjectiveSummary goals={item.goals}/>
+                    <FocusObjectiveSummary goals={item.goals} />
                   ) : null,
                   content: (
                     <FocusObjectiveContent
@@ -487,14 +487,14 @@ const PlanStrategyFocusObjectives = ({
                       onFocusCustomIndicatorCreate={handleFocusGoalCustomIndicatorsCreateUpdate(
                         item.macroId
                       )}
-                   />
+                    />
                   )
                 }}
               </AccordionV2>
             ))}
           </S.ListWrapper>
         </S.ContentSection>
-        <Footer/>
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

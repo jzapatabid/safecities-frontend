@@ -14,7 +14,7 @@ const Disclaimer: React.FC<DisclaimerProps> = ({
     <S.Wrapper withTitle={withTitle} mtOnly={mtOnly}>
       {!withTitle && (
         <S.VariantWrapper>
-          <ToastWarningIcon fill="#fff"/>
+          <ToastWarningIcon fill="#fff" />
         </S.VariantWrapper>
       )}
       <S.TextWrapper>

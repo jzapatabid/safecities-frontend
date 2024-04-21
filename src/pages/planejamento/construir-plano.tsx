@@ -31,7 +31,7 @@ export default function ProblemsPage({ plansData }: PlansPageProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [plansData])
 
-  return <Plans/>
+  return <Plans />
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

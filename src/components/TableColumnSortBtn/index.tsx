@@ -13,7 +13,7 @@ const MutliDirectionArrow = ({ direction, onClick, source }: ArrowProps) => {
     <>
       {direction === 'unsorted' ? (
         <S.IconWrapper onClick={onClick}>
-          <UnsortedIcon/>
+          <UnsortedIcon />
         </S.IconWrapper>
       ) : (
         <S.I direction={direction} onClick={onClick} source={source}></S.I>

@@ -32,7 +32,7 @@ const AggregatedInputErrors = ({
   return (
     <S.ErrorMessageWrapper variant={variant} errorLevel={detailedError?.level}>
       <S.IconWrapper>
-        <WarningIcon/>
+        <WarningIcon />
       </S.IconWrapper>
       <>
         {variant === AGGREGATED_INPUT_ERRORS_VARIANTS.DETAILED ? (
@@ -45,7 +45,7 @@ const AggregatedInputErrors = ({
                 variant="outline"
                 text="Recarregar página"
                 onClick={handleClick}
-             />
+              />
             )}
           </S.ErrorMessage>
         ) : (

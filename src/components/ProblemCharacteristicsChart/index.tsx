@@ -134,7 +134,7 @@ const ProblemCharacteristicsChart = ({
       <S.Section1Wrapper>
         <S.TitleAndIcon>
           <S.IconWrapper>
-            <Icon/>
+            <Icon />
           </S.IconWrapper>
           <S.Title>{title}</S.Title>
         </S.TitleAndIcon>
@@ -148,7 +148,7 @@ const ProblemCharacteristicsChart = ({
             selectedText={
               dropdownOptions.filter((option: any) => option.selected)[0]?.text
             }
-         />
+          />
         </S.DropdownWrapper>
       </S.Section1Wrapper>
       <S.Section2Wrapper>
@@ -156,7 +156,7 @@ const ProblemCharacteristicsChart = ({
           tabs={[{ name: <FormattedMessage id='problem.detail.chart.header.see.charts'/> }, { name: <FormattedMessage id='problem.detail.chart.header.see.tables'/> }]}
           selected={selectedTab}
           onTabClick={setSelectedTab}
-       />
+        />
       </S.Section2Wrapper>
       <S.Section3Wrapper>
         <S.BtnsGroup>
@@ -171,7 +171,7 @@ const ProblemCharacteristicsChart = ({
                   selected={idx === selectedOption}
                   onClick={handleSelectOption(idx)}
                   disabled={!Object.values(option)[0]}
-               />
+                />
               ))
             : null}
         </S.BtnsGroup>
@@ -184,11 +184,11 @@ const ProblemCharacteristicsChart = ({
                 data={Object.values(chartData)[0] || []}
                 legendColors={legendColor}
                 // updateDate={detail.problem.updatedAt}
-             />
+              />
             ) : (
               <>
                 <S.DataVizWrapper>
-                  <DonutChart data={Object.values(chartData)[0] || []}/>
+                  <DonutChart data={Object.values(chartData)[0] || []} />
                 </S.DataVizWrapper>
 
                 <S.LegendsWrapper>
@@ -196,13 +196,13 @@ const ProblemCharacteristicsChart = ({
                     data={(Object.values(chartData)[0] || []).sort(
                       (a, b) => b?.total - a?.total
                     )}
-                 />
+                  />
                 </S.LegendsWrapper>
               </>
             )}
           </>
         ) : (
-          <InfoShelf data={Object.values(chartData)[0] || []}/>
+          <InfoShelf data={Object.values(chartData)[0] || []} />
         )}
       </S.Section4Wrapper>
       <S.Section5Wrapper>
@@ -212,7 +212,7 @@ const ProblemCharacteristicsChart = ({
           variant="outline"
           LeadingIcon={DownloadIcon}
           disabled
-       />
+        />
       </S.Section5Wrapper>
       <S.Footer><FormattedMessage id='problem.detail.chart.footer'/> {`${getLastYearRangeInPortuguese(updatedAt).replace(
         '-',

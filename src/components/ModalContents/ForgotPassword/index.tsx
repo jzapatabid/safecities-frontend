@@ -66,7 +66,7 @@ const ForgotPasswordModalContent = () => {
     <S.Wrapper>
       {(inputError || modalState?.actions?.forgotPassword?.error) && (
         <S.ErrorMessageWrapper>
-          <WarningIcon fill="#FF6191" width={22} height={22}/>
+          <WarningIcon fill="#FF6191" width={22} height={22} />
           <S.ErrorMessage>
             {inputError
               ? 'O nome de usuário ou e-mail tem um formato inválido'
@@ -82,7 +82,7 @@ const ForgotPasswordModalContent = () => {
           {...register('email')}
           error={inputError}
           onChange={handleChange}
-       />
+        />
       </S.InputWrapper>
     </S.Wrapper>
   )

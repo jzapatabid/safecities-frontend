@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
         originalRenderPage({
           enhanceApp: (App) =>
             function enhance(props) {
-              return sheet.collectStyles(<App {...props}/>)
+              return sheet.collectStyles(<App {...props} />)
             }
         })
 
@@ -40,17 +40,17 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          <link rel="icon" href="/favicon.ico"/>
-          <link rel="preconnect" href="https://fonts.googleapis.com"/>
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
             crossOrigin="true"
-         />
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
-         />
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
             rel="stylesheet"
@@ -58,11 +58,11 @@ export default class MyDocument extends Document {
           <meta
             name="description"
             content="Uma ferramenta para elaborar diagnósticos baseados em dados e desenvolver planos de segurança cidadã baseada em evidências."
-         />
+          />
         </Head>
         <body>
-          <Main/>
-          <NextScript/>
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )

@@ -118,7 +118,7 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <S.GobackWrapper>
           <S.NavWrapper>
@@ -127,7 +127,7 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
               width={24}
               color={theme.colors.base.lightPure}
               onClick={() => router.push('/diagnostico/causes-possiveis')}
-           />
+            />
           </S.NavWrapper>
           <S.GoBackText>
             <FormattedMessage id='page.link.return'/>{' '}
@@ -146,13 +146,13 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
                   fill={theme.colors.base.lightPure}
                   height={26}
                   width={26}
-               />
+                />
               ) : (
                 <FlagIcon
                   fill={theme.colors.base.lightPure}
                   height={26}
                   width={26}
-               />
+                />
               )}
               <S.ProblemName>{problem?.name}</S.ProblemName>
             </S.NameWrapper>
@@ -173,7 +173,7 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
                       PROBLEMS_ACTION_MODAL_PROPS[PROBLEMS_ACTION.PRIORITIZE]
                     )
               }
-           />
+            />
           </S.NameAndActionWrapper>
           <S.DescriptionWrapper>
             <S.DescLabel><FormattedMessage id='diagnosis.desc'/></S.DescLabel>
@@ -188,7 +188,7 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
               totalCaus={totalCauses}
               variant="small"
               trailingParam={`${problemId}?bkt=ca`}
-           />
+            />
           </S.NavBarWrapper>
         ) : null} */}
         <S.ActionsWrapper>
@@ -203,7 +203,7 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
                 CAUSES_ACTION_MODAL_PROPS[CAUSES_ACTION.DEPRIORITIZE]
               )
             }
-         />
+          />
           <ButtonV2
             loading={btn2Loading}
             text={<FormattedMessage id='button.diagnosis.prioritize.cause'/>}
@@ -214,14 +214,14 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
                 CAUSES_ACTION_MODAL_PROPS[CAUSES_ACTION.PRIORITIZE]
               )
             }
-         />
+          />
         </S.ActionsWrapper>
         <AssociatedCausesTable
           causes={problemsState.associatedCausesData.items}
           problemId={problemId}
           problemName={problem.name}
-       />
-        <Footer/>
+        />
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

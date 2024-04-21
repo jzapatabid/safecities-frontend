@@ -48,7 +48,7 @@ const FocusObjectiveContent = ({
             dark
           >
             {{
-              header: <FocusObjectiveHeader data={item} index={idx}/>,
+              header: <FocusObjectiveHeader data={item} index={idx} />,
               summary: null,
               content: (
                 <MacroObjectiveContent
@@ -78,13 +78,13 @@ const FocusObjectiveContent = ({
                   onCustomIndicatorCreate={onFocusCustomIndicatorCreate(
                     item.focusId
                   )}
-               />
+                />
               ),
               footer: (
                 <AccordionFooter
                   onSave={onFocusSave(item.focusId)}
                   toggleAccordion={toggleFocusAccordion(item.focusId)}
-               />
+                />
               )
             }}
           </AccordionV2>

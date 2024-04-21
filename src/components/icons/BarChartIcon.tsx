@@ -15,7 +15,7 @@ const BarChartIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
       d="M10.6 5H13.4V19H10.6V5ZM5 9.2H8V19H5V9.2ZM19 13H16.2V19H19V13Z"
       fill="white"
       fillOpacity="0.3"
-   />
+    />
   </svg>
 )
 

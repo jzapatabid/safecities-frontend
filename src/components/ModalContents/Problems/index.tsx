@@ -64,12 +64,12 @@ const ProblemsModalContent: React.FC<ProblemsModalContentPropsTypes> = ({
       setModalState({ open: false })
       router.replace(router.asPath)
       toast.custom((t) => (
-        <Notification id={t.id} text={successMsg} variant="success"/>
+        <Notification id={t.id} text={successMsg} variant="success" />
       ))
     } catch (e) {
       setModalState({ open: false })
       toast.custom((t) => (
-        <Notification id={t.id} text={warningMsg} variant="warning"/>
+        <Notification id={t.id} text={warningMsg} variant="warning" />
       ))
     }
   }

@@ -110,11 +110,11 @@ const CausesModalContent: React.FC<CausesContentPropsTypes> = ({
       await prioritizeCauseProblems(api, payload)
       router.push(router.asPath)
       toast.custom((t) => (
-        <Notification id={t.id} text={messages.successMsg} variant="success"/>
+        <Notification id={t.id} text={messages.successMsg} variant="success" />
       ))
     } catch (e) {
       toast.custom((t) => (
-        <Notification id={t.id} text={messages.warningMsg} variant="warning"/>
+        <Notification id={t.id} text={messages.warningMsg} variant="warning" />
       ))
     }
   }
@@ -203,7 +203,7 @@ const CausesModalContent: React.FC<CausesContentPropsTypes> = ({
   return (
     <S.Wrapper>
       <S.DisclaimerWrapper>
-        <Disclaimer data={CAUSES_PRIORITIZATION_DISCLAIMER}/>
+        <Disclaimer data={CAUSES_PRIORITIZATION_DISCLAIMER} />
       </S.DisclaimerWrapper>
       <S.MapWrapper>
         {cause ? (
@@ -213,7 +213,7 @@ const CausesModalContent: React.FC<CausesContentPropsTypes> = ({
               children: formState.problems
             }}
             onProblemsCheck={handleProblemsCheck()}
-         />
+          />
         ) : (
           <S.CauseTreeWrapper>
             {formState.causes?.map(({ cause, problems }, idx: any) => (
@@ -229,7 +229,7 @@ const CausesModalContent: React.FC<CausesContentPropsTypes> = ({
                 }}
                 onCausesCheck={handleCauseCheck}
                 onProblemsCheck={handleProblemsCheck(cause)}
-             />
+              />
             ))}
           </S.CauseTreeWrapper>
         )}

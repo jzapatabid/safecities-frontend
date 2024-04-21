@@ -15,21 +15,21 @@ const ArrowMap = () => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-     />
+      />
       <path
         d="M9.7251 1H16.9975V8.2724"
         stroke="white"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-     />
+      />
       <path
         d="M17.0008 1L8.27393 9.72689"
         stroke="white"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-     />
+      />
     </svg>
   )
 }

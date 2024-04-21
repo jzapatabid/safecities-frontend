@@ -25,7 +25,7 @@ export default function ModalForm({
       <S.Content>
         {children}
 
-        <S.Hr/>
+        <S.Hr />
 
         <S.ButtonArea doubleButtons={!!optionalButtonText}>
           {optionalButtonText && (

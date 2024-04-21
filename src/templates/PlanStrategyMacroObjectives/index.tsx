@@ -258,13 +258,13 @@ const PlanStrategyMacroObjectives = ({
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <NavigateBack
           normalText= "plan.basic.info.go.back"
           linkText="plan.basic.info.link.text"
           url="/planejamento/construir-plano"
-       />
+        />
         <S.SectionWrapper>
           <S.PlanName>
             {basic_information?.title || `[Título do plano]`}
@@ -282,7 +282,7 @@ const PlanStrategyMacroObjectives = ({
                 }
               })}
               variant="small"
-           />
+            />
           </S.NavBarWrapper>
         </S.SectionWrapper>
         <S.SectionWrapperNoBottomUnderline>
@@ -294,23 +294,23 @@ const PlanStrategyMacroObjectives = ({
                 }
               })}
               variant="small"
-           />
+            />
           </S.NavBarWrapperWithUnderline>
         </S.SectionWrapperNoBottomUnderline>
         <S.ContentSection>
           <S.TitleWrapper>
-            <S.Title><FormattedMessage id="macro.objectives.description.title"/></S.Title>
+            <S.Title><FormattedMessage id="macro.objectives.description.title" /></S.Title>
             <S.AddNewMacroObjective>
               <TextButton
                 text="add.new.macro"
                 LeadingIcon={PlusSignIcon}
                 onClick={() => null}
                 disabled
-             />
+              />
             </S.AddNewMacroObjective>
           </S.TitleWrapper>
           <S.Description>
-            <FormattedMessage id="macro.objectives.description.2"/>
+            <FormattedMessage id="macro.objectives.description.2" />
             
           </S.Description>
           <S.ListWrapper>
@@ -325,11 +325,11 @@ const PlanStrategyMacroObjectives = ({
                     <MacroObjectiveHeader
                       data={item}
                       hasSummary={!item.enabled && !item.open}
-                   />
+                    />
                   ),
                   summary:
                     !item.enabled && !item.open ? (
-                      <MacroObjectiveSummary/>
+                      <MacroObjectiveSummary />
                     ) : null,
                   content: (
                     <MacroObjectiveContent
@@ -358,20 +358,20 @@ const PlanStrategyMacroObjectives = ({
                       onCustomIndicatorCreate={handleCustomIndicatorCreate(
                         item.macroId
                       )}
-                   />
+                    />
                   ),
                   footer: (
                     <AccordionFooter
                       onSave={handleSave(item.macroId)}
                       toggleAccordion={handleAccordionToggle(item.macroId)}
-                   />
+                    />
                   )
                 }}
               </AccordionV2>
             ))}
           </S.ListWrapper>
         </S.ContentSection>
-        <Footer/>
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

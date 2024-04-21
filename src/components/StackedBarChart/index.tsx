@@ -437,7 +437,7 @@ const StackedBarChart = ({
               '_blank'
             )
           }
-       />
+        />
       </S.L1Wrapper>
       {static_data.count && static_data.countDesc && (
         <S.L2Wrapper>
@@ -454,7 +454,7 @@ const StackedBarChart = ({
                 {...{
                   ...data
                 }}
-             />
+              />
             ))}
           </S.TrendWrapper>
         </S.L2Wrapper>
@@ -464,9 +464,9 @@ const StackedBarChart = ({
         {static_data.legends.map((legend: any, idx: number) => (
           <S.LegendWrapper key={idx}>
             {legend.color ? (
-              <S.SquareIcon color={legend.color}/>
+              <S.SquareIcon color={legend.color} />
             ) : (
-              <S.TaxaIcon/>
+              <S.TaxaIcon />
             )}
             <S.LegendText>{legend.label}</S.LegendText>
           </S.LegendWrapper>

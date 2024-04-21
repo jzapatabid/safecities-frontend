@@ -83,7 +83,7 @@ export default function UsersTable({ users }: { users?: UserModel[] }) {
                 indeterminate: row.getIsSomeSelected(),
                 onChange: row.getToggleSelectedHandler()
               }}
-           />
+            />
           </S.InputColumnWrapper>
         ),
         width: 70
@@ -103,7 +103,7 @@ export default function UsersTable({ users }: { users?: UserModel[] }) {
       {
         accessorFn: (row) => row.isActive,
         id: `${USER.STATUS}-${TABLE_COLUMN_VARIANT.SORTING}`,
-        cell: (info) => <TagV2 label={info.getValue() ? 'Ativo' : 'Inativa'}/>,
+        cell: (info) => <TagV2 label={info.getValue() ? 'Ativo' : 'Inativa'} />,
         header: () => <span>Status</span>
       }
     ],
@@ -126,7 +126,7 @@ export default function UsersTable({ users }: { users?: UserModel[] }) {
           sorting,
           onRowSelection: handleUserSelections
         }}
-     />
+      />
     </>
   )
 }
@@ -143,5 +143,5 @@ function IndeterminateCheckbox({
     }
   }, [ref, indeterminate, rest.checked])
   // @ts-expect-error It is typescript issue
-  return <S.Input type="checkbox" ref={ref} {...rest}/>
+  return <S.Input type="checkbox" ref={ref} {...rest} />
 }

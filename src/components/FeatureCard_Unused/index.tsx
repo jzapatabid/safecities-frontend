@@ -19,7 +19,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, desc, details }) => (
     <S.Description>{desc}</S.Description>
     <S.InfoWrapper>
       {details.map((detail, idx) => (
-        <FeatureInfoCard key={idx} content={detail.content}/>
+        <FeatureInfoCard key={idx} content={detail.content} />
       ))}
     </S.InfoWrapper>
   </S.Wrapper>

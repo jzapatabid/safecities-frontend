@@ -44,15 +44,15 @@ const TablePagination = ({ table }: TablePaginationProps) => {
         <IconButton
           onClick={() => table.setPageIndex(0)}
           disabled={!table.getCanPreviousPage()}
-          icon={<PaginationExtremeLeft/>}
-       />
+          icon={<PaginationExtremeLeft />}
+        />
       </S.PageNavBtnWrapper>
       <S.PageNavBtnWrapper disabled={!table.getCanPreviousPage()}>
         <IconButton
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
-          icon={<PaginationLeft/>}
-       />
+          icon={<PaginationLeft />}
+        />
       </S.PageNavBtnWrapper>
       <S.PageBtnsWrapper>
         {paginationBtns
@@ -71,15 +71,15 @@ const TablePagination = ({ table }: TablePaginationProps) => {
         <IconButton
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
-          icon={<PaginationLeft transform="rotate(180 0 0)"/>}
-       />
+          icon={<PaginationLeft transform="rotate(180 0 0)" />}
+        />
       </S.PageNavBtnWrapper>
       <S.PageNavBtnWrapper disabled={!table.getCanNextPage()}>
         <IconButton
           onClick={() => table.setPageIndex(table.getPageCount() - 1)}
           disabled={!table.getCanNextPage()}
-          icon={<PaginationExtremeLeft transform="rotate(180 0 0)"/>}
-       />
+          icon={<PaginationExtremeLeft transform="rotate(180 0 0)" />}
+        />
       </S.PageNavBtnWrapper>
     </S.Pagination>
   )

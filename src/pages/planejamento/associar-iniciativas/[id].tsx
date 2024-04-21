@@ -22,7 +22,7 @@ export default function CauseDetailPage({ id, detail }: CauseDetailPageProps) {
     <InitiativeDetail
       id={id}
       detail={{ ...detail, ...defaultCauseDetailWithMockData }}
-   />
+    />
   )
 }
 

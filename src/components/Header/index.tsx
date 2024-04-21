@@ -66,7 +66,7 @@ const Header = () => {
           <Container>
             <SafeCitiesBrand
               onClick={() => router.push(`/diagnostico/problemas-potenciais`)}
-           />
+            />
             <S.UserInfoWrapper>
               <S.BellWrapper
                 onClick={() =>
@@ -75,11 +75,11 @@ const Header = () => {
                     id={t.id}
                       text="Enviou corretamente o convite"
                       variant="success"
-                     />
+                      />
                     ))
                   }
               >
-                <NotificationsBell/>
+                <NotificationsBell />
               </S.BellWrapper>
               <UserMenuDropdown
                 options={options}
@@ -88,11 +88,11 @@ const Header = () => {
                 onClick={() => setShowUserMenu((state) => !state)}
               >
                 <S.UserAccountInfoWrapper open={showUserMenu}>
-                  <UserAccountIcon/>
+                  <UserAccountIcon />
                   <S.Username>{user.fullName}</S.Username>
                 </S.UserAccountInfoWrapper>
               </UserMenuDropdown>
-              {/* <LanguageDropdown/> */}
+              {/* <LanguageDropdown /> */}
             </S.UserInfoWrapper>
           </Container>
         </IntlProvider>

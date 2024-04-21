@@ -47,7 +47,7 @@ const Modal: React.FC<ModalPropTypes> = ({ type }) => {
 
   return (
     <S.Dialog ref={dialogRef} type={type}>
-      <Template/>
+      <Template />
     </S.Dialog>
   )
 }

@@ -29,7 +29,7 @@ const OneToManyTree = ({
             <CheckboxV2
               checked={root?.prioritized}
               onChange={(e) => onCausesCheck(root, e.target)}
-           />
+            />
           ) : null}
           <S.Title>Causa</S.Title>
         </S.CheckboxAndTitleWrapper>
@@ -46,7 +46,7 @@ const OneToManyTree = ({
                 <CheckboxV2
                   checked={data?.prioritized || false}
                   onChange={(e) => onProblemsCheck(data, e.target)}
-               />
+                />
               ) : null}
               <S.Title>Problema</S.Title>
             </S.CheckboxAndTitleWrapper>

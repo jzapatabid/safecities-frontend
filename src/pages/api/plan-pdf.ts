@@ -95,12 +95,12 @@ const planPdfTemplateNew = ({
 }: any) => `
 <html>
     <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
         rel="stylesheet"
-       />
+        />
         <style>
             body {
                 font-family: 'Poppins';
@@ -462,7 +462,7 @@ export default async (req: any, res: any) => {
                     clip-rule="evenodd"
                     d="M6.66667 0.833008V1.66634H3.33333V0.833008H2.5V1.66634H1.25417L1.25 9.16634H8.75V1.66634H7.5V0.833008H6.66667ZM7.08333 5.41634H5V7.49967H7.08333V5.41634ZM2.08333 8.33301H7.91667V3.74967H2.08333V8.33301Z"
                     fill="black"
-                   />
+                    />
                 </svg>
             </div>
             <p style="font-family: Poppins; font-size: 7px; font-weight: 500; letter-spacing: 0px; text-align: left;">

@@ -51,7 +51,7 @@ const MutlilineInput: ForwardRefRenderFunction<
         id={rest.placeholder}
         {...rest}
         placeholder={rest.secondaryPlaceholder}
-     />
+      />
       <S.Placeholder
         ref={placeHolderRef}
         htmlFor={rest.placeholder}

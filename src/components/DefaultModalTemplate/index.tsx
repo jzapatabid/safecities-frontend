@@ -25,12 +25,12 @@ const DefaultModalTemplate = () => {
       <S.Header>
         <S.Title>{modalState.title}</S.Title>
         <S.DismissWrapper tabIndex={0} onClick={onClose}>
-          <CrossIcon height={16} width={16} fill="#FFFFFF"/>
+          <CrossIcon height={16} width={16} fill="#FFFFFF" />
         </S.DismissWrapper>
       </S.Header>
       <S.ContentWrapper>
         <S.Description>{modalState.desc}</S.Description>
-        {Content && <Content {...modalState.contentProps}/>}
+        {Content && <Content {...modalState.contentProps} />}
       </S.ContentWrapper>
       <S.Footer>
         {modalState.cancelBtn && (
@@ -40,7 +40,7 @@ const DefaultModalTemplate = () => {
               variant="outline"
               onClick={onClose}
               text={modalState.cancelBtn}
-           />
+            />
           </S.BtnWrapper>
         )}
         {modalState.confirmBtn && (
@@ -51,7 +51,7 @@ const DefaultModalTemplate = () => {
               onClick={modalState.onConfirm}
               text={modalState.confirmBtn}
               LeadingIcon={getConfirmBtnIcon(modalState.confirmBtn)}
-           />
+            />
           </S.BtnWrapper>
         )}
       </S.Footer>

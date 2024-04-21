@@ -73,12 +73,12 @@ const Initiatives = () => {
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <S.NavBarWrapper>
-          <NavBar links={DIAGNOSIS_NAV_LINKS} variant="small"/>
+          <NavBar links={DIAGNOSIS_NAV_LINKS} variant="small" />
         </S.NavBarWrapper>
-        <Disclaimer data={PROBLEMS_DISCLAIMER}/>
+        <Disclaimer data={PROBLEMS_DISCLAIMER} />
         <S.StatsWrapper>
           <S.Wrapper>
             {PROBLEMS_SUMMARY_FIELDS.map(({ key, ...stats }, idx) => (
@@ -86,7 +86,7 @@ const Initiatives = () => {
                 key={idx}
                 count={problemsState.summary[key]}
                 {...stats}
-             />
+              />
             ))}
           </S.Wrapper>
           <S.BtnWrapper>
@@ -97,13 +97,13 @@ const Initiatives = () => {
               onClick={() =>
                 setModalState(NEW_PERSONALIZED_PROBLEM_MODAL_PROPS)
               }
-           />
+            />
           </S.BtnWrapper>
         </S.StatsWrapper>
         {/* <S.FiltersWrapper>
-          <SearchBar search={search} setSearch={setSearch}/>
+          <SearchBar search={search} setSearch={setSearch} />
           <S.ClearFiltersBtnWrapper>
-            <ButtonV2 text="Limpar filtros" LeadingIcon={CrossIcon} disabled/>
+            <ButtonV2 text="Limpar filtros" LeadingIcon={CrossIcon} disabled />
           </S.ClearFiltersBtnWrapper>
         </S.FiltersWrapper> */}
         <S.ActionsWrapper>
@@ -118,7 +118,7 @@ const Initiatives = () => {
                 PROBLEMS_ACTION_MODAL_PROPS[PROBLEMS_ACTION.DEPRIORITIZE]
               )
             }
-         />
+          />
           <ButtonV2
             loading={false}
             text={<FormattedMessage id='button.diagnosis.prioritize.problem'/>}
@@ -129,11 +129,11 @@ const Initiatives = () => {
                 PROBLEMS_ACTION_MODAL_PROPS[PROBLEMS_ACTION.PRIORITIZE]
               )
             }
-         />
+          />
         </S.ActionsWrapper>
-        <ProblemsTable problems={problemsState.problems}/>
+        <ProblemsTable problems={problemsState.problems} />
         <S.Text><FormattedMessage id='last.update.footer.text'/> {date.toUTCString()}</S.Text>
-        <Footer/>
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

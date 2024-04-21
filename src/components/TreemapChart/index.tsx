@@ -171,7 +171,7 @@ const TreemapChart = ({ static_data, data, problemId }: TreemapChartProps) => {
               '_blank'
             )
           }
-       />
+        />
       </S.L1Wrapper>
       <S.Container ref={containerRef}>
         {data.children.length !== 0 ? (
@@ -180,7 +180,7 @@ const TreemapChart = ({ static_data, data, problemId }: TreemapChartProps) => {
             <div id="treemap-tooltip" className={chartStyles.tooltip}></div>
           </>
         ) : (
-          <S.EmptyContainer/>
+          <S.EmptyContainer />
         )}
       </S.Container>
       <S.Footer>{static_data.footer}</S.Footer>

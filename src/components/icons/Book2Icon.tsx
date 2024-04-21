@@ -14,7 +14,7 @@ const Book2Icon = ({ ...props }: SVGProps<SVGSVGElement>) => (
       clipRule="evenodd"
       d="M0 0H16V20H0V0ZM7 2H2V10L4.5 8.5L7 10V2Z"
       fill="white"
-   />
+    />
   </svg>
 )
 

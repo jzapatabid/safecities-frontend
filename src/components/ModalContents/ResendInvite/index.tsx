@@ -28,7 +28,7 @@ const ResendInviteModalContent = () => {
             id={t.id}
             text={'O convite foi enviado corretamente'}
             variant="success"
-         />
+          />
         ))
         setModalState({ open: false })
       } catch (err) {
@@ -39,7 +39,7 @@ const ResendInviteModalContent = () => {
               'Não foi possível reenviar os convites. Tente novamente em algum momento'
             }
             variant="warning"
-         />
+          />
         ))
         setModalState({ open: false })
       }
@@ -67,7 +67,7 @@ const ResendInviteModalContent = () => {
 
   return (
     <>
-      <ResendInviteTable data={adminState.selectedUsers}/>
+      <ResendInviteTable data={adminState.selectedUsers} />
     </>
   )
 }

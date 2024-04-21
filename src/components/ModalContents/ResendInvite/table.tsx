@@ -34,7 +34,7 @@ export default function ResendInviteTable({ data }: { data: UserModel[] }) {
                 indeterminate: table.getIsSomeRowsSelected(),
                 onChange: table.getToggleAllRowsSelectedHandler()
               }}
-           />
+            />
           </S.InputColumnWrapper>
         ),
         cell: ({ row }) => (
@@ -46,7 +46,7 @@ export default function ResendInviteTable({ data }: { data: UserModel[] }) {
                 indeterminate: row.getIsSomeSelected(),
                 onChange: row.getToggleSelectedHandler()
               }}
-           />
+            />
           </S.InputColumnWrapper>
         ),
         width: 70
@@ -83,7 +83,7 @@ export default function ResendInviteTable({ data }: { data: UserModel[] }) {
           widthConfig,
           onRowSelection: handleRowSelections
         }}
-     />
+      />
     </>
   )
 }
@@ -100,5 +100,5 @@ function IndeterminateCheckbox({
     }
   }, [ref, indeterminate, rest.checked])
   //   @ts-expect-error It is typescript issue
-  return <S.Input type="checkbox" ref={ref} {...rest}/>
+  return <S.Input type="checkbox" ref={ref} {...rest} />
 }

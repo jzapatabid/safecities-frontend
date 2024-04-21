@@ -60,10 +60,10 @@ export default function AddCauseForm(CauseProps: any) {
 
   return (
     <Container>
-      <Header/>
+      <Header />
       <Link href={`/diagnostico/causas/${CauseProps.problemId}`}>
         <a style={{ margin: '20px 0' }}>
-          <LeftArrow color="white"/>
+          <LeftArrow color="white" />
         </a>
       </Link>
 
@@ -91,7 +91,7 @@ export default function AddCauseForm(CauseProps: any) {
               handleChange(e)
             }}
             maxLength={limitChar.title}
-         />
+          />
           <S.AssistentWrapper>
             <p>
               {counterTitleChar
@@ -114,7 +114,7 @@ export default function AddCauseForm(CauseProps: any) {
               handleChange(e)
             }}
             maxLength={limitChar.justificative}
-         />
+          />
           <S.AssistentWrapper>
             <p>
               {counterJustificativeChar
@@ -138,7 +138,7 @@ export default function AddCauseForm(CauseProps: any) {
               handleChange(e)
             }}
             maxLength={limitChar.evidence}
-         />
+          />
           <S.AssistentWrapper>
             <p>
               {counterEvidenceChar
@@ -152,7 +152,7 @@ export default function AddCauseForm(CauseProps: any) {
         </S.Wrapper>
       </S.Form>
 
-      <S.Hr/>
+      <S.Hr />
       <S.WrapperButton>
         <Button
           type="submit"
@@ -178,7 +178,7 @@ export default function AddCauseForm(CauseProps: any) {
         </ModalForm>
       )}
 
-      <Footer/>
+      <Footer />
     </Container>
   )
 }

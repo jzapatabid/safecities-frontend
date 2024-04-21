@@ -23,11 +23,11 @@ function App({ Component, pageProps }: AppProps) {
           position="top-right"
           reverseOrder={false}
           toastOptions={{ duration: 2000 }}
-       />
+        />
         <Head>
           <title>Plataforma Cidades Seguras</title>
         </Head>
-        <GlobalStyles/>
+        <GlobalStyles />
         <AdminProvider>
           <ProblemsProvider>
             <CausesProvider>
@@ -35,7 +35,7 @@ function App({ Component, pageProps }: AppProps) {
                 <PlansProvider>
                   <ModalProvider>
                     <AuthProvider>
-                      <Component {...pageProps}/>
+                      <Component {...pageProps} />
                     </AuthProvider>
                   </ModalProvider>
                 </PlansProvider>

@@ -5,9 +5,9 @@ import theme from 'styles/theme'
 
 import Checkbox from '.'
 
-describe('<Checkbox/>', () => {
+describe('<Checkbox />', () => {
   it('should render with label', () => {
-    render(<Checkbox label="checkbox label" labelFor="check"/>)
+    render(<Checkbox label="checkbox label" labelFor="check" />)
 
     expect(screen.getByRole('checkbox')).toBeInTheDocument()
 
@@ -21,7 +21,7 @@ describe('<Checkbox/>', () => {
   })
 
   it('should render without label', () => {
-    render(<Checkbox/>)
+    render(<Checkbox />)
 
     expect(screen.queryByLabelText('Checkbox')).not.toBeInTheDocument()
   })
@@ -29,7 +29,7 @@ describe('<Checkbox/>', () => {
   it('should dispatch onCheck when status changes', async () => {
     const onCheck = jest.fn()
 
-    render(<Checkbox label="Checkbox" onCheck={onCheck}/>)
+    render(<Checkbox label="Checkbox" onCheck={onCheck} />)
 
     expect(onCheck).not.toHaveBeenCalled()
 
@@ -45,7 +45,7 @@ describe('<Checkbox/>', () => {
   it('should call onCheck with false if the Checkbox is already checked', async () => {
     const onCheck = jest.fn()
 
-    render(<Checkbox label="Checkbox" onCheck={onCheck} isChecked/>)
+    render(<Checkbox label="Checkbox" onCheck={onCheck} isChecked />)
 
     userEvent.click(screen.getByRole('checkbox'))
 
@@ -57,7 +57,7 @@ describe('<Checkbox/>', () => {
   })
 
   it('should be accessible with tab', () => {
-    render(<Checkbox label="Checkbox" labelFor="Checkbox"/>)
+    render(<Checkbox label="Checkbox" labelFor="Checkbox" />)
 
     expect(document.body).toHaveFocus()
 

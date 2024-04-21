@@ -84,7 +84,7 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <S.GobackWrapper>
           <S.NavWrapper>
@@ -93,7 +93,7 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
               width={24}
               color={theme.colors.base.lightPure}
               onClick={() => router.push(`/diagnostico/problemas-potenciais`)}
-           />
+            />
           </S.NavWrapper>
           <S.GoBackText>
             Volte a lista de{' '}
@@ -116,7 +116,7 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                 />
+                  />
                 </S.IconWrapper>
               ) : (
                 <S.IconWrapper>
@@ -124,7 +124,7 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                 />
+                  />
                 </S.IconWrapper>
               )}
               <ButtonV2
@@ -146,12 +146,12 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
                         PROBLEMS_ACTION_MODAL_PROPS[PROBLEMS_ACTION.PRIORITIZE]
                       )
                 }
-             />
+              />
             </S.BtnWrapper>
           </S.NameAndActionWrapper>
           <S.CauseInfoWrapper>
             <S.Author>
-              <RecordVoiceIcon/>
+              <RecordVoiceIcon />
               <S.CauseType>{PERSONALIZED_PROBLEM_TYPE_LABEL}</S.CauseType>
             </S.Author>
             <S.CauseInfoItemWrapper>
@@ -166,7 +166,7 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
               variant="outline"
               LeadingIcon={EditIcon}
               onClick={handleEditInitiative}
-           />
+            />
           </S.ButtonWrapper>
           <S.DescriptionWrapper>
             <S.DescLabel>Descrição</S.DescLabel>
@@ -181,7 +181,7 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
                 onlyFilesList
                 filesList={cause.annexes}
                 onFileDownload={onFileDownload}
-             />
+              />
             </S.AttachmentsWrapper>
           </S.SectionWrapper>
         ) : null}
@@ -190,12 +190,12 @@ const PersonalizedProblemDetail: React.FC<PersonalizedProblemPropTypes> = ({
             <S.ReferencesWrapper>
               <S.AttachmentsTitle>Referências</S.AttachmentsTitle>
               {cause.references.map((link: any, idx: number) => (
-                <ReferenceForeignlink key={idx} link={link} noDelete/>
+                <ReferenceForeignlink key={idx} link={link} noDelete />
               ))}
             </S.ReferencesWrapper>
           </S.SectionWrapper>
         ) : null}
-        <Footer/>
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

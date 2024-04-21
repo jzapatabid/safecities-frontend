@@ -12,7 +12,7 @@ const PaginationLeft = ({ ...props }: SVGProps<SVGSVGElement>) => (
     <path
       d="M8.25473 11.115L3.67473 6.52502L8.25473 1.93502L6.84473 0.525024L0.844727 6.52502L6.84473 12.525L8.25473 11.115Z"
       fill={props.fill || 'white'}
-   />
+    />
   </svg>
 )
 

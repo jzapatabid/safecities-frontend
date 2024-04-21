@@ -78,13 +78,13 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <NavigateBack
           normalText="plan.basic.info.go.back"
           linkText="plan.basic.info.link.text"
           url="/planejamento/construir-plano"
-       />
+        />
         <S.SectionWrapper>
           <S.PlanName>{data?.title || `[Título do plano]`}</S.PlanName>
           <S.PlanDates>{`De ${data?.startAt || '[Data de inicio]'} a ${
@@ -100,7 +100,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
                 }
               })}
               variant="small"
-           />
+            />
           </S.NavBarWrapper>
         </S.SectionWrapper>
         <S.SectionWrapper>
@@ -113,7 +113,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
               value={plansState.basic_information.title || ''}
               secondaryPlaceholder="Título de plano"
               onChange={handleInputChange('title')}
-           />
+            />
           </S.TitleWrapper>
           <S.DatesWrapper>
             <S.DateInputWrapper>
@@ -125,7 +125,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
                 value={plansState.basic_information.startAt || ''}
                 secondaryPlaceholder="DD/MM/AAAA"
                 onChange={handleInputChange('startAt')}
-             />
+              />
             </S.DateInputWrapper>
             <S.DateInputWrapper>
               <Input
@@ -136,7 +136,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
                 value={plansState.basic_information.endAt || ''}
                 secondaryPlaceholder="DD/MM/AAAA"
                 onChange={handleInputChange('endAt')}
-             />
+              />
             </S.DateInputWrapper>
           </S.DatesWrapper>
         </S.SectionWrapper>
@@ -147,8 +147,8 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
                 loading={false}
                 variant="outline"
                 onClick={() => router.push('/planejamento/construir-plano')}
-                text= {<FormattedMessage id='button.cancel'/>}
-             />
+                text= {<FormattedMessage id='button.cancel' />}
+              />
             </S.DangerBtnWrapper>
             <S.BtnGroup>
               <S.BtnWrapper>
@@ -165,9 +165,9 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
                       cancelBtn: 'add.initiative.cancel.button'
                     })
                   }
-                  text={ <FormattedMessage id='button.save'/>}
+                  text={ <FormattedMessage id='button.save' />}
                   LeadingIcon={FloppyIcon}
-               />
+                />
               </S.BtnWrapper>
 
               <S.BtnWrapper>
@@ -177,13 +177,13 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
                   onClick={() =>
                     router.push('/planejamento/plan-strategy-dimension')
                   }
-                  text={<FormattedMessage id='button.step.by.step.continue'/>}
+                  text={<FormattedMessage id='button.step.by.step.continue' />}
                   LeadingIcon={SkipNextIcon}
-               />
+                />
               </S.BtnWrapper>
             </S.BtnGroup>
           </S.ActionsWrapper>
-          <Footer/>
+          <Footer />
         </S.FooterWrapper>
       </MainContainer>
 </LanguageProvider>

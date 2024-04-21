@@ -91,8 +91,8 @@ const FileDropzone = ({
         <>
           {filesList.length < 5 ? (
             <S.DropzoneWrapper {...getRootProps()}>
-              <input {...getInputProps()}/>
-              <FileUploadCloudIcon/>
+              <input {...getInputProps()} />
+              <FileUploadCloudIcon />
               <S.DropzoneTitle>
                 {isDragActive
                   ? 'Solte os arquivos aqui'
@@ -104,7 +104,7 @@ const FileDropzone = ({
             </S.DropzoneWrapper>
           ) : (
             <S.MaxFilesWarning>
-              <WarningIcon height={24} width={24}/>
+              <WarningIcon height={24} width={24} />
               Você atingiu o número máximo de arquivos para anexar
             </S.MaxFilesWarning>
           )}
@@ -114,7 +114,7 @@ const FileDropzone = ({
                 <FileAttachmentItem
                   file={{ url: 'Uploading files ...' }}
                   uploadProgress={uploadProgress}
-               />
+                />
               )}
             </>
           )}
@@ -128,7 +128,7 @@ const FileDropzone = ({
             onlyFilesList={onlyFilesList}
             onDelete={onFileDelete}
             onDownload={onFileDownload}
-         />
+          />
         ))}
       </S.FileListWrapper>
     </>

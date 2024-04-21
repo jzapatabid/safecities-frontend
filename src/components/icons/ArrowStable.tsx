@@ -11,7 +11,7 @@ export default function ArrowStable({ status }: any) {
         d="M0 10H22"
         stroke={status === 2 ? '#FF5C00' : '#555555'}
         strokeWidth="3"
-     />
+      />
     </svg>
   )
 }

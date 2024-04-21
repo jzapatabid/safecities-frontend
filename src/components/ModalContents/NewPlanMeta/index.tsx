@@ -56,7 +56,7 @@ const NewPlanMeta = ({ currentMeta, onConfirm }: NewPlanMetaProps) => {
   return (
     <S.Wrapper>
       <S.DisclaimerWrapper>
-        <Disclaimer data={NEW_PLAN_META_DISCLAIMER}/>
+        <Disclaimer data={NEW_PLAN_META_DISCLAIMER} />
       </S.DisclaimerWrapper>
       <S.SMARTDescWrapper>
         {PLAN_META_SMART_DESC_DETAILS.map((detail: string, idx: number) => (
@@ -72,7 +72,7 @@ const NewPlanMeta = ({ currentMeta, onConfirm }: NewPlanMetaProps) => {
           secondaryPlaceholder="-"
           value={metaData.goalValue ? metaData.goalValue : ''}
           onChange={updateMetaData('goalValue')}
-       />
+        />
       </S.ValueInputWrapper>
       <S.JustificationInputWrapper>
         <MultilineInput
@@ -84,7 +84,7 @@ const NewPlanMeta = ({ currentMeta, onConfirm }: NewPlanMetaProps) => {
           value={metaData.goalJustification}
           onChange={updateMetaData('goalJustification')}
           restrictionLabel="Insira até 320 caracteres"
-       />
+        />
       </S.JustificationInputWrapper>
     </S.Wrapper>
   )

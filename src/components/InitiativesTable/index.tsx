@@ -48,11 +48,11 @@ export const getCostLabel: { [key: number]: string } = {
 }
 
 export const getEfficiencyLabel: { [key: number]: any } = {
-  1: <FormattedMessage id='efficiency.1'/>,
-  2: <FormattedMessage id='efficiency.2'/>,
-  3: <FormattedMessage id='efficiency.3'/>,
-  4: <FormattedMessage id='efficiency.4'/>,
-  5: <FormattedMessage id='efficiency.5'/>
+  1: <FormattedMessage id='efficiency.1' />,
+  2: <FormattedMessage id='efficiency.2' />,
+  3: <FormattedMessage id='efficiency.3' />,
+  4: <FormattedMessage id='efficiency.4' />,
+  5: <FormattedMessage id='efficiency.5' />
 }
 
 export default function InitiativesTable({
@@ -111,7 +111,7 @@ export default function InitiativesTable({
                 indeterminate: row.getIsSomeSelected(),
                 onChange: row.getToggleSelectedHandler()
               }}
-           />
+            />
           </S.InputColumnWrapper>
         ),
         width: 70
@@ -136,7 +136,7 @@ export default function InitiativesTable({
         },
         header: () => (
           <S.ColumnName>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.NAME}/> || <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.NAME}/>}
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.NAME} /> || <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.NAME}/>}
           </S.ColumnName>
         )
       },
@@ -146,7 +146,7 @@ export default function InitiativesTable({
         cell: (info) =>
           info.getValue() === true ? (
             <S.StatusWrapper>
-              <FlagFilledIcon fill={theme.colors.base.lightPure}/>
+              <FlagFilledIcon fill={theme.colors.base.lightPure} />
               {INITIATIVE_STATUS.PRIORITIZED}
             </S.StatusWrapper>
           ) : (
@@ -176,7 +176,7 @@ export default function InitiativesTable({
         ),
         header: () => (
           <S.ColumnRelations>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.PROBLEMS}/> ||
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.PROBLEMS} /> ||
               <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.PERFORMANCE}/>}
           </S.ColumnRelations>
         )
@@ -190,12 +190,12 @@ export default function InitiativesTable({
               score={info.getValue() as number}
               label={getCostLabel[info.getValue() as number]}
               type={INITIATIVE.COST}
-           />
+            />
           </S.IndicatorWrapper>
         ),
         header: () => (
           <S.ColumnTrend>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.ESTIMATED}/> || <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.RECENT_TREND}/>}
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.ESTIMATED} /> || <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.RECENT_TREND}/>}
           </S.ColumnTrend>
         )
       },
@@ -210,12 +210,12 @@ export default function InitiativesTable({
               score={info.getValue() as number}
               label={getEfficiencyLabel[info.getValue() as number]}
               type={INITIATIVE.EFFICIENCY}
-           />
+            />
           </S.IndicatorWrapper>
         ),
         header: () => (
           <S.ColumnEffectiveness>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.EFFECTYIVENESS}/> ||
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.EFFECTYIVENESS} /> ||
               <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.CRITITCALITY_LEVEL}/>}
           </S.ColumnEffectiveness>
         )
@@ -272,7 +272,7 @@ export default function InitiativesTable({
           search,
           setGlobalSearch
         }}
-     />
+      />
     </>
   )
 }
@@ -292,5 +292,5 @@ function IndeterminateCheckbox({
       ref.current.indeterminate = !rest.checked && indeterminate
     }
   }, [ref, indeterminate, rest.checked])
-  return <S.Input type="checkbox" ref={ref} onClick={handleClick} {...rest}/>
+  return <S.Input type="checkbox" ref={ref} onClick={handleClick} {...rest} />
 }

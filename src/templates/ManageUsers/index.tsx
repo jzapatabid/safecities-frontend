@@ -36,7 +36,7 @@ const ManageUsers = () => {
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <S.TitleWrapper>
           <S.Title>Gerenciar usuários</S.Title>
@@ -46,11 +46,11 @@ const ManageUsers = () => {
               text={'Enviar novo convite'}
               LeadingIcon={NewUserInviteIcon}
               onClick={handleNewInviteClick}
-           />
+            />
           </S.ButtonWrapper>
         </S.TitleWrapper>
         <S.PrimaryOptionsWrapper>
-          <SearchBar search={search} setSearch={handleSearch()}/>
+          <SearchBar search={search} setSearch={handleSearch()} />
         </S.PrimaryOptionsWrapper>
         <S.OptionsWrapper>
           <S.BtnGroup>
@@ -66,12 +66,12 @@ const ManageUsers = () => {
                     ...optionProps.modalProps
                   })
                 }
-             />
+              />
             ))}
           </S.BtnGroup>
         </S.OptionsWrapper>
-        <UsersTable users={paginatedUsers}/>
-        <Footer/>
+        <UsersTable users={paginatedUsers} />
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

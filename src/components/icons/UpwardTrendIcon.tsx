@@ -12,7 +12,7 @@ const UpwardTrendIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
     <path
       d="M14 0L16.29 2.29L11.41 7.17L7.41 3.17L0 10.59L1.41 12L7.41 6L11.41 10L17.71 3.71L20 6V0H14Z"
       fill={props.fill || '#FB6A6A'}
-   />
+    />
   </svg>
 )
 

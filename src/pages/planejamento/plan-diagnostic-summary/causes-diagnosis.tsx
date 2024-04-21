@@ -26,7 +26,7 @@ export default function PlanDiagnosticSummaryPage({
     setPlansState((state) => ({ ...state, cause_diagnosis }))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cause_diagnosis])
-  return <PlanCausesDiagnosticSummary basic_information={basic_information}/>
+  return <PlanCausesDiagnosticSummary basic_information={basic_information} />
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

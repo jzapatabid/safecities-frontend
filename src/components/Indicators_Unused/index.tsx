@@ -14,7 +14,7 @@ type IndicatorsProps = {
 const Indicators: React.FC<IndicatorsProps> = ({ details }) => (
   <S.Wrapper>
     {details.map((detail) => (
-      <Indicator key={detail.name} name={detail.name} count={detail.count}/>
+      <Indicator key={detail.name} name={detail.name} count={detail.count} />
     ))}
   </S.Wrapper>
 )

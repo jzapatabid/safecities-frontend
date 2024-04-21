@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { render, screen } from 'utils/test-utils'
 
 import Header from '.'
@@ -26,7 +27,7 @@ jest.mock('next/router', () => {
 describe('Header', () => {
   it('should render correclty', () => {
     render(
-      <LanguageProvider><Header/></LanguageProvider>
+      <LanguageProvider><Header /></LanguageProvider>
     )
 
     expect(screen.getAllByRole('link')).toHaveLength(3)

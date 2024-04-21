@@ -23,7 +23,7 @@ export default function PersonalizedProblemDetailPage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return <PersonalizedProblemDetail id={id} detail={detail}/>
+  return <PersonalizedProblemDetail id={id} detail={detail} />
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

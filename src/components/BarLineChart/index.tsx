@@ -264,19 +264,19 @@ const BarLineChartSorted = ({
               '_blank'
             )
           }
-       />
+        />
       </S.L1Wrapper>
       <S.Container ref={containerRef}>
         <S.RootSVG id="svg-container" ref={rootSvgRef}></S.RootSVG>
-        <S.Tooltip ref={tooltipRef}/>
+        <S.Tooltip ref={tooltipRef} />
       </S.Container>
       <S.L4Wrapper>
         {static_data.legends.map((legend: any, idx: number) => (
           <S.LegendWrapper key={idx}>
             {legend.color ? (
-              <S.SquareIcon color={legend.color}/>
+              <S.SquareIcon color={legend.color} />
             ) : (
-              <S.TaxaIcon/>
+              <S.TaxaIcon />
             )}
             <S.LegendText>{legend.label}</S.LegendText>
           </S.LegendWrapper>

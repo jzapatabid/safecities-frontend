@@ -4,7 +4,7 @@ import Footer from '.'
 
 describe('Footer', () => {
   it('should render correclty', () => {
-    render(<Footer/>)
+    render(<Footer />)
 
     const heading = screen.getByRole('heading', {
       name: /Gestão de Segurança Pública da Prefeitura de Florianópolis/i,

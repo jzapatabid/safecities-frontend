@@ -46,7 +46,7 @@ const StatCard: React.FC<StatCardProps> = ({
         <S.IndicatorInfoWrapper>
           {(!innerLabel.toLowerCase().startsWith("ver") && !innerLabel.toLowerCase().startsWith("see")) && (
             <S.IconWrapper>
-              <ToastSuccessIcon/>
+              <ToastSuccessIcon />
             </S.IconWrapper>
           )}
           {link ? (

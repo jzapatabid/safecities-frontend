@@ -294,25 +294,25 @@ const PLAN_PRINARY_NAV_LINKS = [
   {
     id: 1,
     href: '/planejamento/plan-basic-information',
-    label: <FormattedMessage id='planning.stats.card.title.1'/>,
+    label: <FormattedMessage id='planning.stats.card.title.1' />,
     disabled: false
   },
   {
     id: 2,
     href: '/planejamento/plan-diagnostic-summary',
-    label: <FormattedMessage id='planning.stats.card.title.2'/>,
+    label: <FormattedMessage id='planning.stats.card.title.2' />,
     disabled: false
   },
   {
     id: 3,
     href: '/planejamento/plan-strategy-dimension',
-    label: <FormattedMessage id='planning.stats.card.title.3'/>,
+    label: <FormattedMessage id='planning.stats.card.title.3' />,
     disabled: false
   },
   {
     id: 4,
     href: '/planejamento/plan-tactical-dimension',
-    label: <FormattedMessage id='planning.stats.card.title.4'/>,
+    label: <FormattedMessage id='planning.stats.card.title.4' />,
     disabled: false
   }
 ] as const

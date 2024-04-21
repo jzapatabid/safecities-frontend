@@ -23,7 +23,7 @@ export default function PlanBasicInfoPage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [macro_objectives])
 
-  return <PlanStrategyMacroObjectives basic_information={basic_information}/>
+  return <PlanStrategyMacroObjectives basic_information={basic_information} />
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

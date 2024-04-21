@@ -9,7 +9,7 @@ const LanguageDropdown = () => {
         <S.GlobalContainer onClick={languageDropdown} >
             <S.Container>
                 { state.text }
-                <S.SelectorButton />
+                <S.SelectorButton  />
             </S.Container>
             {
                 state.isOpen ? <S.LanguageUl>

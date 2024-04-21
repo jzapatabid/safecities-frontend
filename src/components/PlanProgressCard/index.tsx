@@ -31,19 +31,19 @@ const PlanProgressCard = ({ detail, data }: { detail: any; data: any }) => {
         <S.StatusBg>
           <S.IconWrapper>
             {data.progressPercentage === 100 ? (
-              <CheckCircleGreenIcon/>
+              <CheckCircleGreenIcon />
             ) : (
-              <FilledWraningIconBig/>
+              <FilledWraningIconBig />
             )}
           </S.IconWrapper>
         </S.StatusBg>
       </S.StatusWrapper>
       <S.DetailsWrapper>
-        <S.Title>{<FormattedMessage id={detail.title}/>}</S.Title>
+        <S.Title>{<FormattedMessage id={detail.title} />}</S.Title>
         <S.DateInfo>{`${lastUpdateF} ${date} de ${
           PORTUGESE_MONTH_MAPPING[month] as string
         } de ${year}`}</S.DateInfo>
-        <S.Description>{<FormattedMessage id={detail.description}/>}</S.Description>
+        <S.Description>{<FormattedMessage id={detail.description} />}</S.Description>
         <S.ProgressWrapper>
           <TubelightIndicator
             score={data.progressPercentage}
@@ -53,25 +53,25 @@ const PlanProgressCard = ({ detail, data }: { detail: any; data: any }) => {
                 : 'indisponível'
             }`}
             type="planStatus"
-         />
+          />
         </S.ProgressWrapper>
       </S.DetailsWrapper>
       <S.ActionWrapper>
         {data.progressPercentage === 100 ? (
           <Link href={detail.href} passHref>
             <S.EditWrapper>
-              <EditIcon/>
-              <S.EditText>{<FormattedMessage id= "planning.stats.card.button.edit"/>}</S.EditText>
+              <EditIcon />
+              <S.EditText>{<FormattedMessage id= "planning.stats.card.button.edit" />}</S.EditText>
             </S.EditWrapper>
           </Link>
         ) : (
           <S.BtnWrapper>
             <ButtonV2
               loading={false}
-              text= {<FormattedMessage id= "button.step.by.step.continue"/>}
+              text= {<FormattedMessage id= "button.step.by.step.continue" />}
               disabled={!detail.href}
               href={detail.href}
-           />
+            />
           </S.BtnWrapper>
         )}
       </S.ActionWrapper>

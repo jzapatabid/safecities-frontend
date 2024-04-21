@@ -148,7 +148,7 @@ export default function Table({
                               : 'up'
                           }
                           onClick={header.column.getToggleSortingHandler()}
-                       />
+                        />
                       )}
                     </S.TableHeadCellWrapper>
                   </S.TableHeadCell>
@@ -186,7 +186,7 @@ export default function Table({
             Array.from(Array(10 - rows - 3).keys()).map((id) => (
               <tr key={id}>
                 {Array.from(Array(columns.length).keys()).map((id) => (
-                  <S.TableDataCell key={id}/>
+                  <S.TableDataCell key={id} />
                 ))}
               </tr>
             ))}
@@ -214,7 +214,7 @@ export default function Table({
           <TablePaginationControlled
             pagination={pagination}
             totalPages={totalPages}
-         />
+          />
         </S.Footer>
       )}
     </S.Wrapper>

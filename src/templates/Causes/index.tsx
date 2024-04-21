@@ -34,16 +34,16 @@ const Causes = () => {
   return (
     <>
       <LanguageProvider>
-        <Header/>
+        <Header />
         <MainContainer>
         <S.NavBarWrapper>
-          <NavBar links={DIAGNOSIS_NAV_LINKS} variant="small"/>
+          <NavBar links={DIAGNOSIS_NAV_LINKS} variant="small" />
         </S.NavBarWrapper>
-        <Disclaimer data={CAUSES_DISCLAIMER}/>
+        <Disclaimer data={CAUSES_DISCLAIMER} />
         <S.StatsWrapper>
           <S.Wrapper>
             {CAUSES_SUMMARY_FIELDS.map(({ key, ...stats }, idx) => (
-              <StatCard key={idx} count={causesState.summary[key]} {...stats}/>
+              <StatCard key={idx} count={causesState.summary[key]} {...stats} />
             ))}
           </S.Wrapper>
           {/* <S.BtnWrapper>
@@ -52,13 +52,13 @@ const Causes = () => {
               text="Histórico de causas despriorizados"
               LeadingIcon={HistoryIcon}
               disabled
-           />
+            />
           </S.BtnWrapper> */}
         </S.StatsWrapper>
         {/* <S.FiltersWrapper>
-          <SearchBar search={search} setSearch={setSearch}/>
+          <SearchBar search={search} setSearch={setSearch} />
           <S.ClearFiltersBtnWrapper>
-            <ButtonV2 text="Limpar filtros" LeadingIcon={CrossIcon} disabled/>
+            <ButtonV2 text="Limpar filtros" LeadingIcon={CrossIcon} disabled />
           </S.ClearFiltersBtnWrapper>
         </S.FiltersWrapper> */}
         <S.ActionsWrapper>
@@ -67,15 +67,15 @@ const Causes = () => {
             text={<FormattedMessage id='button.causes.add.new.cause'/>}
             LeadingIcon={PlusSignIcon}
             onClick={() => setModalState(NEW_PERSONALIZED_CAUSE_MODAL_PROPS)}
-         />
+          />
         </S.ActionsWrapper>
         <CausesTable
           problems={causesState.problemsWithCausesDetail.filter(
             (problem) => problem.prioritized
           )}
-       />
+        />
         <S.Text><FormattedMessage id='last.update.footer.text'/> {date.toUTCString()}</S.Text>
-        <Footer/>
+        <Footer />
       </MainContainer>
 </LanguageProvider>
     </>

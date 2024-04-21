@@ -162,7 +162,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                 id={t.id}
                 text="A problema personalizada foi atualizada corretamente."
                 variant="success"
-             />
+              />
             ))
           } catch (e) {
             toast.custom((t) => (
@@ -170,7 +170,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                 id={t.id}
                 text="A solicitação de atualização para problema personalizada falhou devido a erros. Por favor, tente novamente mais tarde."
                 variant="warning"
-             />
+              />
             ))
           }
         }
@@ -193,7 +193,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                 id={t.id}
                 text="Problema novo adicionado corretamente"
                 variant="success"
-             />
+              />
             ))
             setProblemsState((state) => ({
               ...state,
@@ -205,7 +205,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                 id={t.id}
                 text="Problema personalizado não registrado. Por favor, tente novamente mais tarde"
                 variant="warning"
-             />
+              />
             ))
           }
         }
@@ -244,7 +244,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                   id={t.id}
                   text="Problema excluído corretamente."
                   variant="success"
-               />
+                />
               ))
             } catch (e) {
               setModalState({ open: false })
@@ -253,7 +253,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                   id={t.id}
                   text="Ocorreu um erro ao excluir a problema. Por favor, tente novamente mais tarde."
                   variant="warning"
-               />
+                />
               ))
             }
           }
@@ -274,7 +274,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
           value={causeData.name}
           onChange={onTitleChange}
           restrictionLabel="Insira até 200 caracteres"
-       />
+        />
       </S.CauseTitleInputWrapper>
       <S.EvidenceInputWrapper>
         <MultilineInput
@@ -284,13 +284,13 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
           value={causeData.description}
           onChange={onDescriptionChange}
           restrictionLabel="Insira até 1000 caracteres"
-       />
+        />
       </S.EvidenceInputWrapper>
       <S.AttachmentsWrapper>
         <S.AttachmentsTitle>
           Anexos
           <S.IconWrapper>
-            <InfoIcon height={20} width={20}/>
+            <InfoIcon height={20} width={20} />
             <S.InfoTooltip>
               {'.doc, .docx, .ppt, .pptx, .pdf, .epub, .html, .xls, .csv'}
             </S.InfoTooltip>
@@ -301,7 +301,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
           filesList={cause ? edit_problem.annexes : new_problem.annexes}
           onFileDelete={handleFileDelete}
           onFileDownload={handleFileDownload}
-       />
+        />
       </S.AttachmentsWrapper>
       <S.ReferencesWrapper>
         <S.AttachmentsTitle>Referências</S.AttachmentsTitle>
@@ -314,7 +314,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                 key={idx}
                 link={link}
                 onDelete={handlerLinkDelete}
-             />
+              />
             ))
           : null}
         {(showReferenceInput || causeData.references?.length === 0) && (
@@ -331,7 +331,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
                   newLink: e.target.value
                 }))
               }
-           />
+            />
           </S.ReferencesInputWrapper>
         )}
         {!showReferenceInput && causeData.references?.length !== 0 && (
@@ -340,7 +340,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
               text="Adicionar referências"
               LeadingIcon={PlusSignIcon}
               onClick={() => setShowReferenceInput(true)}
-           />
+            />
           </S.AddReferencesBtnWrapper>
         )}
       </S.ReferencesWrapper>

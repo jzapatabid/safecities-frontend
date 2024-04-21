@@ -12,7 +12,7 @@ const NormalTrendIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
     <path
       d="M19.5 4L15.5 0V3H0.5V5H15.5V8L19.5 4Z"
       fill={props.fill || 'white'}
-   />
+    />
   </svg>
 )
 
