@@ -3,6 +3,7 @@ import React, { createContext, useState, useContext } from 'react'
 import { ModalContextProps, ModalStateTypes } from 'types/Modal'
 
 import Modal from 'components/Modal'
+import LanguageProvider from 'contexts/LanguageSelector'
 
 const ModalContext = createContext<ModalContextProps>({} as ModalContextProps)
 
@@ -13,8 +14,12 @@ const ModalProvider: React.FC = ({ children }) => {
 
   return (
     <ModalContext.Provider value={{ modalState, setModalState }}>
-      {children}
-      <Modal type={modalState.type} />
+      <LanguageProvider>
+        {children}
+        <Modal type={modalState.type} />
+      </LanguageProvider>
+
+      
     </ModalContext.Provider>
   )
 }

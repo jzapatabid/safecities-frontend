@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://safecities-backend.sndbx.run/'
+  baseURL: 'http://4.153.179.70:5000/'
 })
 
 export const useApi = () => ({

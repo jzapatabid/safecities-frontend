@@ -15,6 +15,7 @@ type StatCardProps = {
   count2?: number
   label2?: string
   link?: string
+  iniciativasCard?: boolean
 }
 
 const StatCard: React.FC<StatCardProps> = ({
@@ -23,7 +24,8 @@ const StatCard: React.FC<StatCardProps> = ({
   label = '',
   label2 = '',
   type,
-  link = ''
+  link = '',
+  iniciativasCard = false
 }) => {
 
   let intl = useIntl()
@@ -54,9 +56,12 @@ const StatCard: React.FC<StatCardProps> = ({
               } ${innerLabel}`}</S.IndicatorText>
             </Link>
           ) : (
+            // (!label2.toLowerCase().startsWith("ver") && !label2.toLowerCase().startsWith("see")) ? count2 : ''
             <S.IndicatorText>{`${
-              (!innerLabel.toLowerCase().startsWith("ver") && !innerLabel.toLowerCase().startsWith("see")) ? count2 : ''
-            } ${innerLabel}`}</S.IndicatorText>
+              (!label2.toLowerCase().startsWith("ver") && !label2.toLowerCase().startsWith("see")) && iniciativasCard
+                ? label2.replace('XX', count2.toString())
+                : ''
+            } ${iniciativasCard ? '' : label2}`}</S.IndicatorText>
           )}
         </S.IndicatorInfoWrapper>
       )}

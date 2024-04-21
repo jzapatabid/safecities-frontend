@@ -5,6 +5,16 @@ type IndexDataTypes = {
   objectives: any[]
 }
 
+function convertDecimal(number: any) {
+  if (typeof number !== 'string') {
+    number = number.toString()
+  }
+
+  number = number.replace('.', ',')
+
+  return number
+}
+
 const generateInitiativesContent = (data: any) => {
   const template = data
     .map(
@@ -275,25 +285,25 @@ const trendIndicators = [
 
 const relativeFrequencyIndicators = [
   {
-    text: 'Baixa: <5%',
+    text: 'Participação Alta',
     slope: 'negative',
+    criticality: 'none',
+    variant: 'up',
+    class: 'up-trend'
+  },
+  {
+    text: 'Participação Média',
+    slope: 'neutral',
     criticality: 'none',
     variant: 'center',
     class: 'flat-trend'
   },
   {
-    text: 'Média: Entre 5% e 25%',
-    slope: 'negative',
+    text: 'Participação Baixa',
+    slope: 'positive',
     criticality: 'none',
-    variant: 'center',
-    class: 'flat-trend'
-  },
-  {
-    text: 'Alta: Maior que 25%',
-    slope: 'negative',
-    criticality: 'none',
-    variant: 'center',
-    class: 'flat-trend'
+    variant: 'down',
+    class: 'down-trend'
   }
 ]
 
@@ -306,9 +316,9 @@ const generateProblemsContent = (data: any) => {
             <p style="font-family: Poppins; font-size: 10px; font-weight: 700; letter-spacing: 0em; text-align: left;">Desempenho</p>
             <div style="display: flex; padding: 8px; gap: 16px; align-items: center;">
               <div style="display: flex; flex-direction: column; gap: 8px;">
-                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${
+                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${convertDecimal(
                   BLC.performance
-                }${BLC.performance !== '-' ? '%' : ''}`}</p>
+                )}${BLC.performance !== '-' ? '%' : ''}`}</p>
               </div>
               <div style="display: flex; flex-direction: column; gap: 4px;">
                 ${performanceIndicators
@@ -355,9 +365,9 @@ const generateProblemsContent = (data: any) => {
             <p style="font-family: Poppins; font-size: 10px; font-weight: 700; letter-spacing: 0em; text-align: left;">Tendência</p>
             <div style="display: flex; padding: 8px; gap: 16px; align-items: center;">
               <div style="display: flex; flex-direction: column; gap: 8px;">
-                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${
+                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${convertDecimal(
                   SBC.trend
-                }${SBC.trend !== '-' ? '%' : ''}`}</p>
+                )}${SBC.trend !== '-' ? '%' : ''}`}</p>
               </div>
               <div style="display: flex; flex-direction: column; gap: 4px;">
                 ${trendIndicators
@@ -405,15 +415,31 @@ const generateProblemsContent = (data: any) => {
             <p style="font-family: Poppins; font-size: 10px; font-weight: 700; letter-spacing: 0em; text-align: left;">Frequência relativa</p>
             <div style="display: flex; padding: 8px; gap: 16px; align-items: center;">
               <div style="display: flex; flex-direction: column; gap: 8px;">
-                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${TM.relativeFrequency}`}</p>
+                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${convertDecimal(
+                  TM.relativeFrequency
+                )}`}</p>
               </div>
               <div style="display: flex; flex-direction: column; gap: 4px;">
                 ${relativeFrequencyIndicators
                   .map((indicator: any) => {
                     return `
-                    <div style="display: flex; align-items: center;">
+                    <div style="display: flex; align-items: center;  opacity: ${
+                      TM.relativeFrequency > 25 &&
+                      indicator.text === 'Participação Alta'
+                        ? '1'
+                        : TM.relativeFrequency >= 5 &&
+                          TM.relativeFrequency <= 25 &&
+                          indicator.text === 'Participação Média'
+                        ? '1'
+                        : TM.relativeFrequency < 5 &&
+                          indicator.text === 'Participação Baixa'
+                        ? '1'
+                        : '0.2'
+                    }" >
                       <div class="${indicator.class}"></div>
-                      <p style="margin: 0px; padding: 0px; margin-left: 4px; font-family: Poppins; font-size: 7px; font-weight: 700; letter-spacing: 0em; text-align: left;">${indicator.text}</p>
+                      <p style="margin: 0px; padding: 0px; margin-left: 4px; font-family: Poppins; font-size: 7px; font-weight: 700; letter-spacing: 0em; text-align: left;">${
+                        indicator.text
+                      }</p>
                     </div>
                   `
                   })
@@ -515,9 +541,9 @@ const generateCausesContent = (data: any) => {
             <p style="font-family: Poppins; font-size: 10px; font-weight: 700; letter-spacing: 0em; text-align: left;">Tendência</p>
             <div style="display: flex; padding: 8px; gap: 16px; align-items: center;">
               <div style="display: flex; flex-direction: column; gap: 8px;">
-                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${
+                <p style="font-family: Poppins; font-size: 26px; font-weight: 800; letter-spacing: 0em; text-align: left; color: black; margin: 0px; padding: 0px;">${`${convertDecimal(
                   SBC.trend
-                }${SBC.trend !== '-' ? '%' : ''}`}</p>
+                )}${SBC.trend !== '-' ? '%' : ''}`}</p>
               </div>
               <div style="display: flex; flex-direction: column; gap: 4px;">
                 ${trendIndicators

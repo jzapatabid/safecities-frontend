@@ -268,9 +268,9 @@
     "chart.trend.variation": "Variação da taxa",
     "chart.trend.relation": "Em relação aos últimos 5 anos",
     "chart.relative.frequency": "Frequência relativa",
-    "chart.relative.1": "Alta: Maior que 25%",
-    "chart.relative.2": "Média: Entre 5% e 25%",
-    "chart.relative.3": "Baixa: <5%",
+    "chart.relative.1": "Participação Alta",
+    "chart.relative.2": "Participação Média",
+    "chart.relative.3": "Participação Baixa",
     "chart.relative": "Do total de ocorrências registradas na cidade",
     "chart.relative.time": "Em relação ao último ano",
     "chart.caracteristics":"Características-chave do problema",
@@ -283,5 +283,20 @@
     "text.kpi": "Selecione pelo menos um KPI de análise quantitativa",
     "text.kpi.details": "Ver detalhes",
     "text.kpi.analisis": "Análise descritiva",
-    "text.indicator.analisis": "Indicador"
+    "text.indicator.analisis": "Indicador",
+
+    "chart.title": "Estatísticas de desempenho",
+    "population.rate": "Taxa por 100.000 habitantes",
+    "occurrences.text": "Ocorrências",
+    "prioritized.text": "Priorizado",
+
+    "efficiency.1": "Efeito negativo",
+    "efficiency.2": "Sem efeito",
+    "efficiency.3": "Evidências mistas",
+    "efficiency.4": "Promissora",
+    "efficiency.5": "Efetiva",
+
+    "footer": "Fonte: Secretaria Municipal/Estadual de Segurança Pública"
+
+    
 }

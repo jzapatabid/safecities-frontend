@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig } from 'axios'
 import { GetServerSidePropsContext } from 'next'
 import { parseCookies } from 'nookies'
 
-const baseURL = "https://safecities-backend.sndbx.run/"
+const baseURL = 'http://4.153.179.70:5000/'
 
 export const getAPIClient = (ctx?: GetServerSidePropsContext) => {
   const { ['@unacity-token']: token } = parseCookies(ctx)

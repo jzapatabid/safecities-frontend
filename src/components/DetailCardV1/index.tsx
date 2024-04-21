@@ -10,6 +10,7 @@ const DetailCardV1: React.FC<DetailCardPropsTypes> = ({
   label,
   period
 }) => {
+  console.log("This Is  label:", label)
   return (
     <S.Wrapper>
       <S.Content>

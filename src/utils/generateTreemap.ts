@@ -3,6 +3,13 @@
 import * as d3 from 'd3'
 
 const generateTreemap = (problemName: any, value: any, serverData: any) => {
+  const transformedserverData = serverData.map((item: any) => {
+    if (item.percentage && typeof item.percentage === 'number') {
+      item.percentage = item.percentage.toString().replace('.', ',')
+    }
+    return item
+  })
+
   // Create a container element
   const container = document.createElement('div')
 
@@ -58,7 +65,7 @@ const generateTreemap = (problemName: any, value: any, serverData: any) => {
 
   // Create a root node for the hierarchy
   const root = d3
-    .hierarchy({ name: 'Root', children: serverData })
+    .hierarchy({ name: 'Root', children: transformedserverData })
     .sum((d) => d.value)
 
   // Calculate the layout

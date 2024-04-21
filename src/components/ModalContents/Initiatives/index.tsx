@@ -241,11 +241,11 @@ const InitiativesModalContent: React.FC<CausesContentPropsTypes> = ({
             <S.Title>Iniciativa</S.Title>
           </S.CheckboxAndTitleWrapper>
           <S.Name withCheckbox={false}>
-            {selectedInitiative.initiativeName}
+            {selectedInitiative?.initiativeName}
           </S.Name>
         </S.InitiativeInfo>
         <S.CauseTreeWrapper>
-          {selectedInitiative.causes?.map((cause: any, idx: any) => (
+          {selectedInitiative?.causes?.map((cause: any, idx: any) => (
             <OneToManyTree
               readOnly={type ? false : true}
               showCauseConnectors

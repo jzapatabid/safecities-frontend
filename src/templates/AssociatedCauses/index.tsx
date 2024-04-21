@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { CAUSES_ACTION_MODAL_PROPS } from 'constants/Causes'
-import { DETAIL_PAGE_NAV_LINKS } from 'constants/Diagnosis'
+// import { DETAIL_PAGE_NAV_LINKS } from 'constants/Diagnosis'
 import { PROBLEMS_ACTION_MODAL_PROPS } from 'constants/Problems'
 
 import { useModal } from 'contexts/Modal'
@@ -28,7 +28,6 @@ import FlagFilledIcon from 'components/icons/FlagFilledIcon'
 import FlagIcon from 'components/icons/FlagOutlineIcon'
 import LeftArrow from 'components/icons/LeftArrow'
 import MainContainer from 'components/MainContainer'
-import NavBar from 'components/NavBar'
 import { FormattedMessage } from 'react-intl'
 import LanguageProvider from 'contexts/LanguageSelector'
 
@@ -40,8 +39,8 @@ type ProblemDetailPropTypes = {
 
 const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
   problemId,
-  problem,
-  totalCauses
+  problem
+  // totalCauses
 }) => {
   const router = useRouter()
   const { problemsState } = useProblems()
@@ -181,7 +180,7 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
             <S.Description>{problem?.description}</S.Description>
           </S.DescriptionWrapper>
         </S.AboutProblemWrapper>
-        {problem?.isDefault ? (
+        {/* {problem?.isDefault ? (
           <S.NavBarWrapper>
             <NavBar
               nounderline
@@ -191,7 +190,7 @@ const AssociatedCauses: React.FC<ProblemDetailPropTypes> = ({
               trailingParam={`${problemId}?bkt=ca`}
             />
           </S.NavBarWrapper>
-        ) : null}
+        ) : null} */}
         <S.ActionsWrapper>
           <ButtonV2
             loading={btn1Loading}

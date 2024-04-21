@@ -108,6 +108,7 @@ const Initiatives = () => {
                   count2={initiativesState.summary[key2]}
                   label={label}
                   label2={label2}
+                  iniciativasCard={true}
                   {...stats}
                 />
               )

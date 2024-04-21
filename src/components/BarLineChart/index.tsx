@@ -68,25 +68,20 @@ const BarLineChartSorted = ({
 
       lineData.forEach((d) => {
         d.date = parseDate(d)
-        d.totalStateIncidents =
-          d.totalStateIncidents !== undefined
-            ? +d.totalStateIncidents
-            : undefined
+        d.stateRate = d.stateRate !== undefined ? +d.stateRate : undefined
       })
 
-      const definedBarData = mapData.filter(
-        (d: any) => d.totalCityIncidents !== 0
-      )
+      const definedBarData = mapData.filter((d: any) => d.cityRate !== 0)
 
       const allBarDataZero = definedBarData.length === 0
 
       const definedLineData = mapData.filter(
-        (d: any) => d.totalStateIncidents !== undefined
+        (d: any) => d.stateRate !== undefined
       )
 
       const allLineDataZero =
-        definedLineData.filter((item: any) => item.totalStateIncidents === 0)
-          .length === definedLineData.length
+        definedLineData.filter((item: any) => item.stateRate === 0).length ===
+        definedLineData.length
 
       const x = d3
         .scaleBand()
@@ -100,16 +95,7 @@ const BarLineChartSorted = ({
         .domain([
           0,
           d3.max(mapData, (d) => {
-            console.log(
-              'd.totalCityIncidents',
-              d.totalCityIncidents,
-              'd.totalStateIncidents',
-              d.totalStateIncidents
-            )
-            return Math.max(
-              d.totalCityIncidents || 0,
-              d.totalStateIncidents || 0
-            )
+            return Math.max(d.cityRate || 0, d.stateRate || 0)
           })
         ])
         .nice()
@@ -145,41 +131,39 @@ const BarLineChartSorted = ({
         .append('rect')
         .attr('class', 'rect-box')
         .attr('x', (d) => x(`${MONTH_MAPPING[d.month]}, ${d.year}`))
-        .attr('y', (d) => y(d.totalCityIncidents) || 0)
-        .attr('height', (d) => height - y(d.totalCityIncidents) || 0)
+        .attr('y', (d) => y(d.cityRate) || 0)
+        .attr('height', (d) => height - y(d.cityRate) || 0)
         .attr('width', x.bandwidth())
-        .attr('fill', (d) =>
-          d.totalCityIncidents === 0 ? 'transparent' : '#00ADD2'
-        )
+        .attr('fill', (d) => (d.cityRate === 0 ? 'transparent' : '#00ADD2'))
         .on('mouseover', function (event, d) {
-          if (d.totalCityIncidents) {
+          if (d.cityRate) {
             tooltip.style('opacity', 0.9)
             tooltip
-              .html(`${d.totalCityIncidents}`)
+              .html(`${d.cityRate}`)
               .style('left', event.clientX + 15 + 'px')
               .style('top', event.clientY - 15 + 'px')
           }
         })
         .on('mousemove', function (event, d) {
-          if (d.totalCityIncidents) {
+          if (d.cityRate) {
             tooltip
               .style('left', event.clientX + 15 + 'px')
               .style('top', event.clientY - 15 + 'px')
           }
         })
         .on('mouseout', (event, d) => {
-          if (d.totalCityIncidents) {
+          if (d.cityRate) {
             tooltip.style('opacity', 0)
           }
         })
 
       const line = d3
         .line()
-        .defined((d) => d.totalStateIncidents !== undefined)
+        .defined((d) => d.stateRate !== undefined)
         .x((d) => {
           return x(`${MONTH_MAPPING[d.month]}, ${d.year}`) + x.bandwidth() / 2
         })
-        .y((d) => (allLineDataZero ? height : y(d.totalStateIncidents)))
+        .y((d) => (allLineDataZero ? height : y(d.stateRate)))
 
       svg
         .append('path')
@@ -200,17 +184,15 @@ const BarLineChartSorted = ({
           'cx',
           (d) => x(`${MONTH_MAPPING[d.month]}, ${d.year}`) + x.bandwidth() / 2
         )
-        .attr('cy', (d) =>
-          allLineDataZero ? height : y(d.totalStateIncidents)
-        )
+        .attr('cy', (d) => (allLineDataZero ? height : y(d.stateRate)))
         .attr('r', (d: any) => {
-          return typeof d.totalStateIncidents === 'undefined' ? 0 : 5
+          return typeof d.stateRate === 'undefined' ? 0 : 5
         })
         .attr('fill', 'white')
         .on('mouseover', function (event, d) {
           tooltip.style('opacity', 0.9)
           tooltip
-            .html(` ${d.totalStateIncidents}`)
+            .html(` ${d.stateRate}`)
             .style('left', event.clientX + 15 + 'px')
             .style('top', event.clientY - 15 + 'px')
         })
@@ -253,7 +235,7 @@ const BarLineChartSorted = ({
         .attr('y', 0 - margin.left - 2)
         .attr('x', 0 - height / 2)
         .attr('dy', '1em')
-        .text('Número de ocorrências')
+        .text('Taxa de ocorrências')
 
       svg
         .append('g')

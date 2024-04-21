@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import * as d3 from 'd3'
 import {
@@ -22,14 +22,19 @@ import { FormattedMessage } from 'react-intl'
 type StackedBarChartProps = {
   data: any
   static_data: any
+  measurementUnit: any
+  polarityAndTrend: any
   problemId?: number | string
 }
 
 const StackedBarChart = ({
   data,
   static_data,
+  measurementUnit,
+  polarityAndTrend = {},
   problemId
 }: StackedBarChartProps) => {
+  /* eslint-disable */
   let slope, criticality_info
   if (data.trend === 0 || data.trend) {
     if (data.trend === '-') {
@@ -44,8 +49,11 @@ const StackedBarChart = ({
     }
 
     criticality_info = getCriticalityDetail(slope)
+    /* eslint-enable */
   }
+
   const containerRef = useRef<HTMLDivElement | null>(null)
+  /* eslint-disable */
   useEffect(() => {
     let mapdata
     const keys = data.keys
@@ -80,7 +88,8 @@ const StackedBarChart = ({
       window.removeEventListener('resize', handleResize)
     }
   }, [data])
-
+  /* eslint-enable */
+  const [slope2, setSlop2] = useState('')
   const drawDataViz = (
     data: any,
     keys: string[],
@@ -208,7 +217,7 @@ const StackedBarChart = ({
         .attr('class', `${dataVizStyles.y_axis_label} line_y_axis`)
         .attr('x', 10)
         .attr('y', height / 2.6)
-        .text('Taxa por 100.000 habitantes')
+        .text(measurementUnit ? measurementUnit : 'Taxa por 100.000 habitantes')
     }
 
     const lineYScale = d3
@@ -376,6 +385,40 @@ const StackedBarChart = ({
     svg.node()
   }
 
+  function polarityCheck(
+    polaritive: 'positive' | 'negative',
+    polaritivevalue: any
+  ) {
+    if (polaritive === 'positive' && polaritivevalue > 0) {
+      static_data.indicators[0].criticality = 'low'
+      setSlop2('positive')
+    } else if (
+      polaritive === 'positive' &&
+      (polaritivevalue === null || polaritivevalue === 0)
+    ) {
+      static_data.indicators[1].criticality = 'none'
+    } else if (polaritive === 'positive' && polaritivevalue < 0) {
+      static_data.indicators[2].criticality = 'high'
+      setSlop2('negative')
+    } else if (polaritive === 'negative' && polaritivevalue > 0) {
+      static_data.indicators[0].criticality = 'high'
+      setSlop2('negative')
+    } else if (
+      polaritive === 'negative' &&
+      (polaritivevalue === null || polaritivevalue === 0)
+    ) {
+      static_data.indicators[1].criticality = 'none'
+    } else if (polaritive === 'negative' && polaritivevalue < 0) {
+      static_data.indicators[2].criticality = 'low'
+      setSlop2('positive')
+    }
+  }
+
+  /* eslint-disable */
+  useEffect(() => {
+    polarityCheck(polarityAndTrend.polarity, polarityAndTrend.trendValue)
+  }, [polarityAndTrend.polarity, polarityAndTrend.trendValue])
+  /* eslint-enable */
   return (
     <S.Wrapper>
       <S.L1Wrapper>
@@ -399,7 +442,7 @@ const StackedBarChart = ({
       {static_data.count && static_data.countDesc && (
         <S.L2Wrapper>
           <S.PercentAndInfoWrapper>
-            <S.Percentage type={slope}>{`${data.trend}${
+            <S.Percentage type={slope2}>{`${data.trend}${
               data.trend !== '-' ? '%' : ''
             }`}</S.Percentage>
             <S.Info>{static_data.countDesc}</S.Info>
@@ -409,10 +452,7 @@ const StackedBarChart = ({
               <TrendIndicator
                 key={idx}
                 {...{
-                  ...data,
-                  ...(idx === criticality_info.index
-                    ? { criticality: criticality_info.criticality }
-                    : {})
+                  ...data
                 }}
               />
             ))}

@@ -24,7 +24,7 @@ const Disclaimer: React.FC<DisclaimerProps> = ({
             <S.InlineText>{<FormattedMessage id={line2}/>}</S.InlineText>
             <S.ReadMoreText
               target="_blank"
-              href="https://drive.google.com/file/d/1L8jcDhSlsyM7ooMQTTHOY-1stTxp9RzL/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1-647R57Oe5PvDbNkWqWlq8RII-SBgP_K/view?usp=sharing"
             >
               <FormattedMessage id='diagnosis.disclaimer.link'/>
             </S.ReadMoreText>

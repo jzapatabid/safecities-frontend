@@ -62,10 +62,10 @@ const Home = () => {
         <S.Description>
           <FormattedMessage id='home.description'/>
         </S.Description>
-        <S.ReadMoreText target="_blank" href="https://google.com">
+        <S.ReadMoreText target="_blank" href="https://drive.google.com/file/d/1XU-p0aeRNrk3QtBRF5XXCF_--uAjGNiK/view?usp=sharing">
           <FormattedMessage id='home.link.text.one'/>
         </S.ReadMoreText>
-        <S.ReadMoreText target="_blank" href="https://google.com">
+        <S.ReadMoreText target="_blank" href="https://drive.google.com/file/d/1-647R57Oe5PvDbNkWqWlq8RII-SBgP_K/view?usp=sharing">
           <FormattedMessage id='home.link.text.two'/>
         </S.ReadMoreText>
         <Footer />

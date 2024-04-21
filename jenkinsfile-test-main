@@ -45,24 +45,10 @@ pipeline {
             }
         }
 
-        stage ('Delete old image') {
-            steps {
-                script {
-                    sh """
-                    ssh -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null pmf_admin@${params.REMOTE_DEV_SERVER} "
-                        docker stop safe-cities-frontend-test || true
-                        docker rm  safe-cities-frontend-test || true
-                        docker rmi safe-cities-front-test || true
-                        "
-                    """
-                }
-            }
-        }
-
         stage('SCP Test Docker Image to Remote Test Server') {
             steps {
                 script {
-                     sh "scp -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null safe-cities-front-test-latest.tar pmf_admin@${params.REMOTE_DEV_SERVER}:${params.REMOTE_PATH}"
+                    sh "scp -i ${params.SSH_CREDENTIALS_ID} safe-cities-front-test-latest.tar pmf_admin@${params.REMOTE_TEST_SERVER}:${params.REMOTE_PATH}"
                 }
             }
         }
@@ -73,6 +59,8 @@ pipeline {
                     sh """
                         ssh -i ${params.SSH_CREDENTIALS_ID} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null pmf_admin@${params.REMOTE_TEST_SERVER} "
                             docker load < ${params.REMOTE_PATH}/safe-cities-front-test-latest.tar
+                            docker stop safe-cities-frontend-test || true
+                            docker rm  safe-cities-frontend-test || true
                             docker run --name safe-cities-frontend-test --network safe_cities -d -p 80:3000 safe-cities-front-test:latest
                         "
                     """

@@ -268,9 +268,9 @@
     "chart.trend.variation": "Rate variation",
     "chart.trend.relation": "In relation to the last 5 years",
     "chart.relative.frequency": "Relative frequency",
-    "chart.relative.1": "High: Greater than 25%",
-    "chart.relative.2": "Medium: Between 5% and 25%",
-    "chart.relative.3": "Low: <5%",
+    "chart.relative.1": "High Participation",
+    "chart.relative.2": "Average Participation",
+    "chart.relative.3": "Low Participation",
     "chart.relative.time": "In relation to last year",
     "chart.relative": "Of the total number of incidents recorded in the city",
     "chart.caracteristics":"Key features of the problem",
@@ -283,5 +283,20 @@
     "text.kpi": "Select at least one quantitative analysis KPI",
     "text.kpi.details": "See details",
     "text.kpi.analisis": "Descriptive analysis",
-    "text.indicator.analisis": "Indicator"
+    "text.indicator.analisis": "Indicator",
+
+    
+    "chart.title": "Performance statistics",
+    "population.rate": "Rate per 100,000 inhabitants",
+    "occurrences.text": "Occurrences",
+    "prioritized.text": "Prioritized",
+
+    "efficiency.1": "Negative effect",
+    "efficiency.2": "Without effect",
+    "efficiency.3": "Mixed evidence",
+    "efficiency.4": "Promising",
+    "efficiency.5": "Effective",
+
+    "footer": "Font: Municipal/State Public Security Secretariat"
+
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { DETAIL_PAGE_NAV_LINKS } from 'constants/Diagnosis'
 import {
@@ -52,10 +52,10 @@ type ProblemDetailPropTypes = {
 const static_data: any = {
   data_viz: {
     performance: {
-      title: 'Estatísticas de desempenho',
+      title: <FormattedMessage id = 'chart.title'/>,
       count: '25,000',
       countDesc: 'Do total de ocorrências registradas na cidade',
-      footer: 'Fonte: Secretaria Municipal/Estadual de Segurança Pública',
+      footer: <FormattedMessage id = "footer" />,
       legends: [
         { label: 'Florianópolis', color: '#00ADD2' },
         { label: 'Santa Catarina', Icon: EditIcon }
@@ -63,7 +63,7 @@ const static_data: any = {
     },
     trend: {
       title: 'Estatísticas de tendência',
-      footer: 'Fonte: Secretaria Municipal/Estadual de Segurança Pública',
+      footer: <FormattedMessage id = "footer" />,
       legends: [
         { label: 'Ocorrências', color: '#00ADD2' },
         { label: 'Taxa', Icon: EditIcon }
@@ -71,7 +71,7 @@ const static_data: any = {
     },
     relativeFrequency: {
       title: 'Estatísticas de frequência relativa',
-      footer: 'Fonte: Secretaria Municipal/Estadual de Segurança Pública'
+      footer: <FormattedMessage id = "footer" />
     }
   },
   key_variables: [
@@ -110,17 +110,17 @@ const static_data: any = {
           variant: 'center'
         },
         {
-          text: <FormattedMessage id = "chart.relative.2"/>,
+          text: <FormattedMessage id="chart.relative.2"/>,
           criticality: 'none',
           variant: 'center'
         },
         {
-          text: <FormattedMessage id = "chart.relative.3"/>,
+          text: <FormattedMessage id="chart.relative.3"/>,
           criticality: 'none',
           variant: 'center'
         }
       ],
-      footer: <FormattedMessage id = "chart.relative.time" />
+      footer: <FormattedMessage id="chart.relative.time" />
     }
   ]
 }
@@ -130,6 +130,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
   id,
   backTo
 }) => {
+  console.log("This Is  detail:", detail)
   const router = useRouter()
   const [chartDataKey, setChartDataKey] = useState('performance')
   const { setModalState } = useModal()
@@ -141,6 +142,21 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
         type: modalProps.actionType
       }
     })
+  }
+
+  useEffect(() => {
+    PROBLEM_DETAIL_ACTUAL_SITUATION_FIELDS[1].label =
+      detail.problem?.measurement_unit
+  }, [detail.problem?.measurement_unit])
+
+  const polarity = {
+    performance:
+      detail.problem && detail.problem.polarity ? detail.problem.polarity : '',
+    performanceValue:
+      detail.kpi && detail.kpi.performance ? detail.kpi.performance : '',
+    trend:
+      detail.problem && detail.problem.polarity ? detail.problem.polarity : '',
+    trendValue: detail.kpi && detail.kpi.trend ? detail.kpi.trend : ''
   }
 
   return (
@@ -251,6 +267,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                   {static_data.key_variables.map((data: any, idx: number) => (
                     <DetailCardV2
                       key={idx}
+                      polarity={polarity}
                       data={{
                         ...data,
                         percentage:
@@ -283,6 +300,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                   {chartDataKey === 'trend' ? (
                     <StackedBarChart
                       static_data={static_data.data_viz[chartDataKey]}
+                      measurementUnit={detail.problem.measurement_unit}
                       data={{
                         data: detail.kpi?.trendData || [],
                         keys: ['totalCityIncidents'],
@@ -322,6 +340,17 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                     updatedAt={detail?.problem?.updatedAt || 'NA'}
                   />
                 ))}
+                {/* <S.WrapperConcentration>
+                  <S.Title>Concentração</S.Title>
+                 <S.ConcentrationContent>
+                    <ConsentrationBarChart
+                      data={detail.kpi.concentrationData}
+                      legendColors={legendColor}
+                      updateDate={detail.problem.updatedAt}
+                    /> 
+                  </S.ConcentrationContent>
+                  <S.Footer>Valores de Abr/2021 a Mar/2022</S.Footer>
+                </S.WrapperConcentration> */}
               </S.ProblemCharacteristicsWrapper>
             )}
           </>
@@ -332,6 +361,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
             />
           </S.DisclaimerWrapper>
         )}
+        {detail?.problem?.hasData && detail?.problem?.geonetLink ? (
         <S.AccessMapWrapper>
           <S.AccessMapDetailsWrapper>
             <S.AccessMapTitle>
@@ -353,6 +383,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
             />
           </S.ButtonWrapper>
         </S.AccessMapWrapper>
+        ) : null}
         <Footer />
       </MainContainer>
 </LanguageProvider>

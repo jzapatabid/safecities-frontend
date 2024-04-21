@@ -21,12 +21,33 @@ export type InputProps = {
   placeholderFixed?: boolean
   secondaryPlaceholder?: string
   endIconAction?: any
-}
+  numericOnly?: boolean
+} & InputHTMLAttributes<HTMLInputElement>
 
 const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
-  { name, type, error = null, trailingAction, endIconAction, ...rest },
+  {
+    name,
+    type,
+    error = null,
+    trailingAction,
+    endIconAction,
+    numericOnly = false,
+    ...rest
+  },
   ref
 ) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (numericOnly) {
+      // Allow numeric values, space, and some special keys like backspace, delete, arrow keys
+      if (
+        !/^[\d\s]$/.test(event.key) &&
+        !['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight'].includes(event.key)
+      ) {
+        event.preventDefault()
+      }
+    }
+  }
+
   const [isFirefox, setIsFirefox] = useState(false)
   const [showText, setShowText] = useState(type === 'text' ? true : false)
 
@@ -47,6 +68,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         isFirefox={isFirefox}
         {...rest}
         placeholder={rest.secondaryPlaceholder}
+        onKeyDown={handleKeyDown}
       />
       <S.Placeholder htmlFor={rest.placeholder} placeholderFixed>
         {rest.placeholder}

@@ -165,11 +165,11 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
             />
           </S.NavWrapper>
           <S.GoBackText>
-            Volte{' '}
+            <FormattedMessage id = "plan.basic.info.go.back" />{' '}
             <S.LinkText
               onClick={() => router.push(`/planejamento/associar-iniciativas/`)}
             >
-              Assocciar iniciativas
+              <FormattedMessage id = "planning.associate.initiatives.title" />
             </S.LinkText>
           </S.GoBackText>
         </S.GobackWrapper>

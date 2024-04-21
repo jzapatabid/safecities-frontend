@@ -189,7 +189,7 @@ const EDIT_PERSONALIZED_INITIATIVE_MODAL_PROPS = {
 }
 
 const INITIATIVE_STATUS = {
-  PRIORITIZED: 'Priorizado',
+  PRIORITIZED: <FormattedMessage id = 'prioritized.text'/>,
   NOT_PRIORITIZED: ''
 } as const
 

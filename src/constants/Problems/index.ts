@@ -118,13 +118,13 @@ const PROBLEMS_SUMMARY_FIELDS: readonly ProblemsSummaryFieldPropsTypes[] = [
 const PROBLEM_DETAIL_ACTUAL_SITUATION_FIELDS = [
   {
     dataKey: 'totalIncidences',
-    label: 'Ocorrências'
+    label: 'occurrences.text'
   },
   {
     dataKey: 'ratePerPopulation',
-    label: 'Taxa por 100.000 habitantes'
+    label: "population.rate"
   }
-] as const
+]
 
 const SAMPLE_ALL_PROBLEMS: { text: string; checked?: boolean; id: string }[] = [
   { text: 'Homicidio', id: 'pe0001' },

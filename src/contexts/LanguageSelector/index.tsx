@@ -40,7 +40,7 @@ const LanguageProvider = ({children}:any) => {
         }
     }
     useEffect(() => {
-        let langSel = "lang" in localStorage ? localStorage.getItem("lang") : "Portugues"
+        let langSel = "lang" in localStorage ? localStorage.getItem("lang") : "Español"
         changeLanguage(langSel!)
     }, []);
   return (

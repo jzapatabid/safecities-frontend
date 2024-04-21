@@ -112,7 +112,7 @@ const Login = ({ email }: LoginProps) => {
           <S.LoginContent>
             <S.BrandContainer>
               <S.Brand />
-              <LanguageDropdown />
+              {/* <LanguageDropdown /> */}
             </S.BrandContainer>
             <S.HeadingWrapper>
               <Heading size="large" lineHeight="6rem">

@@ -52,7 +52,7 @@ const static_data = {
   title: 'Tendência',
   count: '-50%',
   countDesc: 'Variação da taxa',
-  footer: 'Fonte: Secretaria Municipal/Estadual de Segurança Pública',
+  footer: <FormattedMessage id = "footer" />,
   legends: [
     { label: 'Ocorrências', color: '#00ADD2' },
     { label: 'Taxa', Icon: EditIcon }
@@ -78,6 +78,8 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
   }))
   const [selectedTab, setSelectedTab] = useState(0)
   const [indicatorData, setIndicatorData] = useState({} as any)
+  const [causeIndicator, setCauseIndicator] = useState({} as any)
+  const [polarityAndTrend, setPolarityAndTrend] = useState({} as any)
   const [btn1Loading, setBtn1Loading] = useState(false)
   const router = useRouter()
   const { setModalState } = useModal()
@@ -115,15 +117,28 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
       }
     })
   }
-
+/* eslint-disable */
   useEffect(() => {
     if (cause.indicators[selectedTab]) {
       setIndicatorData({
         ...cause.indicators[selectedTab].causeIndicatorData
       })
+
+      setCauseIndicator({
+        ...cause.indicators[selectedTab].causeIndicator
+      })
+
+      DEFAULT_CAUSE_DETAIL_ACTUAL_SITUATION_FIELDS[1].label =
+        cause.indicators[selectedTab].causeIndicator.measurement_unit
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTab])
+  /* eslint-enable */
+  useEffect(() => {
+    setPolarityAndTrend({
+      polarity: cause.indicators[selectedTab]?.causeIndicator.polarity,
+      trendValue: cause.indicators[selectedTab]?.causeIndicatorData?.kpi.trend
+    })
+  }, [selectedTab, cause.indicators])
 
   return (
     <>
@@ -254,6 +269,8 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                       <S.KeyVariableVisualizationWrapper>
                         <StackedBarChart
                           static_data={static_data}
+                          measurementUnit={causeIndicator.measurement_unit}
+                          polarityAndTrend={polarityAndTrend}
                           data={{
                             trend:
                               typeof indicatorData.kpi?.trend === 'number'

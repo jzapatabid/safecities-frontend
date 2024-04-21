@@ -209,6 +209,8 @@ const TacticalDimensionContent = ({
               role={dept.role || ''}
               onDeptSelect={onDeptSelect(dept.departmentId)}
               onRoleUpdate={onDeptRoleUpdate(dept.departmentId)}
+              placeholderText="Função/responsabilidade do órgão"
+              applyNumericOnly={false}
             />
           )
         })}
@@ -252,6 +254,7 @@ const TacticalDimensionContent = ({
               onDeptSelect={onGoalSelect(goal.goalId)}
               onRoleUpdate={onGoalValueUpdate(goal.goalId)}
               onGoalDateUpdate={onGoalDateUpdate(goal.goalId)}
+              placeholderText="Defina metas quantitativas"
             />
           )
         })}
@@ -264,6 +267,7 @@ const TacticalDimensionContent = ({
               autoComplete="off"
               placeholder="form.total.label"
               type="text"
+              numericOnly={true}
               placeholderFixed
               secondaryPlaceholder="R$"
               value={data?.tactical_dimension.total_cost || ''}

@@ -65,6 +65,7 @@ const Plans = () => {
                 trendMapData = generateSBC(
                   problem?.trend,
                   problem.trend_data,
+                  problem?.measurement_unit,
                   problem?.trend_end_at || ''
                 )
               }

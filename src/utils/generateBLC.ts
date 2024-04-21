@@ -58,23 +58,20 @@ const generateBLC = (value: any, serverData: any, updatedAt: string) => {
 
   lineData.forEach((d) => {
     d.date = parseDate(d)
-    d.totalStateIncidents =
-      d.totalStateIncidents !== undefined ? +d.totalStateIncidents : undefined
+    d.stateRate = d.stateRate !== undefined ? +d.stateRate : undefined
   })
 
-  const definedBarData = finalData.filter(
-    (d: any) => d.totalCityIncidents !== 0
-  )
+  const definedBarData = finalData.filter((d: any) => d.cityRate !== 0)
 
   const allBarDataZero = definedBarData.length === 0
 
   const definedLineData = finalData.filter(
-    (d: any) => d.totalStateIncidents !== undefined
+    (d: any) => d.stateRate !== undefined
   )
 
   const allLineDataZero =
-    definedLineData.filter((item: any) => item.totalStateIncidents === 0)
-      .length === definedLineData.length
+    definedLineData.filter((item: any) => item.stateRate === 0).length ===
+    definedLineData.length
 
   const x = d3
     .scaleBand()
@@ -88,7 +85,7 @@ const generateBLC = (value: any, serverData: any, updatedAt: string) => {
     .domain([
       0,
       d3.max(finalData, (d) => {
-        return Math.max(d.totalCityIncidents || 0, d.totalStateIncidents || 0)
+        return Math.max(d.cityRate || 0, d.stateRate || 0)
       })
     ])
     .nice()
@@ -125,12 +122,10 @@ const generateBLC = (value: any, serverData: any, updatedAt: string) => {
     .append('rect')
     .attr('class', 'rect-box')
     .attr('x', (d) => x(`${MONTH_MAPPING[d.month]}, ${d.year}`))
-    .attr('y', (d) => y(d.totalCityIncidents) || 0)
-    .attr('height', (d) => height - y(d.totalCityIncidents) || 0)
+    .attr('y', (d) => y(d.cityRate) || 0)
+    .attr('height', (d) => height - y(d.cityRate) || 0)
     .attr('width', x.bandwidth())
-    .attr('fill', (d) =>
-      d.totalCityIncidents === 0 ? 'transparent' : '#000000'
-    )
+    .attr('fill', (d) => (d.cityRate === 0 ? 'transparent' : '#000000'))
 
   svg
     .selectAll('textB')
@@ -142,9 +137,9 @@ const generateBLC = (value: any, serverData: any, updatedAt: string) => {
       'x',
       (d) => x(`${MONTH_MAPPING[d.month]}, ${d.year}`) + x.bandwidth() / 2
     )
-    .attr('y', (d) => y(d.totalCityIncidents) - 5 || 0)
+    .attr('y', (d) => y(d.cityRate) - 5 || 0)
     .text((d) => {
-      return d?.totalCityIncidents || ''
+      return d?.cityRate || ''
     })
     .style('font-size', '10px')
     .attr('fill', 'black')
@@ -152,11 +147,11 @@ const generateBLC = (value: any, serverData: any, updatedAt: string) => {
 
   const line = d3
     .line()
-    .defined((d) => d.totalStateIncidents !== undefined)
+    .defined((d) => d.stateRate !== undefined)
     .x((d) => {
       return x(`${MONTH_MAPPING[d.month]}, ${d.year}`) + x.bandwidth() / 2
     })
-    .y((d) => (allLineDataZero ? height : y(d.totalStateIncidents)))
+    .y((d) => (allLineDataZero ? height : y(d.stateRate)))
 
   svg
     .append('path')
@@ -177,9 +172,9 @@ const generateBLC = (value: any, serverData: any, updatedAt: string) => {
       'cx',
       (d) => x(`${MONTH_MAPPING[d.month]}, ${d.year}`) + x.bandwidth() / 2
     )
-    .attr('cy', (d) => (allLineDataZero ? height : y(d.totalStateIncidents)))
+    .attr('cy', (d) => (allLineDataZero ? height : y(d.stateRate)))
     .attr('r', (d: any) => {
-      return typeof d.totalStateIncidents === 'undefined' ? 0 : 5
+      return typeof d.stateRate === 'undefined' ? 0 : 5
     })
     .attr('fill', '#50C878')
 
@@ -194,14 +189,10 @@ const generateBLC = (value: any, serverData: any, updatedAt: string) => {
       'x',
       (d) => x(`${MONTH_MAPPING[d.month]}, ${d.year}`) + x.bandwidth() / 2 - 2.5
     )
-    .attr('y', (d) =>
-      allLineDataZero ? height : y(d.totalStateIncidents) - 12.5 || 0
-    )
-    .text((d) => d.totalStateIncidents || 0)
+    .attr('y', (d) => (allLineDataZero ? height : y(d.stateRate) - 12.5 || 0))
+    .text((d) => d.stateRate || 0)
     .attr('fill', (d) =>
-      d.totalStateIncidents !== undefined && d.totalStateIncidents !== null
-        ? '#50C878'
-        : '#FFFFFF'
+      d.stateRate !== undefined && d.stateRate !== null ? '#50C878' : '#FFFFFF'
     )
 
   svg

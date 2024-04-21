@@ -5,6 +5,7 @@ import { getLastYearRangeInPortuguese } from 'utils'
 import * as S from './styles'
 
 import ButtonV2 from 'components/ButtonV2'
+import ConsentrationBarChart from 'components/ConsentrationBarChart'
 import ControlledTabs from 'components/ControlledTabs'
 import DonutChart from 'components/DonutChart'
 import DonutChartLegends from 'components/DonutChartLegends'
@@ -24,6 +25,7 @@ const ICONS = {
   modality: ModalityIcon
 }
 
+const legendColor = ['#FEDB5A', '#6772E5', '#6B7C93', '#8F6ED5']
 const ProblemCharacteristicsChart = ({
   data,
   title,
@@ -51,6 +53,8 @@ const ProblemCharacteristicsChart = ({
     data && data.length !== 0 ? data[0].data : []
   )
   const [open, setOpen] = useState(false)
+  const [lugares, SetLugares] = useState(false)
+  const [contab, setContab] = useState(false)
   const [selectedTab, setSelectedTab] = useState(0)
   const [selectedOption, setSelectedOption] = useState(
     data && data.length !== 0
@@ -58,8 +62,13 @@ const ProblemCharacteristicsChart = ({
       : 0
   )
   const [chartData, setChartData] = useState({})
-
   const handleSelectDDOption = (option: any) => {
+    if (option.text === 'Tipo de lugar') {
+      setContab(false)
+    } else {
+      setContab(true)
+    }
+
     setDropdownOptions((state: any) =>
       state.map((initialOption: any) => ({
         ...initialOption,
@@ -73,6 +82,13 @@ const ProblemCharacteristicsChart = ({
   const handleSelectOption = (id: number) => () => {
     setSelectedOption(id)
   }
+
+  useEffect(() => {
+    if (title === 'Lugares') {
+      SetLugares(true)
+      setContab(true)
+    }
+  }, [title])
 
   useEffect(() => {
     if (data && data.length !== 0) {
@@ -163,12 +179,27 @@ const ProblemCharacteristicsChart = ({
       <S.Section4Wrapper>
         {selectedTab === 0 ? (
           <>
-            <S.DataVizWrapper>
-              <DonutChart data={Object.values(chartData)[0] || []} />
-            </S.DataVizWrapper>
-            <S.LegendsWrapper>
-              <DonutChartLegends data={Object.values(chartData)[0] || []} />
-            </S.LegendsWrapper>
+            {lugares && contab ? (
+              <ConsentrationBarChart
+                data={Object.values(chartData)[0] || []}
+                legendColors={legendColor}
+                // updateDate={detail.problem.updatedAt}
+              />
+            ) : (
+              <>
+                <S.DataVizWrapper>
+                  <DonutChart data={Object.values(chartData)[0] || []} />
+                </S.DataVizWrapper>
+
+                <S.LegendsWrapper>
+                  <DonutChartLegends
+                    data={(Object.values(chartData)[0] || []).sort(
+                      (a, b) => b?.total - a?.total
+                    )}
+                  />
+                </S.LegendsWrapper>
+              </>
+            )}
           </>
         ) : (
           <InfoShelf data={Object.values(chartData)[0] || []} />

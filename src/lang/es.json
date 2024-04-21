@@ -268,9 +268,9 @@
     "chart.trend.variation": "Variación de tasa",
     "chart.trend.relation": "En relación a los últimos 5 años",
     "chart.relative.frequency": "Frecuencia relativa",
-    "chart.relative.1": "Alta: Mayor de 25%",
-    "chart.relative.2": "Media: Entre 5% y 25%",
-    "chart.relative.3": "Baja: <5%",
+    "chart.relative.1": "Alta participación",
+    "chart.relative.2": "Participación promedio",
+    "chart.relative.3": "Baja participación",
     "chart.relative": "Del total de incidentes registrados en la ciudad",
     "chart.relative.time": "En relación con el ultimo año",
     "chart.caracteristics":"Caracteristicas clave del problema",
@@ -283,5 +283,19 @@
     "text.kpi": "Seleccione por lo menos un KPI de analisis cuantitativo",
     "text.kpi.details": "Ver detalles",
     "text.kpi.analisis": "Analisis descriptivo",
-    "text.indicator.analisis": "Indicador"
+    "text.indicator.analisis": "Indicador",
+
+    "chart.title": "Estadisticas de desempeño",
+    "population.rate": "Tasa por 100.000 habitantes",
+    "occurrences.text": "Ocurrencias",
+    "prioritized.text": "Priorizado",
+
+    "efficiency.1": "Efecto negativo",
+    "efficiency.2": "Sin efecto",
+    "efficiency.3": "Evidencia mixta",
+    "efficiency.4": "Prometedor",
+    "efficiency.5": "Eficaz",
+
+    "footer": "Fuente:  Secretaría Municipal/Estatal de Seguridad Pública "
+
 }

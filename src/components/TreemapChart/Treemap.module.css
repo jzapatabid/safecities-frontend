@@ -27,15 +27,18 @@
   text-align: center;
   color: white;
   min-width: 40px;
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: rotate(-180deg);
+  word-break: break-all;
 }
 
 .tooltip::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 85%;
   right: 100%;
   margin-top: -5.5px;
   border-top-width: 6px;
@@ -50,7 +53,7 @@
   content: '';
   display: block;
   position: absolute;
-  top: 50%;
+  top: 85%;
   right: 98%;
   margin-top: -5.5px;
   border-top-width: 6px;

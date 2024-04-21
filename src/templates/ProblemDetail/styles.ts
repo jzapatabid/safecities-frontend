@@ -224,3 +224,46 @@ export const PieChartsTitle = styled.div`
 export const DisclaimerWrapper = styled.div`
   border-bottom: 1px solid #2b323b;
 `
+
+export const WrapperConcentration = styled.div`
+  ${({ theme }) => css`
+    background: ${theme.colors.blueDark};
+    width: calc(50% - 12px);
+    height: auto;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+  `}
+`
+
+export const Title = styled.p`
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  height: 25px;
+`
+
+export const Footer = styled.div`
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  text-align: left;
+
+  color: rgba(255, 255, 255, 0.5);
+`
+export const ConcentrationContent = styled.div`
+  height: 500px;
+  padding: 50px 24px;
+  display: flex;
+  flex-direction: column;
+`

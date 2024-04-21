@@ -18,6 +18,11 @@ type TreemapChartProps = {
   problemId: string | number
 }
 
+export function formatRelativeData(value) {
+  const stringValue = value.toString()
+  return stringValue.includes('.') ? stringValue.replace('.', ',') : stringValue
+}
+
 const TreemapChart = ({ static_data, data, problemId }: TreemapChartProps) => {
   const rootSvgRef = useRef<SVGSVGElement | null>(null)
   const containerRef = useRef<HTMLDivElement | null>(null)
@@ -79,17 +84,33 @@ const TreemapChart = ({ static_data, data, problemId }: TreemapChartProps) => {
             if (event.target.children[0].style.display === 'none') {
               tooltip
                 .html(
-                  `<div style="display: flex; flex-direction: column"><p>${
+                  `<div style="transform: rotate(180deg)"; display: flex; flex-direction: column">
+                  <p>${
                     d.data.name.slice(0, 1).toUpperCase() + d.data.name.slice(1)
-                  }</p><p>${d.data.value}</p></div>`
+                  }</p>
+                  <p style="margin-top: 10px;">Total: ${d.data.value}</p>
+                  <p style="margin-top: 3px;">${formatRelativeData(
+                    d.data.percentage
+                  )}%</p>
+                  </div>`
                 )
-                .style('left', event.pageX + 20 + 'px')
-                .style('top', event.pageY - 25 + 'px')
+                .style('left', event.pageX - 160 + 'px')
+                .style('top', event.pageY - 20 + 'px')
             } else {
               tooltip
-                .html(`${d.data.value}`)
-                .style('left', event.pageX + 20 + 'px')
-                .style('top', event.pageY - 25 + 'px')
+                .html(
+                  `<div style="transform: rotate(180deg)"; display: flex; flex-direction: column">
+                  <p>${
+                    d.data.name.slice(0, 1).toUpperCase() + d.data.name.slice(1)
+                  }</p>
+                  <p style="margin-top: 10px;">Total: ${d.data.value}</p>
+                  <p style="margin-top: 3px;">${formatRelativeData(
+                    d.data.percentage
+                  )}%</p>
+                  </div>`
+                )
+                .style('left', event.pageX - 160 + 'px')
+                .style('top', event.pageY - 20 + 'px')
             }
           }
         })
@@ -102,9 +123,9 @@ const TreemapChart = ({ static_data, data, problemId }: TreemapChartProps) => {
         .html((d) => {
           return `<p style="font-weight: 700; font-size: 11px; font-family: Poppins;">${
             d.data.name.slice(0, 1).toUpperCase() + d.data.name.slice(1)
-          }</p><p style="font-weight: 700; font-size: 11px; font-family: Poppins; margin-top: 2px;">${
+          }</p><p style="font-weight: 700; font-size: 11px; font-family: Poppins; margin-top: 2px;">${formatRelativeData(
             d.data.percentage
-          }%</p>`
+          )}%</p>`
         })
 
       const allContentNodes = d3.selectAll('.treemap-content').nodes()

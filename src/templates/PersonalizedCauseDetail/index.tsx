@@ -222,7 +222,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
             />
           </S.ButtonWrapper>
           <S.DescriptionWrapper>
-            <S.DescLabel>Justificativa</S.DescLabel>
+            <S.DescLabel>Descrição</S.DescLabel>
             <S.Description>{cause.justification}</S.Description>
           </S.DescriptionWrapper>
         </S.SectionWrapper>

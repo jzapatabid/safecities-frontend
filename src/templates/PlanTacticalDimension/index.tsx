@@ -503,7 +503,7 @@ const PlanTacticalDimension = ({
           <S.TotalCostWrapper>
             <S.TotalCostTitle><FormattedMessage id = "total.estimated.cost" /></S.TotalCostTitle>
             <S.TotalCostValue>
-              R$ - {plansState.td_total_cost || ''}
+              R$ {plansState.td_total_cost || ''}
             </S.TotalCostValue>
             <S.TotalCostForecast>
               <FormattedMessage id = "total.estimated.cost.description" />

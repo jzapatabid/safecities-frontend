@@ -92,7 +92,7 @@ const Header = () => {
                   <S.Username>{user.fullName}</S.Username>
                 </S.UserAccountInfoWrapper>
               </UserMenuDropdown>
-              <LanguageDropdown />
+              {/* <LanguageDropdown /> */}
             </S.UserInfoWrapper>
           </Container>
         </IntlProvider>

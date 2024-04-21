@@ -47,12 +47,12 @@ export const getCostLabel: { [key: number]: string } = {
   3: 'Alto'
 }
 
-export const getEfficiencyLabel: { [key: number]: string } = {
-  1: 'Efeito negativo',
-  2: 'Sem efeito',
-  3: 'Evidências mistas',
-  4: 'Promissora',
-  5: 'Efetiva'
+export const getEfficiencyLabel: { [key: number]: any } = {
+  1: <FormattedMessage id = 'efficiency.1' />,
+  2: <FormattedMessage id = 'efficiency.2' />,
+  3: <FormattedMessage id = 'efficiency.3' />,
+  4: <FormattedMessage id = 'efficiency.4' />,
+  5: <FormattedMessage id = 'efficiency.5' />
 }
 
 export default function InitiativesTable({

@@ -147,7 +147,7 @@ const DEFAULT_CAUSE_DETAIL_ACTUAL_SITUATION_FIELDS = [
     dataKey: 'cityRate',
     label: 'Taxa por 100.000 habitantes'
   }
-] as const
+]
 
 const CAUSES_PRIORITIZATION_DISCLAIMER = {
   line1:

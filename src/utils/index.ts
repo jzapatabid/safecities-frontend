@@ -36,8 +36,8 @@ function getPaginationPageGroupInfo(currentPage: number) {
 
 function getLast12MonthsIncreasingOrder() {
   const currentDate = new Date()
-  const currentYear = currentDate.getFullYear()
-  const currentMonth = currentDate.getMonth() + 1
+  const currentYear = currentDate.getUTCFullYear()
+  const currentMonth = currentDate.getUTCMonth() + 1
 
   const months = []
   for (let i = 0; i < 12; i++) {
@@ -47,7 +47,7 @@ function getLast12MonthsIncreasingOrder() {
     months.push({
       year: year.toString(),
       month,
-      totalCityIncidents: 0
+      cityRate: 0
     })
   }
 
@@ -56,8 +56,8 @@ function getLast12MonthsIncreasingOrder() {
 
 function getLast12MonthsIncreasingOrderFromGivenStartDate(date: string) {
   const currentDate = new Date(date)
-  const currentYear = currentDate.getFullYear()
-  const currentMonth = currentDate.getMonth() + 1
+  const currentYear = currentDate.getUTCFullYear()
+  const currentMonth = currentDate.getUTCMonth() + 1
 
   const months = []
   for (let i = 0; i < 12; i++) {
@@ -67,7 +67,7 @@ function getLast12MonthsIncreasingOrderFromGivenStartDate(date: string) {
     months.push({
       year: year.toString(),
       month,
-      totalCityIncidents: 0
+      cityRate: 0
     })
   }
 
@@ -75,7 +75,7 @@ function getLast12MonthsIncreasingOrderFromGivenStartDate(date: string) {
 }
 
 function getLast5YearsQuarters() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getUTCFullYear()
   const quarters = ['q1', 'q2', 'q3', 'q4']
 
   const result = []
@@ -94,7 +94,7 @@ function getLast5YearsQuarters() {
 }
 
 function getLast5YearsQuartersFromGivenStartDate(date: string) {
-  const currentYear = new Date(date).getFullYear()
+  const currentYear = new Date(date).getUTCFullYear()
   const quarters = ['q1', 'q2', 'q3', 'q4']
 
   const result = []
@@ -126,8 +126,8 @@ const formatProblemPerformanceMapData = (
     const key = item.year + '-' + item.month
     if (serverDataMap.has(key)) {
       const serverItem = serverDataMap.get(key)
-      item.totalStateIncidents = serverItem.totalStateIncidents
-      item.totalCityIncidents = serverItem.totalCityIncidents
+      item.stateRate = serverItem.stateRate
+      item.cityRate = serverItem.cityRate
     }
   })
 
@@ -173,15 +173,15 @@ function getLastYearRangeInPortuguese(date?: string) {
   }
 
   let lastYearStart
-  const today = date ? new Date(date + 'T00:00:00') : new Date()
+  const today = date ? new Date(date) : new Date()
 
   // Exception case check
-  if (today.getMonth() === 11) {
+  if (today.getUTCMonth() === 11) {
     lastYearStart = new Date(today)
     lastYearStart.setMonth(0)
   } else {
     lastYearStart = new Date(today)
-    lastYearStart.setFullYear(today.getFullYear() - 1)
+    lastYearStart.setFullYear(today.getUTCFullYear() - 1)
   }
   const lastYearEnd = new Date(today)
 
@@ -204,15 +204,15 @@ function getLastYearRangeInPortuguese(date?: string) {
   // Format the start and end months
   const startMonth =
     monthNames[
-      lastYearStart.getMonth() === 0 && today.getMonth() !== 0
-        ? lastYearStart.getMonth()
-        : lastYearStart.getMonth() + 1
+      lastYearStart.getUTCMonth() === 0 && today.getUTCMonth() !== 0
+        ? lastYearStart.getUTCMonth()
+        : lastYearStart.getUTCMonth() + 1
     ]
-  const endMonth = monthNames[lastYearEnd.getMonth()]
+  const endMonth = monthNames[lastYearEnd.getUTCMonth()]
 
   // Get the year of the start and end months
-  const startYear = lastYearStart.getFullYear()
-  const endYear = lastYearEnd.getFullYear()
+  const startYear = lastYearStart.getUTCFullYear()
+  const endYear = lastYearEnd.getUTCFullYear()
 
   // Format the result
   const result = `${startMonth}/${startYear} - ${endMonth}/${endYear}`

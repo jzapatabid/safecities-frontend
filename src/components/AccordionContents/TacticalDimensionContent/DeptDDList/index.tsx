@@ -12,7 +12,9 @@ const DeptDDList = ({
   date,
   onDeptSelect,
   onRoleUpdate,
-  onGoalDateUpdate
+  onGoalDateUpdate,
+  placeholderText,
+  applyNumericOnly = true
 }: {
   options: any
   selectedText: string
@@ -21,6 +23,8 @@ const DeptDDList = ({
   onDeptSelect: (option: any) => void
   onRoleUpdate: (event: any) => void
   onGoalDateUpdate?: (event: any) => void
+  placeholderText: any
+  applyNumericOnly?: boolean
 }) => {
   const [deptDD, setDeptDD] = useState(false)
   const handleOptionSelect = (option: any) => {
@@ -47,6 +51,7 @@ const DeptDDList = ({
           placeholderFixed
           secondaryPlaceholder="-"
           value={role || ''}
+          numericOnly={applyNumericOnly}
           onChange={onRoleUpdate}
         />
       </S.DashInputWrapper>

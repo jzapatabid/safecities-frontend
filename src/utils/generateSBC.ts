@@ -22,7 +22,12 @@ const colors = {
 
 const keys = ['totalCityIncidents']
 
-const generateSBC = (value: any, serverData: any, updatedAt: string) => {
+const generateSBC = (
+  value: any,
+  serverData: any,
+  measurement_unit: any,
+  updatedAt: string
+) => {
   if (!serverData || serverData?.length === 0) return
   let slope: string, criticality_info: { index: number; criticality: string }
   let data: Iterable<any>
@@ -203,7 +208,7 @@ const generateSBC = (value: any, serverData: any, updatedAt: string) => {
       .style('font-size', '10px')
       .attr('x', 40)
       .attr('y', height / 2.65)
-      .text('Taxa por 100.000 habitantes')
+      .text(measurement_unit)
   }
 
   const lineYScale = d3
