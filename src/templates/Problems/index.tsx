@@ -35,7 +35,7 @@ import { FormattedMessage } from 'react-intl'
 import LanguageProvider from 'contexts/LanguageSelector'
 
 const Initiatives = () => {
-  let date = new Date()
+  const date = new Date()
   const { problemsState } = useProblems()
   const { setModalState } = useModal()
   // const [search, setSearch] = useState<string>('')
@@ -132,7 +132,12 @@ const Initiatives = () => {
           />
         </S.ActionsWrapper>
         <ProblemsTable problems={problemsState.problems} />
-        <S.Text><FormattedMessage id='last.update.footer.text'/> {date.toUTCString()}</S.Text>
+        <S.Text>
+          <FormattedMessage id='last.update.footer.text' />
+          {
+          date.toUTCString()
+          }
+        </S.Text>
         <Footer />
       </MainContainer>
 </LanguageProvider>

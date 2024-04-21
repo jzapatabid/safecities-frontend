@@ -28,7 +28,7 @@ export const signInRequest = async ({
 }: SignInRequestParams) => {
     try {
       if ("userBlockedData" in localStorage) {
-        let userBlockedData = JSON.parse(localStorage.getItem("userBlockedData")!)
+        const userBlockedData = JSON.parse(localStorage.getItem("userBlockedData")!)
         if (userBlockedData.some((user:any) => user.email === email)) {
           return {emailBlocked: email}
         }
@@ -48,7 +48,7 @@ export const signInRequest = async ({
             if (blockUsr >= 3) {
               localStorage.setItem("blockUserCount", JSON.stringify(0))
               if ("userBlockedData" in localStorage) {
-                let userBlockedData = JSON.parse(localStorage.getItem("userBlockedData")!)
+                const userBlockedData = JSON.parse(localStorage.getItem("userBlockedData")!)
                 userBlockedData.push({email:email, blocked: true})
                 localStorage.setItem("userBlockedData", JSON.stringify(userBlockedData))
               } else {

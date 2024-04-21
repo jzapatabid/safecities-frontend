@@ -16,9 +16,9 @@ import {useIntl} from 'react-intl'
 
 const PlanProgressCard = ({ detail, data }: { detail: any; data: any }) => {
 
-  let intl = useIntl()
-  let progress = intl.formatMessage({id: 'step.by.step.progress'})
-  let lastUpdateF = intl.formatMessage({id: 'last.update.footer.text'})
+  const intl = useIntl()
+  const progress = intl.formatMessage({id: 'step.by.step.progress'})
+  const lastUpdateF = intl.formatMessage({id: 'last.update.footer.text'})
 
 
   const [year = '', month = '', date = ''] = data.lastUpdate

@@ -28,9 +28,9 @@ const StatCard: React.FC<StatCardProps> = ({
   iniciativasCard = false
 }) => {
 
-  let intl = useIntl()
+  const intl = useIntl()
 
-  let innerLabel = intl.formatMessage({ id: 'diagnosis.associated.card'})
+  const innerLabel = intl.formatMessage({ id: 'diagnosis.associated.card'})
   
 
 

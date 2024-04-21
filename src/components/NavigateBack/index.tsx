@@ -15,10 +15,10 @@ type NavigateBackProps = {
   
 const NavigateBack = ({ normalText, linkText, url }: NavigateBackProps) => {
   const router = useRouter()
-  let intl = useIntl()
+  const intl = useIntl()
   
-  let goBackText = intl.formatMessage({id: normalText})
-  let linkFormmatedText = intl.formatMessage({id: linkText})
+  const goBackText = intl.formatMessage({id: normalText})
+  const linkFormmatedText = intl.formatMessage({id: linkText})
 
   return (
     <S.GobackWrapper>

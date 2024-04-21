@@ -58,6 +58,6 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "no-useless-catch": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "prettier/prettier": "off"
   }
 }

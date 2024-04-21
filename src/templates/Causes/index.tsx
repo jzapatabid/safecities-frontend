@@ -30,7 +30,7 @@ const Causes = () => {
   const { causesState } = useCauses()
   const { setModalState } = useModal()
   // const [search, setSearch] = useState<string>('')
-  let date = new Date()
+  const date = new Date()
   return (
     <>
       <LanguageProvider>
