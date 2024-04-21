@@ -22,7 +22,7 @@ const UserMenuDropdown: React.FC<DropdownTypes> = ({
       {fixedSelection && (
         <S.FirstSelectionWrapper open={open}>
           {children}
-          <S.DownArrow state={open} />
+          <S.DownArrow state={open}/>
         </S.FirstSelectionWrapper>
       )}
       <S.OptionsWrapper onClick={(e) => e.stopPropagation()} open={open}>
@@ -32,7 +32,7 @@ const UserMenuDropdown: React.FC<DropdownTypes> = ({
               {option.text}
             </S.OptionText>
             {option.TrailingIcon && (
-              <option.TrailingIcon height="18" width="18" />
+              <option.TrailingIcon height="18" width="18"/>
             )}
           </S.Option>
         ))}

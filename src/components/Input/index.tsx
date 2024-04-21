@@ -69,23 +69,23 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         {...rest}
         placeholder={rest.secondaryPlaceholder}
         onKeyDown={handleKeyDown}
-      />
+     />
       <S.Placeholder htmlFor={rest.placeholder} placeholderFixed>
         {rest.placeholder}
       </S.Placeholder>
       {type === 'password' && (
         <S.IconWrapper onClick={() => setShowText((value) => !value)}>
-          {showText === false ? <EyeIcon /> : <EyeOpenIcon />}
+          {showText === false ? <EyeIcon/> : <EyeOpenIcon/>}
         </S.IconWrapper>
       )}
       {trailingAction && (
         <S.ButtonWrapper onClick={trailingAction}>
-          <ButtonV2 loading={false} variant="outline" text="Carregar" />
+          <ButtonV2 loading={false} variant="outline" text="Carregar"/>
         </S.ButtonWrapper>
       )}
       {endIconAction && (
         <S.TrainingIconActionWrapper>
-          <IconButton icon={<AddCircleOutlineIcon />} onClick={endIconAction} />
+          <IconButton icon={<AddCircleOutlineIcon/>} onClick={endIconAction}/>
         </S.TrainingIconActionWrapper>
       )}
     </>

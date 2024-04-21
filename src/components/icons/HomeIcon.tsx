@@ -12,7 +12,7 @@ const HomeIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
     <path
       d="M11.3337 23.3332V15.3332H16.667V23.3332H23.3337V12.6665H27.3337L14.0003 0.666504L0.666992 12.6665H4.66699V23.3332H11.3337Z"
       fill="white"
-    />
+   />
   </svg>
 )
 

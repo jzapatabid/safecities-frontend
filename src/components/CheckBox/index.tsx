@@ -28,7 +28,7 @@ const Checkbox = ({
         onChange={onChange}
         checked={checked}
         {...props}
-      />
+     />
       {!!label && <S.Label htmlFor={labelFor}>{label}</S.Label>}
     </S.Wrapper>
   )

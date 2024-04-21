@@ -41,7 +41,7 @@ export default function PlanBasicInfoPage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data])
 
-  return <PlanTacticalDimension basic_information={basic_information} />
+  return <PlanTacticalDimension basic_information={basic_information}/>
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

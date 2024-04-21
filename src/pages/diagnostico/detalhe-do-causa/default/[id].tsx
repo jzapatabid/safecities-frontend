@@ -34,7 +34,7 @@ export default function CauseDetailPage({
       problemId={problemId}
       problemName={problemName}
       detail={{ ...detail, indicators }}
-    />
+   />
   )
 }
 

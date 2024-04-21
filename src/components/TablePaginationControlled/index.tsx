@@ -48,8 +48,8 @@ const TablePaginationControlled = ({
             }))
           }
           disabled={pageIndex === 1}
-          icon={<PaginationExtremeLeft />}
-        />
+          icon={<PaginationExtremeLeft/>}
+       />
       </S.PageNavBtnWrapper>
       <S.PageNavBtnWrapper disabled={pageIndex === 1}>
         <IconButton
@@ -63,8 +63,8 @@ const TablePaginationControlled = ({
                 () => {}
           }
           disabled={pageIndex === 1}
-          icon={<PaginationLeft />}
-        />
+          icon={<PaginationLeft/>}
+       />
       </S.PageNavBtnWrapper>
       <S.PageBtnsWrapper>
         {paginationBtns
@@ -93,8 +93,8 @@ const TablePaginationControlled = ({
             }))
           }
           disabled={pageIndex === totalPages}
-          icon={<PaginationLeft transform="rotate(180 0 0)" />}
-        />
+          icon={<PaginationLeft transform="rotate(180 0 0)"/>}
+       />
       </S.PageNavBtnWrapper>
       <S.PageNavBtnWrapper disabled={pageIndex === totalPages}>
         <IconButton
@@ -105,8 +105,8 @@ const TablePaginationControlled = ({
             }))
           }
           disabled={pageIndex === totalPages}
-          icon={<PaginationExtremeLeft transform="rotate(180 0 0)" />}
-        />
+          icon={<PaginationExtremeLeft transform="rotate(180 0 0)"/>}
+       />
       </S.PageNavBtnWrapper>
     </S.Pagination>
   )

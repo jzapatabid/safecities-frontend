@@ -22,12 +22,12 @@ const FileAttachmentItem = ({
   return (
     <S.Wrapper progress={uploadProgress}>
       <S.IconWrapper>
-        <FileAttachmentIcon />
+        <FileAttachmentIcon/>
       </S.IconWrapper>
       {uploadProgress ? (
         <S.LinkText>
           {file?.fileName || file?.name || file?.url}
-          <S.Bar />
+          <S.Bar/>
         </S.LinkText>
       ) : (
         <S.LinkText>{file?.fileName || file?.name || file?.url}</S.LinkText>
@@ -36,7 +36,7 @@ const FileAttachmentItem = ({
       <S.ExtremeWrapper>
         {!uploadProgress && onDownload && (
           <S.IconWrapper clickable onClick={() => onDownload(file)}>
-            <DownloadIcon width={22} height={20} viewBox="0 0 22 19" />
+            <DownloadIcon width={22} height={20} viewBox="0 0 22 19"/>
           </S.IconWrapper>
         )}
         {uploadProgress === undefined ? (
@@ -46,13 +46,13 @@ const FileAttachmentItem = ({
                 clickable
                 onClick={() => (onDelete ? onDelete(file) : null)}
               >
-                <DeleteIcon viewBox="0 0 14 18" />
+                <DeleteIcon viewBox="0 0 14 18"/>
               </S.IconWrapper>
             )}
           </>
         ) : (
           <S.IconWrapper clickable>
-            <CrossIconFilled />
+            <CrossIconFilled/>
           </S.IconWrapper>
         )}
       </S.ExtremeWrapper>

@@ -54,7 +54,7 @@ export default {
   }
 } as ComponentMeta<typeof Heading>
 
-export const Default: Story<HeadingProps> = (args) => <Heading {...args} />
+export const Default: Story<HeadingProps> = (args) => <Heading {...args}/>
 
 Default.args = {
   children: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'

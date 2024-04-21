@@ -49,14 +49,14 @@ const MacroObjectiveContent = ({
             onDateUpdate={onGoalDateUpdate}
             onProblemUpdate={onGoalProblemSelect(goal.goalId)}
             onCustomIndicatorCreate={onCustomIndicatorCreate}
-          />
+         />
         ))}
         <S.AddNewGoalBtnWrapper>
           <TextButton
             text="Adicionar novo indicador de mensuração"
             LeadingIcon={PlusSignIcon}
             onClick={onAddNewGoal}
-          />
+         />
         </S.AddNewGoalBtnWrapper>
       </S.Content>
     </>

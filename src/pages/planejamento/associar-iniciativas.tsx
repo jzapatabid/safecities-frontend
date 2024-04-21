@@ -31,7 +31,7 @@ export default function ProblemsPage({ initiativesData }: ProblemsPageProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initiativesData])
 
-  return <Initiatives />
+  return <Initiatives/>
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

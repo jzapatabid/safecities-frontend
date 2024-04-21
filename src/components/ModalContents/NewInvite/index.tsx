@@ -76,7 +76,7 @@ const NewInviteModalContent = () => {
                 id={t.id}
                 text={'Enviou corretamente o convite!'}
                 variant="success"
-              />
+             />
             ))
             setModalState({ open: false })
             router.replace(router.asPath)
@@ -95,7 +95,7 @@ const NewInviteModalContent = () => {
                     : 'Não foi possível enviar os convites. Tente novamente em algum momento'
                 }
                 variant="warning"
-              />
+             />
             ))
             setModalState({ open: false })
           }
@@ -123,7 +123,7 @@ const NewInviteModalContent = () => {
     <S.Wrapper>
       {(inputError || modalState?.actions?.newInvite?.error) && (
         <S.ErrorMessageWrapper>
-          <WarningIcon fill="#FF6191" width={22} height={22} />
+          <WarningIcon fill="#FF6191" width={22} height={22}/>
           <S.ErrorMessage>
             {inputError
               ? 'O nome de usuário ou e-mail tem um formato inválido'
@@ -139,7 +139,7 @@ const NewInviteModalContent = () => {
             placeholder="Primeiro nome*"
             {...register('firstname')}
             error={watchFirstName && errors?.firstname ? true : false}
-          />
+         />
         </S.InputWrapper>
         <S.InputWrapper>
           <Input
@@ -148,7 +148,7 @@ const NewInviteModalContent = () => {
             placeholder="Sobrenome*"
             {...register('lastname')}
             error={watchLastName && errors?.lastname ? true : false}
-          />
+         />
         </S.InputWrapper>
         <S.InputWrapper>
           <Input
@@ -157,7 +157,7 @@ const NewInviteModalContent = () => {
             placeholder="E-mail*"
             {...register('email')}
             error={watchEmail && errors?.email ? true : false}
-          />
+         />
         </S.InputWrapper>
       </S.Form>
     </S.Wrapper>

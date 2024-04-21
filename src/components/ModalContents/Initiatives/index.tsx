@@ -112,11 +112,11 @@ const InitiativesModalContent: React.FC<CausesContentPropsTypes> = ({
       await prioritizeInitiative(api, payload)
       router.push(router.asPath)
       toast.custom((t) => (
-        <Notification id={t.id} text={messages.successMsg} variant="success" />
+        <Notification id={t.id} text={messages.successMsg} variant="success"/>
       ))
     } catch (e) {
       toast.custom((t) => (
-        <Notification id={t.id} text={messages.warningMsg} variant="warning" />
+        <Notification id={t.id} text={messages.warningMsg} variant="warning"/>
       ))
     }
   }
@@ -227,12 +227,12 @@ const InitiativesModalContent: React.FC<CausesContentPropsTypes> = ({
             onTabClick={handleTabClick}
             linkText={true}
             noBottomBorder
-          />
+         />
         </S.TabsWrapper>
       )}
       {type ? (
         <S.DisclaimerWrapper>
-          <Disclaimer data={INITIATIVES_PRIORITIZATION_DISCLAIMER} />
+          <Disclaimer data={INITIATIVES_PRIORITIZATION_DISCLAIMER}/>
         </S.DisclaimerWrapper>
       ) : null}
       <S.MapWrapper>
@@ -267,7 +267,7 @@ const InitiativesModalContent: React.FC<CausesContentPropsTypes> = ({
               }}
               onCausesCheck={handleCauseCheck}
               onProblemsCheck={handleProblemsCheck(cause)}
-            />
+           />
           ))}
         </S.CauseTreeWrapper>
       </S.MapWrapper>

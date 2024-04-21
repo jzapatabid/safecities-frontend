@@ -172,7 +172,7 @@ const INITIATIVES_TABLE_WIDTH_CONFIG = {
 const NEW_PERSONALIZED_INITIATIVE_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
-  title: '<FormattedMessage id = "add.initiative.title"/>',
+  title: '<FormattedMessage id="add.initiative.title"/>',
   cancelBtn: 'Cancelar',
   confirmBtn: 'Salvar',
   Content: PersonalizedInitiative
@@ -189,7 +189,7 @@ const EDIT_PERSONALIZED_INITIATIVE_MODAL_PROPS = {
 }
 
 const INITIATIVE_STATUS = {
-  PRIORITIZED: <FormattedMessage id = 'prioritized.text'/>,
+  PRIORITIZED: <FormattedMessage id='prioritized.text'/>,
   NOT_PRIORITIZED: ''
 } as const
 
@@ -294,25 +294,25 @@ const PLAN_PRINARY_NAV_LINKS = [
   {
     id: 1,
     href: '/planejamento/plan-basic-information',
-    label: <FormattedMessage id = 'planning.stats.card.title.1' />,
+    label: <FormattedMessage id='planning.stats.card.title.1'/>,
     disabled: false
   },
   {
     id: 2,
     href: '/planejamento/plan-diagnostic-summary',
-    label: <FormattedMessage id = 'planning.stats.card.title.2' />,
+    label: <FormattedMessage id='planning.stats.card.title.2'/>,
     disabled: false
   },
   {
     id: 3,
     href: '/planejamento/plan-strategy-dimension',
-    label: <FormattedMessage id = 'planning.stats.card.title.3' />,
+    label: <FormattedMessage id='planning.stats.card.title.3'/>,
     disabled: false
   },
   {
     id: 4,
     href: '/planejamento/plan-tactical-dimension',
-    label: <FormattedMessage id = 'planning.stats.card.title.4' />,
+    label: <FormattedMessage id='planning.stats.card.title.4'/>,
     disabled: false
   }
 ] as const
@@ -321,13 +321,13 @@ const PLAN_STRATEGY_PRIMARY_NAV_LINKS = [
   {
     id: 2,
     href: '/planejamento/plan-strategy-dimension/macro-objectives',
-    label: <FormattedMessage id = "macro.objectives.title"/>,
+    label: <FormattedMessage id="macro.objectives.title"/>,
     disabled: false
   },
   {
     id: 3,
     href: '/planejamento/plan-strategy-dimension/focus-objectives',
-    label: <FormattedMessage id = "focuses.title"/>,
+    label: <FormattedMessage id="focuses.title"/>,
     disabled: false
   }
 ] as const
@@ -336,13 +336,13 @@ const PLAN_DISGNOSIS_SUMMARY_NAV_LINKS = [
   {
     id: 1,
     href: '/planejamento/plan-diagnostic-summary/problem-diagnosis',
-    label: <FormattedMessage id = "text.problems"/>,
+    label: <FormattedMessage id="text.problems"/>,
     disabled: false
   },
   {
     id: 2,
     href: '/planejamento/plan-diagnostic-summary/causes-diagnosis',
-    label: <FormattedMessage id = "text.causes"/>,
+    label: <FormattedMessage id="text.causes"/>,
     disabled: false
   }
 ] as const

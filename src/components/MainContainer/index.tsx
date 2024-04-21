@@ -50,7 +50,7 @@ const MainContainer = ({ children }: ContainerProps) => {
         <IntlProvider messages={state.messages} locale="pt" defaultLocale="pt">
           <S.Container>
             <S.SideNavBarWrapper>
-              <SideNavBar links={links} variant="small" />
+              <SideNavBar links={links} variant="small"/>
             </S.SideNavBarWrapper>
             <S.Wrapper>{children}</S.Wrapper>
           </S.Container>

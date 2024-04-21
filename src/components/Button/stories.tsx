@@ -10,23 +10,23 @@ export default {
   }
 } as Meta
 
-export const Normal: Story<ButtonProps> = (args) => <Button {...args} />
+export const Normal: Story<ButtonProps> = (args) => <Button {...args}/>
 
-export const AsLink: Story<ButtonProps> = (args) => <Button {...args} />
+export const AsLink: Story<ButtonProps> = (args) => <Button {...args}/>
 
 AsLink.args = {
   as: 'a',
   href: '/link'
 }
 
-export const Minimal: Story<ButtonProps> = (args) => <Button {...args} />
+export const Minimal: Story<ButtonProps> = (args) => <Button {...args}/>
 
 Minimal.args = {
   minimal: true,
   children: 'Esqueci minha senha'
 }
 
-export const Disabled: Story<ButtonProps> = (args) => <Button {...args} />
+export const Disabled: Story<ButtonProps> = (args) => <Button {...args}/>
 
 Disabled.args = {
   disabled: true,

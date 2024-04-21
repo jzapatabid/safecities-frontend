@@ -51,7 +51,7 @@ const Home = () => {
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         <S.HeroWelcome>
           <S.Paragraph><FormattedMessage id='home.welcome.message'/> {fullName.split(' ')[0]},</S.Paragraph>
@@ -68,7 +68,7 @@ const Home = () => {
         <S.ReadMoreText target="_blank" href="https://drive.google.com/file/d/1-647R57Oe5PvDbNkWqWlq8RII-SBgP_K/view?usp=sharing">
           <FormattedMessage id='home.link.text.two'/>
         </S.ReadMoreText>
-        <Footer />
+        <Footer/>
       </MainContainer>
 </LanguageProvider>
     </>

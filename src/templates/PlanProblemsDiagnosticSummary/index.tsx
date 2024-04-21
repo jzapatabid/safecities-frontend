@@ -113,13 +113,13 @@ const PlanProblemsDiagnosticSummary = ({
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         <NavigateBack
           normalText= "plan.basic.info.go.back"
           linkText="plan.basic.info.link.text"
           url="/planejamento/construir-plano"
-        />
+       />
         <S.SectionWrapper>
           <S.PlanName>
             {basic_information?.title || `[Título do plano]`}
@@ -137,7 +137,7 @@ const PlanProblemsDiagnosticSummary = ({
                 }
               })}
               variant="small"
-            />
+           />
           </S.NavBarWrapper>
         </S.SectionWrapper>
         <S.SectionWrapperNoBottomUnderline>
@@ -149,7 +149,7 @@ const PlanProblemsDiagnosticSummary = ({
                 }
               })}
               variant="small"
-            />
+           />
           </S.NavBarWrapperWithUnderline>
         </S.SectionWrapperNoBottomUnderline>
         <S.ContentSection>
@@ -165,7 +165,7 @@ const PlanProblemsDiagnosticSummary = ({
                     <DiagnosisSummaryHeader
                       data={item}
                       fulfilled={item.fulfilled}
-                    />
+                   />
                   ),
                   summary: null,
                   content: (
@@ -180,14 +180,14 @@ const PlanProblemsDiagnosticSummary = ({
                           ? `/diagnostico/detalhe-do-problema/${item.problem_id}-bktplan`
                           : ''
                       }
-                    />
+                   />
                   ),
                   footer: (
                     <AccordionFooter
                       disableSave={!item.diagnosis}
                       onSave={handleSave(item.problemId)}
                       toggleAccordion={handleAccordionToggle(item.problemId)}
-                    />
+                   />
                   )
                 }}
               </AccordionV2>

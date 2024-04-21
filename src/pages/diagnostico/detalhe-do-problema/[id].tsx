@@ -26,7 +26,7 @@ export default function ProblemDetailPage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return <ProblemDetail id={id} detail={detail} backTo={backTo} />
+  return <ProblemDetail id={id} detail={detail} backTo={backTo}/>
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

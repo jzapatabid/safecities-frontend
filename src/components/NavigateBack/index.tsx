@@ -23,7 +23,7 @@ const NavigateBack = ({ normalText, linkText, url }: NavigateBackProps) => {
   return (
     <S.GobackWrapper>
       <S.NavWrapper>
-        <LeftArrow height={24} width={24} onClick={() => router.push(url)} />
+        <LeftArrow height={24} width={24} onClick={() => router.push(url)}/>
       </S.NavWrapper>
       <S.GoBackText>
         {goBackText + " "}

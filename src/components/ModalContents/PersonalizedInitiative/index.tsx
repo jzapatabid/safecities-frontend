@@ -345,7 +345,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="A causa personalizada foi atualizada corretamente."
                 variant="success"
-              />
+             />
             ))
           } catch (e) {
             toast.custom((t) => (
@@ -353,7 +353,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="A solicitação de atualização para causa personalizada falhou devido a erros. Por favor, tente novamente mais tarde."
                 variant="warning"
-              />
+             />
             ))
           }
         }
@@ -376,7 +376,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="Causa nova adicionada corretamente."
                 variant="success"
-              />
+             />
             ))
             setInitiativesState((state) => ({
               ...state,
@@ -388,7 +388,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="Iniciativa não registada. Por favor, tente novamente mais tarde"
                 variant="warning"
-              />
+             />
             ))
           }
         }
@@ -428,7 +428,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                   id={t.id}
                   text="Iniciativa excluído corretamente."
                   variant="success"
-                />
+               />
               ))
             } catch (e: any) {
               setModalState({ open: false })
@@ -447,7 +447,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                     text="
                     Você deve despriorizar a iniciativa por todas as causas antes de excluí-la."
                     variant="warning"
-                  />
+                 />
                 ))
               } else {
                 toast.custom((t) => (
@@ -455,7 +455,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                     id={t.id}
                     text="Ocorreu um erro ao excluir a iniciativa. Por favor, tente novamente mais tarde."
                     variant="warning"
-                  />
+                 />
                 ))
               }
             }
@@ -486,7 +486,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
           value={causeData.name}
           onChange={onTitleChange}
           restrictionLabel="Insira até 200 caracteres"
-        />
+       />
       </S.CauseTitleInputWrapper>
       <S.DropdownWrapper>
         <Dropdown
@@ -529,7 +529,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
           placeholder={
             'Selecione uma causa ao qual a nova inciativa será associada*'
           }
-        />
+       />
       </S.DropdownWrapper>
       <S.JustificationInputWrapper>
         <MultilineInput
@@ -539,7 +539,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
           value={causeData.justification}
           onChange={onDescriptionChange}
           restrictionLabel="Insira até 1000 caracteres"
-        />
+       />
       </S.JustificationInputWrapper>
       <S.DropdownWrapper>
         <Dropdown
@@ -571,7 +571,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                     : 'Nível de custo'
                 }`
           }
-        />
+       />
       </S.DropdownWrapper>
       <S.DropdownWrapper>
         <Dropdown
@@ -607,10 +607,10 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                     : 'Nível de eficácia'
                 }`
           }
-        />
+       />
       </S.DropdownWrapper>
       <S.InfoLabel onClick={handleShowEfficiencyInfoClick}>
-        <InfoIcon color={theme.colors.feedback.informativePure} />
+        <InfoIcon color={theme.colors.feedback.informativePure}/>
         <S.InfoText>Informações sobre eficácia</S.InfoText>
       </S.InfoLabel>
       <S.DropdownWrapper>
@@ -655,7 +655,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                   .join(', ')
           }
           placeholder={'Departamentos envolvidos*'}
-        />
+       />
       </S.DropdownWrapper>
       <S.EvidenceInputWrapper>
         <MultilineInput
@@ -665,13 +665,13 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
           value={causeData.evidences}
           onChange={onEvidenceChange}
           restrictionLabel="Insira até 1000 caracteres"
-        />
+       />
       </S.EvidenceInputWrapper>
       <S.AttachmentsWrapper>
         <S.AttachmentsTitle>
           Anexar referências de evidências de arquivos
           <S.IconWrapper>
-            <InfoIcon height={20} width={20} />
+            <InfoIcon height={20} width={20}/>
             <S.InfoTooltip>
               {'.doc, .docx, .ppt, .pptx, .pdf, .epub, .html, .xls, .csv'}
             </S.InfoTooltip>
@@ -682,7 +682,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
           filesList={cause ? edit_initiative.annexes : new_initiative.annexes}
           onFileDelete={handleFileDelete}
           onFileDownload={handleFileDownload}
-        />
+       />
       </S.AttachmentsWrapper>
       <S.ReferencesWrapper>
         <S.AttachmentsTitle>Referências externas</S.AttachmentsTitle>
@@ -694,7 +694,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
             key={idx}
             link={link}
             onDelete={handlerLinkDelete}
-          />
+         />
         ))}
         {(showReferenceInput || causeData.references?.length === 0) && (
           <S.ReferencesInputWrapper>
@@ -710,7 +710,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                   newLink: e.target.value
                 }))
               }
-            />
+           />
           </S.ReferencesInputWrapper>
         )}
         {!showReferenceInput && causeData.references?.length !== 0 && (
@@ -719,7 +719,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
               text="Adicionar referências"
               LeadingIcon={PlusSignIcon}
               onClick={() => setShowReferenceInput(true)}
-            />
+           />
           </S.AddReferencesBtnWrapper>
         )}
       </S.ReferencesWrapper>

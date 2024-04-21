@@ -13,8 +13,8 @@ export default function TagOfRates() {
         y2="7.51855"
         stroke="#03E0B8"
         strokeWidth="2"
-      />
-      <circle cx="24" cy="7" r="7" fill="#03E0B8" />
+     />
+      <circle cx="24" cy="7" r="7" fill="#03E0B8"/>
     </svg>
   )
 }

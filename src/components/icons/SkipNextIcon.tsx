@@ -14,7 +14,7 @@ const SkipNextIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
       clipRule="evenodd"
       d="M14.5 12L6 18V6L14.5 12ZM18 18H16V6H18V18Z"
       fill="#141B25"
-    />
+   />
   </svg>
 )
 

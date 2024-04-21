@@ -59,7 +59,7 @@ const Dropdown: React.FC<DropdownTypes> = ({
         {selectedText}
       </S.SelectedText>
       <S.IconWrapper>
-        <S.DownArrow state={open} />
+        <S.DownArrow state={open}/>
       </S.IconWrapper>
       <S.OptionsWrapper onClick={(e) => e.stopPropagation()} open={open}>
         {options?.map((option, idx) => (
@@ -73,14 +73,14 @@ const Dropdown: React.FC<DropdownTypes> = ({
             }
           >
             {!singleSelect && (
-              <CheckboxV2 checked={option.checked || false} readOnly />
+              <CheckboxV2 checked={option.checked || false} readOnly/>
             )}
             <S.OptionText>{option?.text}</S.OptionText>
           </S.Option>
         ))}
         {addNewLabel && (
           <S.Option link>
-            <PlusSignIcon />
+            <PlusSignIcon/>
             <S.OptionText onClick={onAdd}>{addNewLabel}</S.OptionText>
           </S.Option>
         )}

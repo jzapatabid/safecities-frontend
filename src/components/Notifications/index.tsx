@@ -54,11 +54,11 @@ const Notification: React.FC<NotificationProps> = ({ text, id, variant }) => {
   return (
     <S.Wrapper ref={ref}>
       <S.VariantWrapper>
-        <Icon />
+        <Icon/>
       </S.VariantWrapper>
       <S.Text>{text}</S.Text>
       <S.DismissWrapper onClick={() => toast.dismiss(id)}>
-        <CrossIcon height={15} width={15} fill="#fff" />
+        <CrossIcon height={15} width={15} fill="#fff"/>
       </S.DismissWrapper>
     </S.Wrapper>
   )

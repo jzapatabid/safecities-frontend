@@ -12,7 +12,7 @@ jest.mock('next/router', () => {
   }
 })
 
-describe('<ActiveLink />', () => {
+describe('<ActiveLink/>', () => {
   it('renders correctly', () => {
     render(
       <ActiveLink href="/">

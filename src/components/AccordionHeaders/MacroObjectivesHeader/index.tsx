@@ -54,10 +54,10 @@ const MacroObjectiveHeader = ({
               <MutliDirectionArrow
                 direction={data.open ? 'up' : 'down'}
                 source={'Accordion'}
-              />
+             />
             </S.ArrowWrapper>
             <S.IconWrapper>
-              <FilledWarningIcon />
+              <FilledWarningIcon/>
             </S.IconWrapper>
           </>
         ) : null}
@@ -65,7 +65,7 @@ const MacroObjectiveHeader = ({
       <S.AllItemsWrapper>
         <S.NameAndTitleWrapper>
           <S.AccIconWrapper>
-            <Icon />
+            <Icon/>
           </S.AccIconWrapper>
           <S.Name>{`Macro objetivo ${data.id}`}</S.Name>
           <S.Title>{data.name}</S.Title>

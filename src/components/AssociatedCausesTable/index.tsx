@@ -84,7 +84,7 @@ export default function AssociatedCausesTable({
                 indeterminate: row.getIsSomeSelected(),
                 onChange: row.getToggleSelectedHandler()
               }}
-            />
+           />
           </S.InputColumnWrapper>
         ),
         width: 70
@@ -122,7 +122,7 @@ export default function AssociatedCausesTable({
         cell: (info) =>
           info.getValue() === true ? (
             <S.StatusWrapper>
-              <FlagFilledIcon fill={theme.colors.base.lightPure} />
+              <FlagFilledIcon fill={theme.colors.base.lightPure}/>
               {PROBLEM_STATUS.PRIORITIZED}
             </S.StatusWrapper>
           ) : (
@@ -147,7 +147,7 @@ export default function AssociatedCausesTable({
               <S.TrendText>
                 {`${!negative ? '+' : ''}${info.getValue()}`}%
               </S.TrendText>
-              {negative ? <DownwardTrendIcon /> : <UpwardTrendIcon />}
+              {negative ? <DownwardTrendIcon/> : <UpwardTrendIcon/>}
             </S.Trend>
           )
         },
@@ -163,9 +163,9 @@ export default function AssociatedCausesTable({
         cell: (info) => (
           <S.Author>
             {info.getValue() === CAUSE_TYPE_ACCESSOR.PERSONALIZED ? (
-              <RecordVoiceIcon />
+              <RecordVoiceIcon/>
             ) : (
-              <Book2Icon />
+              <Book2Icon/>
             )}
             <S.AuthorText>
               {CAUSE_TYPE_LABELS[`${info.getValue() as CauseTypeModel}`]}
@@ -232,7 +232,7 @@ export default function AssociatedCausesTable({
           search,
           setGlobalSearch
         }}
-      />
+     />
     </div>
   )
 }
@@ -253,5 +253,5 @@ function IndeterminateCheckbox({
     }
   }, [ref, indeterminate, rest.checked])
   // @ts-expect-error It is typescript issue
-  return <S.Input type="checkbox" ref={ref} onClick={handleClick} {...rest} />
+  return <S.Input type="checkbox" ref={ref} onClick={handleClick} {...rest}/>
 }

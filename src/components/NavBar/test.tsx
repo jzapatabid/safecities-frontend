@@ -23,7 +23,7 @@ jest.mock('next/router', () => ({
 
 describe('NavBar', () => {
   it('should render correctly', () => {
-    const { container } = render(<NavBar links={links} />)
+    const { container } = render(<NavBar links={links}/>)
 
     expect(container.querySelectorAll('li')).toHaveLength(2)
 
@@ -38,7 +38,7 @@ describe('NavBar', () => {
   })
 
   it('should render the variant large as default', () => {
-    render(<NavBar links={links} />)
+    render(<NavBar links={links}/>)
 
     const link = screen.getAllByRole('link')[0]
 
@@ -50,7 +50,7 @@ describe('NavBar', () => {
   })
 
   it('should render the variant small', () => {
-    render(<NavBar links={links} variant="small" />)
+    render(<NavBar links={links} variant="small"/>)
 
     const link = screen.getAllByRole('link')[0]
 

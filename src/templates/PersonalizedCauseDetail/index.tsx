@@ -131,7 +131,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         <S.GobackWrapper>
           <S.NavWrapper>
@@ -142,7 +142,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
               onClick={() =>
                 router.push(`/diagnostico/causas-associadas/${problemId}`)
               }
-            />
+           />
           </S.NavWrapper>
           <S.GoBackText>
             Detalhe das causas associadas:{' '}
@@ -167,7 +167,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                  />
+                 />
                 </S.IconWrapper>
               ) : (
                 <S.IconWrapper>
@@ -175,7 +175,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                  />
+                 />
                 </S.IconWrapper>
               )}
               <ButtonV2
@@ -193,12 +193,12 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                         CAUSES_ACTION_MODAL_PROPS[CAUSES_ACTION.PRIORITIZE]
                       )
                 }
-              />
+             />
             </S.BtnWrapper>
           </S.NameAndActionWrapper>
           <S.CauseInfoWrapper>
             <S.Author>
-              <RecordVoiceIcon />
+              <RecordVoiceIcon/>
               <S.CauseType>
                 {CAUSE_TYPE_LABELS[CAUSE_TYPE_ACCESSOR.PERSONALIZED]}
               </S.CauseType>
@@ -219,7 +219,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
               variant="outline"
               LeadingIcon={EditIcon}
               onClick={handleEditCause}
-            />
+           />
           </S.ButtonWrapper>
           <S.DescriptionWrapper>
             <S.DescLabel>Descrição</S.DescLabel>
@@ -238,7 +238,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                 onlyFilesList
                 filesList={cause.annexes}
                 onFileDownload={onFileDownload}
-              />
+             />
             </S.AttachmentsWrapper>
           </S.SectionWrapper>
         ) : null}
@@ -247,12 +247,12 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
             <S.ReferencesWrapper>
               <S.AttachmentsTitle>Referências</S.AttachmentsTitle>
               {cause.references.map((link: any, idx: number) => (
-                <ReferenceForeignlink key={idx} link={link} noDelete />
+                <ReferenceForeignlink key={idx} link={link} noDelete/>
               ))}
             </S.ReferencesWrapper>
           </S.SectionWrapper>
         ) : null}
-        <Footer />
+        <Footer/>
       </MainContainer>
 </LanguageProvider>
     </>

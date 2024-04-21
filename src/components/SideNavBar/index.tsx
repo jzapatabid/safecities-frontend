@@ -32,7 +32,7 @@ const NavBar = ({ links, variant = 'large' }: NavBarProps) => {
             <S.Item variant={variant} disabled={disabled}>
               <S.ItemContentWrapper>
                 <S.IconWrapper>
-                  <Icon />
+                  <Icon/>
                 </S.IconWrapper>
                 <S.Text>{label}</S.Text>
               </S.ItemContentWrapper>

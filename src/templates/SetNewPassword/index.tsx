@@ -125,7 +125,7 @@ const SetNewPassword = ({ type }: SetNewPasswordProps) => {
           id={t.id}
           text={SET_NEW_PW_SUCCESS_MESSAGE[type]}
           variant="success"
-        />
+       />
       ))
       Router.push('/login')
     } catch (err: any) {
@@ -162,7 +162,7 @@ const SetNewPassword = ({ type }: SetNewPasswordProps) => {
     <S.Wrapper>
       <Container>
         <S.Content>
-          <S.Brand />
+          <S.Brand/>
           <S.HeadingWrapper>
             <Heading size="large" lineHeight="6rem">
               Bem-vind@ à Plataforma Cidades Seguras.
@@ -199,7 +199,7 @@ const SetNewPassword = ({ type }: SetNewPasswordProps) => {
                 inlineError={errors}
                 getErrorMessage={getStaticErrorMessage}
                 handleClick={handlePageReload}
-              />
+             />
             )}
             {Object.keys(detailedError).length === 0 ? (
               <>
@@ -209,7 +209,7 @@ const SetNewPassword = ({ type }: SetNewPasswordProps) => {
                     type="password"
                     {...register('password')}
                     error={errors.password?.message}
-                  />
+                 />
                 </S.InputWrapper>
                 <S.InputWrapper>
                   <Input
@@ -217,7 +217,7 @@ const SetNewPassword = ({ type }: SetNewPasswordProps) => {
                     type="password"
                     {...register('confirmPassword')}
                     error={errors.confirmPassword?.message}
-                  />
+                 />
                 </S.InputWrapper>
                 <Button disabled={isDisabled} isLoading={loading}>
                   Enviar
@@ -225,7 +225,7 @@ const SetNewPassword = ({ type }: SetNewPasswordProps) => {
               </>
             ) : null}
           </S.Form>
-          <BidLogo />
+          <BidLogo/>
         </S.Content>
       </Container>
     </S.Wrapper>

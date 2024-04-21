@@ -21,7 +21,7 @@ const SidesheetModalTemplate = () => {
             width={24}
             onClick={modalState.onGoBack}
             strokeWidth={3}
-          />
+         />
           <S.BackNavText>{modalState.backBtn}</S.BackNavText>
         </S.BackNavigationWrapper>
       )}
@@ -32,7 +32,7 @@ const SidesheetModalTemplate = () => {
         ) : null}
       </S.Header>
       <S.ContentWrapper>
-        {Content && <Content {...modalState.contentProps} />}
+        {Content && <Content {...modalState.contentProps}/>}
       </S.ContentWrapper>
       {modalState.contentType !== 'static' && (
         <S.Footer hasDangerBtn={Boolean(modalState.dangerBtn)}>
@@ -45,7 +45,7 @@ const SidesheetModalTemplate = () => {
                 onClick={modalState.onDanger}
                 text={modalState.dangerBtn}
                 LeadingIcon={DeleteIcon}
-              />
+             />
             </S.DangerBtnWrapper>
           )}
           <S.BtnGroup>
@@ -56,7 +56,7 @@ const SidesheetModalTemplate = () => {
                   variant="outline"
                   onClick={modalState.onCancel || onClose}
                   text={modalState.cancelBtn}
-                />
+               />
               </S.BtnWrapper>
             )}
             {modalState.confirmBtn && (
@@ -71,7 +71,7 @@ const SidesheetModalTemplate = () => {
                       ? null
                       : modalState.confirmIcon || FlagFilledIcon
                   }
-                />
+               />
               </S.BtnWrapper>
             )}
           </S.BtnGroup>

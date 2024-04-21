@@ -39,10 +39,10 @@ const Button = ({
       {...props}
     >
       {isLoading ? (
-        <S.Spinner data-testid="is-loading" />
+        <S.Spinner data-testid="is-loading"/>
       ) : (
         <>
-          {checked && <CheckedIcon />}
+          {checked && <CheckedIcon/>}
           {children}
         </>
       )}

@@ -92,12 +92,12 @@ const Initiatives = () => {
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         <S.NavBarWrapper>
-          <NavBar links={PLAN_NAV_LINKS} variant="small" />
+          <NavBar links={PLAN_NAV_LINKS} variant="small"/>
         </S.NavBarWrapper>
-        <Disclaimer data={PLAN_DISCLAIMER} />
+        <Disclaimer data={PLAN_DISCLAIMER}/>
         <S.StatsWrapper>
           <S.Wrapper>
             {INITIATIVES_SUMMARY_FIELDS.map(
@@ -110,7 +110,7 @@ const Initiatives = () => {
                   label2={label2}
                   iniciativasCard={true}
                   {...stats}
-                />
+               />
               )
             )}
           </S.Wrapper>
@@ -120,7 +120,7 @@ const Initiatives = () => {
               text="Histórico de problemas despriorizados"
               LeadingIcon={HistoryIcon}
               disabled
-            /> */}
+           /> */}
             <ButtonV2
               loading={false}
               text = {<FormattedMessage id='button.planning.add.new.initiative'/>}
@@ -128,20 +128,20 @@ const Initiatives = () => {
               onClick={() =>
                 setModalState(NEW_PERSONALIZED_INITIATIVE_MODAL_PROPS)
               }
-            />
+           />
           </S.BtnWrapper>
         </S.StatsWrapper>
         {/* <S.FiltersWrapper>
-          <SearchBar search={search} setSearch={setSearch} />
+          <SearchBar search={search} setSearch={setSearch}/>
           <S.ClearFiltersBtnWrapper>
-            <ButtonV2 loading={false} text="Limpar filtros" LeadingIcon={CrossIcon} disabled />
+            <ButtonV2 loading={false} text="Limpar filtros" LeadingIcon={CrossIcon} disabled/>
           </S.ClearFiltersBtnWrapper>
         </S.FiltersWrapper> */}
         <S.ActionsWrapper>
           <ButtonV2
             loading={btn1Loading}
             variant="outline"
-            text={<FormattedMessage id ='button.diagnosis.deprioritize.problem' />}
+            text={<FormattedMessage id ='button.diagnosis.deprioritize.problem'/>}
             LeadingIcon={FlagIcon}
             disabled={disableDeprioritize}
             onClick={() =>
@@ -149,10 +149,10 @@ const Initiatives = () => {
                 INITIATIVES_ACTION_MODAL_PROPS[INITIATIVES_ACTION.DEPRIORITIZE]
               )
             }
-          />
+         />
           <ButtonV2
             loading={btn2Loading}
-            text={<FormattedMessage id ='button.diagnosis.prioritize.problem' />}
+            text={<FormattedMessage id ='button.diagnosis.prioritize.problem'/>}
             LeadingIcon={FlagFilledIcon}
             disabled={disablePrioritize}
             onClick={() =>
@@ -160,11 +160,11 @@ const Initiatives = () => {
                 INITIATIVES_ACTION_MODAL_PROPS[INITIATIVES_ACTION.PRIORITIZE]
               )
             }
-          />
+         />
         </S.ActionsWrapper>
-        <InitiativesTable problems={initiativesState.problems} />
-        <S.Text>{<FormattedMessage id ='last.update.footer.text' />}: 23 de junho de 2023</S.Text> 
-        <Footer />
+        <InitiativesTable problems={initiativesState.problems}/>
+        <S.Text>{<FormattedMessage id ='last.update.footer.text'/>}: 23 de junho de 2023</S.Text> 
+        <Footer/>
       </MainContainer>
 </LanguageProvider>
     </>

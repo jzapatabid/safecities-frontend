@@ -43,7 +43,7 @@ export default function ProblemDetailPage({
       problemId={problemId}
       problem={problemDetail}
       totalCauses={totalCauses}
-    />
+   />
   )
 }
 

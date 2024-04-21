@@ -28,7 +28,7 @@ const PlusSignIcon = ({
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-    />
+   />
   </svg>
 )
 

@@ -153,7 +153,7 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         <S.GobackWrapper>
           <S.NavWrapper>
@@ -162,14 +162,14 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
               width={24}
               color={theme.colors.base.lightPure}
               onClick={() => router.push(`/planejamento/associar-iniciativas`)}
-            />
+           />
           </S.NavWrapper>
           <S.GoBackText>
-            <FormattedMessage id = "plan.basic.info.go.back" />{' '}
+            <FormattedMessage id="plan.basic.info.go.back"/>{' '}
             <S.LinkText
               onClick={() => router.push(`/planejamento/associar-iniciativas/`)}
             >
-              <FormattedMessage id = "planning.associate.initiatives.title" />
+              <FormattedMessage id="planning.associate.initiatives.title"/>
             </S.LinkText>
           </S.GoBackText>
         </S.GobackWrapper>
@@ -185,7 +185,7 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                  />
+                 />
                 </S.IconWrapper>
               ) : (
                 <S.IconWrapper>
@@ -193,7 +193,7 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                  />
+                 />
                 </S.IconWrapper>
               )}
               <ButtonV2
@@ -217,12 +217,12 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                         ]
                       )
                 }
-              />
+             />
             </S.BtnWrapper>
           </S.NameAndActionWrapper>
           <S.CauseInfoWrapper>
             <S.CauseInfoItemWrapper>
-              <S.CauseInfoItemKey><FormattedMessage id = "last.update.footer.text" /></S.CauseInfoItemKey>
+              <S.CauseInfoItemKey><FormattedMessage id="last.update.footer.text"/></S.CauseInfoItemKey>
               <S.CauseInfoItemValue>4 de julho de 2023</S.CauseInfoItemValue>
             </S.CauseInfoItemWrapper>
           </S.CauseInfoWrapper>
@@ -234,19 +234,19 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                 variant="outline"
                 LeadingIcon={EditIcon}
                 onClick={handleEditInitiative}
-              />
+             />
             </S.ButtonWrapper>
           ) : null}
           <S.DescriptionWrapper>
-            <S.DescLabel><FormattedMessage id = "asociate.initiatives.justfication"/></S.DescLabel>
+            <S.DescLabel><FormattedMessage id="asociate.initiatives.justfication"/></S.DescLabel>
             <S.Description>{cause.justification}</S.Description>
           </S.DescriptionWrapper>
         </S.SectionWrapper>
         <S.SectionWrapper>
-          <S.CurrentSituationTitle><FormattedMessage id = "asociate.initiatives.current.sitation"/></S.CurrentSituationTitle>
+          <S.CurrentSituationTitle><FormattedMessage id="asociate.initiatives.current.sitation"/></S.CurrentSituationTitle>
           <S.CostAndEffectivenessWrapper>
             <S.Card>
-              <S.CardTitle><FormattedMessage id = "asociate.initiatives.cost"/></S.CardTitle>
+              <S.CardTitle><FormattedMessage id="asociate.initiatives.cost"/></S.CardTitle>
               {cause.costLevel && (
                 <>
                   <S.CardLabel>
@@ -255,12 +255,12 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                   <S.CardBar
                     percentage={(cause.costLevel / 3) * 100}
                     type="cost"
-                  />
+                 />
                 </>
               )}
             </S.Card>
             <S.Card>
-              <S.CardTitle><FormattedMessage id = "asociate.initiatives.effectiveness"/></S.CardTitle>
+              <S.CardTitle><FormattedMessage id="asociate.initiatives.effectiveness"/></S.CardTitle>
               {cause.efficiencyLevel && (
                 <>
                   <S.CardLabel>
@@ -269,16 +269,16 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                   <S.CardBar
                     percentage={(cause.efficiencyLevel / 5) * 100}
                     type="effectiveness"
-                  />
+                 />
                 </>
               )}
             </S.Card>
           </S.CostAndEffectivenessWrapper>
         </S.SectionWrapper>
         <S.SectionWrapper>
-          <S.EvidenceLabel><FormattedMessage id = "asociate.initiatives.conection"/></S.EvidenceLabel>
+          <S.EvidenceLabel><FormattedMessage id="asociate.initiatives.conection"/></S.EvidenceLabel>
           <S.ConnectionsDetailsWrapper>
-            <ToastSuccessIcon />
+            <ToastSuccessIcon/>
             <S.EvidenceText onClick={() => handleShowRelations(cause.id)}>
               {`${cause?.totalProblems || 0} Problemas e ${
                 cause?.totalCauses || 0
@@ -287,15 +287,15 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
           </S.ConnectionsDetailsWrapper>
         </S.SectionWrapper>
         <S.SectionWrapper>
-          <S.EvidenceLabel><FormattedMessage id = "asociate.initiatives.evidence"/></S.EvidenceLabel>
+          <S.EvidenceLabel><FormattedMessage id="asociate.initiatives.evidence"/></S.EvidenceLabel>
           <S.Description>{cause.evidences}</S.Description>
         </S.SectionWrapper>
         {cause.municipalDepartments?.length ? (
           <S.SectionWrapper>
-            <S.EvidenceLabel><FormattedMessage id = "asociate.initiatives.departments"/></S.EvidenceLabel>
+            <S.EvidenceLabel><FormattedMessage id="asociate.initiatives.departments"/></S.EvidenceLabel>
             <S.DeptCardWrapper>
               {cause.municipalDepartments.map((dept: any) => (
-                <DepartmentCard key={dept.id} label={dept.name} />
+                <DepartmentCard key={dept.id} label={dept.name}/>
               ))}
             </S.DeptCardWrapper>
           </S.SectionWrapper>
@@ -308,21 +308,21 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                 onlyFilesList
                 filesList={cause.annexes}
                 onFileDownload={onFileDownload}
-              />
+             />
             </S.AttachmentsWrapper>
           </S.SectionWrapper>
         ) : null}
         {cause.references?.length ? (
           <S.SectionWrapper>
             <S.ReferencesWrapper>
-              <S.AttachmentsTitle><FormattedMessage id = "asociate.initiatives.references"/></S.AttachmentsTitle>
+              <S.AttachmentsTitle><FormattedMessage id="asociate.initiatives.references"/></S.AttachmentsTitle>
               {cause.references.map((link: any, idx: number) => (
-                <ReferenceForeignlink key={idx} link={link} noDelete />
+                <ReferenceForeignlink key={idx} link={link} noDelete/>
               ))}
             </S.ReferencesWrapper>
           </S.SectionWrapper>
         ) : null}
-        <Footer />
+        <Footer/>
       </MainContainer>
 </LanguageProvider>
     </>

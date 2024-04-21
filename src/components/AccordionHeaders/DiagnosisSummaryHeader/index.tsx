@@ -20,10 +20,10 @@ const DiagnosisSummaryHeader = ({
             <MutliDirectionArrow
               direction={data.open ? 'up' : 'down'}
               source={'Accordion'}
-            />
+           />
           </S.ArrowWrapper>
           <S.IconWrapper>
-            {fulfilled ? <FilledSuccessIcon /> : <FilledWarningIcon />}
+            {fulfilled ? <FilledSuccessIcon/> : <FilledWarningIcon/>}
           </S.IconWrapper>
         </>
       </S.EnabledItemsWrapper>

@@ -12,7 +12,7 @@ const FlagFilledIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
     <path
       d="M9.4 2.50003L9 0.500031H0V17.5H2V10.5H7.6L8 12.5H15V2.50003H9.4Z"
       fill={props.fill || '#141B25'}
-    />
+   />
   </svg>
 )
 

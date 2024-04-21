@@ -14,21 +14,21 @@ export default function DownloadIconButton() {
           strokeWidth="2.10909"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
+       />
         <path
           d="M4.66699 6.27783L8.00033 9.61117L11.3337 6.27783"
           stroke="#00ADD2"
           strokeWidth="2.10909"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
+       />
         <path
           d="M8.00098 9.61096V1.61096"
           stroke="#00ADD2"
           strokeWidth="2.10909"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
+       />
       </g>
       <defs>
         <clipPath id="clip0_5157_7282">
@@ -37,7 +37,7 @@ export default function DownloadIconButton() {
             height="16"
             fill="white"
             transform="translate(0 0.5)"
-          />
+         />
         </clipPath>
       </defs>
     </svg>

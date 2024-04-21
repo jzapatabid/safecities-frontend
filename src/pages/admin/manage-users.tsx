@@ -47,7 +47,7 @@ export default function ManageUsersPage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [users, totalItems, totalPages])
 
-  return <ManageUsers />
+  return <ManageUsers/>
 }
 
 export const getServerSideProps = withSSRAuth(async (ctx) => {

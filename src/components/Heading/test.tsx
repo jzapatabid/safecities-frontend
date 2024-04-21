@@ -2,7 +2,7 @@ import { render, screen } from 'utils/test-utils'
 
 import Heading from '.'
 
-describe('<Heading />', () => {
+describe('<Heading/>', () => {
   it('should render heading as h1 by default', () => {
     const { container } = render(<Heading>Bem vindo</Heading>)
 

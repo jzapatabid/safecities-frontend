@@ -8,7 +8,7 @@ type LoginPageProps = {
 }
 
 export default function LoginPage({ email }: LoginPageProps) {
-  return (<LanguageProvider> <Login email={email} /> </LanguageProvider>)
+  return (<LanguageProvider> <Login email={email}/> </LanguageProvider>)
 }
 
 export const getServerSideProps = withSSRGuest(async (ctx) => {

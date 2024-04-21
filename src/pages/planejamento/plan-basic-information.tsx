@@ -45,7 +45,7 @@ export default function PlanBasicInfoPage({
         startAt,
         endAt
       }}
-    />
+   />
   )
 }
 

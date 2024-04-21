@@ -163,7 +163,7 @@ const DetailCardV2: React.FC<DetailCardV2PropsTypes> = ({
           height={16}
           width={16}
           fill={theme.colors.feedback.informativePure}
-        />
+       />
       </S.TitleAndNavWrapper>
       <S.StatsWrapper>
         <S.PercentageWrapper>
@@ -190,7 +190,7 @@ const DetailCardV2: React.FC<DetailCardV2PropsTypes> = ({
               {...{
                 ...data
               }}
-            />
+           />
           ))}
         </S.TrendWrapper>
       </S.StatsWrapper>

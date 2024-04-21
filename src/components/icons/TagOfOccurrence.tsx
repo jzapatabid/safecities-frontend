@@ -7,7 +7,7 @@ export default function TagOfOccurrence() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="48" height="14" rx="4" fill="#008ffb" />
+      <rect width="48" height="14" rx="4" fill="#008ffb"/>
     </svg>
   )
 }

@@ -48,7 +48,7 @@ const FocusObjectiveHeader = ({ data, index }: FocusObjectiveHeaderProps) => {
               <MutliDirectionArrow
                 direction={data.open ? 'up' : 'down'}
                 source={'Accordion'}
-              />
+             />
             </S.ArrowWrapper>
           </>
         ) : null}
@@ -56,7 +56,7 @@ const FocusObjectiveHeader = ({ data, index }: FocusObjectiveHeaderProps) => {
       <S.AllItemsWrapper disabled={!data.enabled}>
         <S.NameAndTitleWrapper>
           <S.AccIconWrapper>
-            <Icon />
+            <Icon/>
           </S.AccIconWrapper>
           <S.Name>{`Foco ${index + 1}`}</S.Name>
           <S.Title>{data.name}</S.Title>

@@ -210,13 +210,13 @@ const PlanCausesDiagnosticSummary = ({
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         <NavigateBack
           normalText="Volte à"
           linkText="Construir plano"
           url="/planejamento/construir-plano"
-        />
+       />
         <S.SectionWrapper>
           <S.PlanName>
             {basic_information?.title || `[Título do plano]`}
@@ -234,7 +234,7 @@ const PlanCausesDiagnosticSummary = ({
                 }
               })}
               variant="small"
-            />
+           />
           </S.NavBarWrapper>
         </S.SectionWrapper>
         <S.SectionWrapperNoBottomUnderline>
@@ -246,7 +246,7 @@ const PlanCausesDiagnosticSummary = ({
                 }
               })}
               variant="small"
-            />
+           />
           </S.NavBarWrapperWithUnderline>
         </S.SectionWrapperNoBottomUnderline>
         <S.ContentSection>
@@ -262,7 +262,7 @@ const PlanCausesDiagnosticSummary = ({
                     <DiagnosisSummaryHeader
                       data={item}
                       fulfilled={item.fulfilled}
-                    />
+                   />
                   ),
                   summary: null,
                   content: (
@@ -278,7 +278,7 @@ const PlanCausesDiagnosticSummary = ({
                       onRemoveIndicator={handleRemoveIndicator(item.causeId)}
                       onIndicatorSelect={handleIndicatorSelect(item.causeId)}
                       detail_url={`/diagnostico/detalhe-do-causa/default/${item.cause_id}`}
-                    />
+                   />
                   ),
                   footer: (
                     <AccordionFooter
@@ -291,7 +291,7 @@ const PlanCausesDiagnosticSummary = ({
                       }
                       onSave={handleSave(item.causeId)}
                       toggleAccordion={handleAccordionToggle(item.causeId)}
-                    />
+                   />
                   )
                 }}
               </AccordionV2>

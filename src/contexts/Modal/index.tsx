@@ -16,7 +16,7 @@ const ModalProvider: React.FC = ({ children }) => {
     <ModalContext.Provider value={{ modalState, setModalState }}>
       <LanguageProvider>
         {children}
-        <Modal type={modalState.type} />
+        <Modal type={modalState.type}/>
       </LanguageProvider>
 
       

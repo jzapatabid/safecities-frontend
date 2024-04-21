@@ -13,8 +13,8 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Story />
+      <GlobalStyles/>
+      <Story/>
     </ThemeProvider>
   )
 ]

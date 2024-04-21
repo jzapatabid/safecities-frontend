@@ -69,7 +69,7 @@ export default function EfficiencyTable() {
               score={info.getValue() as number}
               label={getEfficiencyLabel[info.getValue() as number]}
               type={INITIATIVE.EFFICIENCY}
-            />
+           />
           </S.LevelWrapper>
         ),
         header: () => <S.HeaderText>Nível de eficácia</S.HeaderText>
@@ -88,7 +88,7 @@ export default function EfficiencyTable() {
           showEmptyRows: false,
           widthConfig
         }}
-      />
+     />
     </>
   )
 }

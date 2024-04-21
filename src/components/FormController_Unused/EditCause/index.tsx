@@ -100,10 +100,10 @@ export default function EditCause(Causa?: any) {
           <p>Está causa é de acervo datado e portanto não pode ser editada.</p>
         </ModalForm>
       )}
-      <Header />
+      <Header/>
       <Link href={`/diagnostico/causas/${Causa.problemId}`}>
         <a style={{ margin: '20px 0' }}>
-          <LeftArrow color="white" />
+          <LeftArrow color="white"/>
         </a>
       </Link>
       <S.WrapperTextHero>
@@ -130,7 +130,7 @@ export default function EditCause(Causa?: any) {
             }}
             value={title}
             maxLength={limitChar.title}
-          />
+         />
           <S.AssistentWrapper>
             <p>
               {counterTitleChar
@@ -153,7 +153,7 @@ export default function EditCause(Causa?: any) {
             }}
             value={justificative}
             maxLength={limitChar.justificative}
-          />
+         />
           <S.AssistentWrapper>
             <p>
               {counterJustificativeChar
@@ -177,7 +177,7 @@ export default function EditCause(Causa?: any) {
             }}
             value={evidence}
             maxLength={limitChar.evidence}
-          />
+         />
           <S.AssistentWrapper>
             <p>
               {counterEvidenceChar
@@ -191,7 +191,7 @@ export default function EditCause(Causa?: any) {
         </S.Wrapper>
       </S.Form>
 
-      <S.Hr />
+      <S.Hr/>
       <S.WrapperButton>
         <Button
           onClick={() => {
@@ -248,7 +248,7 @@ export default function EditCause(Causa?: any) {
           Alterações salvas com sucesso.
         </ModalForm>
       )}
-      <Footer />
+      <Footer/>
     </Container>
   )
 }

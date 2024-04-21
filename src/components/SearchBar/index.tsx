@@ -11,14 +11,14 @@ const SearchBar: React.FC<SearchBarProps> = ({ search, setSearch }) => {
   return (
     <S.SearchWrapper>
       <S.IconWrapper>
-        <LensIcon />
+        <LensIcon/>
       </S.IconWrapper>
       <S.Input
         type="text"
         placeholder="Buscar"
         value={search}
         onChange={({ target: { value } }) => setSearch(value)}
-      />
+     />
     </S.SearchWrapper>
   )
 }

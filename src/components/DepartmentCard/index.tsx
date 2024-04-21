@@ -16,7 +16,7 @@ const DepartmentCard = ({
   const Icon = Icons[Math.floor(Math.random() * 3)]
   return (
     <S.Wrapper>
-      <Icon />
+      <Icon/>
       <S.Text>{label}</S.Text>
     </S.Wrapper>
   )

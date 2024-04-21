@@ -42,7 +42,7 @@ const ProblemDiagnosisContent = ({
   return (
     <S.Wrapper>
       <S.TitleAndDelete>
-        <S.Title><FormattedMessage id = 'text.indicator.analisis'/></S.Title>
+        <S.Title><FormattedMessage id='text.indicator.analisis'/></S.Title>
         {onRemoveIndicator ? (
           <TextButton
             text="Excluir"
@@ -53,7 +53,7 @@ const ProblemDiagnosisContent = ({
               viewBox: '0 0 13 23'
             }}
             onClick={onRemoveIndicator}
-          />
+         />
         ) : null}
       </S.TitleAndDelete>
       {onRemoveIndicator ? (
@@ -70,7 +70,7 @@ const ProblemDiagnosisContent = ({
                   option?.cause_indicator_id === data?.cause_indicator_id
               )[0]?.text || 'Selecione um indicador*'
             }
-          />
+         />
         </S.DropdownWrapper>
       ) : (
         <S.InputWrapper>
@@ -83,10 +83,10 @@ const ProblemDiagnosisContent = ({
               data?.problem_name?.slice(0, 1)?.toUpperCase() +
                 data?.problem_name?.slice(1) || ''
             }
-          />
+         />
         </S.InputWrapper>
       )}
-      <S.Title><FormattedMessage id = "text.kpi"/></S.Title>
+      <S.Title><FormattedMessage id="text.kpi"/></S.Title>
       <S.FlexWrapper>
         <S.DropdownWrapper>
           <Dropdown
@@ -99,15 +99,15 @@ const ProblemDiagnosisContent = ({
               .map((option: any) => option.text)
               .join(', ')}
             placeholder={'Selecione o KPI e gráfico a ser exibido'}
-          />
+         />
         </S.DropdownWrapper>
         {detail_url ? (
           <Link href={detail_url || ''} passHref>
-            <S.IndicatorText><FormattedMessage id = "text.kpi.details"/></S.IndicatorText>
+            <S.IndicatorText><FormattedMessage id="text.kpi.details"/></S.IndicatorText>
           </Link>
         ) : null}
       </S.FlexWrapper>
-      <S.Title><FormattedMessage id = "text.kpi.analisis"/></S.Title>
+      <S.Title><FormattedMessage id="text.kpi.analisis"/></S.Title>
       <S.AnalysisInputWrapper>
         <MultilineInput
           spellCheck={false}
@@ -116,7 +116,7 @@ const ProblemDiagnosisContent = ({
           value={data.diagnosis ? data.diagnosis : ''}
           onChange={onAnalysisUpdate}
           restrictionLabel="Insira até 1000 caracteres"
-        />
+       />
       </S.AnalysisInputWrapper>
     </S.Wrapper>
   )

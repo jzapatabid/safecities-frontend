@@ -67,7 +67,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
   return (
     <S.Wrapper>
       <S.DisclaimerWrapper>
-        <Disclaimer data={NEW_INDICATOR_DISCLAIMER} />
+        <Disclaimer data={NEW_INDICATOR_DISCLAIMER}/>
       </S.DisclaimerWrapper>
       <S.SMARTDescWrapper>
         {NEW_INDICATOR_RCSECVP_DESC_DETAILS.map(
@@ -87,7 +87,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
           value={indicatorData.name ? indicatorData.name : ''}
           onChange={updateMetaData('name')}
           restrictionLabel="Insira até 100 caracteres"
-        />
+       />
       </S.ValueInputWrapper>
       <S.JustificationInputWrapper>
         <MultilineInput
@@ -99,7 +99,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
           value={indicatorData.formulaDescription}
           onChange={updateMetaData('formulaDescription')}
           restrictionLabel="Insira até 320 caracteres"
-        />
+       />
       </S.JustificationInputWrapper>
       <S.JustificationInputWrapper>
         <MultilineInput
@@ -111,7 +111,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
           value={indicatorData.unitMetric}
           onChange={updateMetaData('unitMetric')}
           restrictionLabel="Insira até 320 caracteres"
-        />
+       />
       </S.JustificationInputWrapper>
       <S.JustificationInputWrapper>
         <MultilineInput
@@ -122,7 +122,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
           secondaryPlaceholder="Inserir o órgão/entidade responsável pela aferição do indicador (Ex.: Secretaria Municipal de Segurança e Ordem Pública de Florianópolis)"
           value={indicatorData.source}
           onChange={updateMetaData('source')}
-        />
+       />
       </S.JustificationInputWrapper>
       <S.JustificationInputWrapper>
         <MultilineInput
@@ -133,7 +133,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
           secondaryPlaceholder="Indicar de quanto em quanto tempo será feita a aferição de indicador (Ex.: Semanal, Mensal, Bimestral, Trimestral, Semestral, Anual, Bienal, Quadrienal, Quinquenal, Decenal, etc.)"
           value={indicatorData.frequency}
           onChange={updateMetaData('frequency')}
-        />
+       />
       </S.JustificationInputWrapper>
       <S.ActualSituationLabel>
         Linha de base (situação stual)
@@ -148,7 +148,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
             value={indicatorData.baselineValue}
             secondaryPlaceholder="00"
             onChange={updateMetaData('baselineValue')}
-          />
+         />
         </S.DateInputWrapper>
         <S.DateInputWrapper>
           <Input
@@ -159,7 +159,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
             value={indicatorData.baselineYear}
             secondaryPlaceholder="AAAA"
             onChange={updateMetaData('baselineYear')}
-          />
+         />
         </S.DateInputWrapper>
       </S.DatesWrapper>
       <S.JustificationInputWrapper>
@@ -172,7 +172,7 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
           value={indicatorData.observation}
           onChange={updateMetaData('observation')}
           restrictionLabel="Insira até 500 caracteres"
-        />
+       />
       </S.JustificationInputWrapper>
     </S.Wrapper>
   )

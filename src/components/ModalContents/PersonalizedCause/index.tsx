@@ -246,7 +246,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="A causa personalizada foi atualizada corretamente."
                 variant="success"
-              />
+             />
             ))
           } catch (e) {
             toast.custom((t) => (
@@ -254,7 +254,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="A solicitação de atualização para causa personalizada falhou devido a erros. Por favor, tente novamente mais tarde."
                 variant="warning"
-              />
+             />
             ))
           }
         }
@@ -283,7 +283,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="Causa nova adicionada corretamente."
                 variant="success"
-              />
+             />
             ))
             setCausesState((state) => ({
               ...state,
@@ -295,7 +295,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                 id={t.id}
                 text="Causa não registrada. Por favor, tente novamente mais tarde"
                 variant="warning"
-              />
+             />
             ))
           }
         }
@@ -334,7 +334,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                   id={t.id}
                   text="Causa nova adicionada corretamente."
                   variant="success"
-                />
+               />
               ))
             } catch (e) {
               setModalState({ open: false })
@@ -343,7 +343,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                   id={t.id}
                   text="Ocorreu um erro ao excluir a causa. Por favor, tente novamente mais tarde."
                   variant="warning"
-                />
+               />
               ))
             }
           }
@@ -366,7 +366,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
           value={causeData.name}
           onChange={onTitleChange}
           restrictionLabel="Insira até 200 caracteres"
-        />
+       />
       </S.CauseTitleInputWrapper>
       <S.DropdownWrapper>
         <Dropdown
@@ -412,7 +412,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
           placeholder={
             'Selecione um problema ao qual a nova causa será associada*'
           }
-        />
+       />
       </S.DropdownWrapper>
       <S.JustificationInputWrapper>
         <MultilineInput
@@ -422,7 +422,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
           value={causeData.justification}
           onChange={onJustificationChange}
           restrictionLabel="Insira até 320 caracteres"
-        />
+       />
       </S.JustificationInputWrapper>
       <S.EvidenceInputWrapper>
         <MultilineInput
@@ -432,13 +432,13 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
           value={causeData.evidences}
           onChange={onEvidenceChange}
           restrictionLabel="Insira até 320 caracteres"
-        />
+       />
       </S.EvidenceInputWrapper>
       <S.AttachmentsWrapper>
         <S.AttachmentsTitle>
           Anexos
           <S.IconWrapper>
-            <InfoIcon height={20} width={20} />
+            <InfoIcon height={20} width={20}/>
             <S.InfoTooltip>
               {'.doc, .docx, .ppt, .pptx, .pdf, .epub, .html, .xls, .csv'}
             </S.InfoTooltip>
@@ -449,7 +449,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
           filesList={cause ? edit_cause.annexes : new_cause.annexes}
           onFileDelete={handleFileDelete}
           onFileDownload={handleFileDownload}
-        />
+       />
       </S.AttachmentsWrapper>
       <S.ReferencesWrapper>
         <S.AttachmentsTitle>Referências</S.AttachmentsTitle>
@@ -462,7 +462,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                 key={idx}
                 link={link}
                 onDelete={handlerLinkDelete}
-              />
+             />
             ))
           : null}
         {(showReferenceInput || causeData.references?.length === 0) && (
@@ -479,7 +479,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
                   newLink: e.target.value
                 }))
               }
-            />
+           />
           </S.ReferencesInputWrapper>
         )}
         {!showReferenceInput && causeData.references?.length !== 0 && (
@@ -488,7 +488,7 @@ const PersonalizedCause = ({ cause }: PersonalizedCausePropTypes) => {
               text="Adicionar referências"
               LeadingIcon={PlusSignIcon}
               onClick={() => setShowReferenceInput(true)}
-            />
+           />
           </S.AddReferencesBtnWrapper>
         )}
       </S.ReferencesWrapper>

@@ -40,7 +40,7 @@ const TextButton: React.FC<TextButtonProps> = ({
 
 
   return <S.Wrapper onClick={onClick} disabled={disabled}>
-  {LeadingIcon && <LeadingIcon {...leadingIconProps} />}
+  {LeadingIcon && <LeadingIcon {...leadingIconProps}/>}
   {link ? (
     <Link passHref href={href}>
       <S.ButtonText disabled={disabled}>{formattedText} </S.ButtonText>
@@ -48,7 +48,7 @@ const TextButton: React.FC<TextButtonProps> = ({
   ) : (
     <S.ButtonText disabled={disabled}>{formattedText}</S.ButtonText>
   )}
-  {TrailingIcon && <TrailingIcon fill="#555555" />}
+  {TrailingIcon && <TrailingIcon fill="#555555"/>}
 </S.Wrapper>
 }
 

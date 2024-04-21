@@ -41,7 +41,7 @@ const DeptDDList = ({
           options={options}
           onOptionClick={handleOptionSelect}
           selectedText={selectedText}
-        />
+       />
       </S.DropdownWrapper>
       <S.DashInputWrapper>
         <Input
@@ -53,7 +53,7 @@ const DeptDDList = ({
           value={role || ''}
           numericOnly={applyNumericOnly}
           onChange={onRoleUpdate}
-        />
+       />
       </S.DashInputWrapper>
       {onGoalDateUpdate ? (
         <S.DashInputWrapper>
@@ -65,7 +65,7 @@ const DeptDDList = ({
             secondaryPlaceholder="MM/AAAA"
             value={date || ''}
             onChange={onGoalDateUpdate}
-          />
+         />
         </S.DashInputWrapper>
       ) : null}
     </S.DetailWrapper>

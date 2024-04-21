@@ -22,7 +22,7 @@ const AccordionFooter = ({
           variant="outline"
           onClick={toggleAccordion}
           text="Cancelar"
-        />
+       />
       </S.ButtonWrapper>
       <S.ButtonWrapper>
         <ButtonV2
@@ -31,7 +31,7 @@ const AccordionFooter = ({
           onClick={onSave}
           text="Salvar"
           LeadingIcon={FlagFilledIcon}
-        />
+       />
       </S.ButtonWrapper>
     </S.Footer>
   )

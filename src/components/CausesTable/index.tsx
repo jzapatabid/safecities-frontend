@@ -155,7 +155,7 @@ export default function CausesTable({
           search,
           setGlobalSearch
         }}
-      />
+     />
     </>
   )
 }

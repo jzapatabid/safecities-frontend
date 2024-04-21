@@ -394,13 +394,13 @@ const PlanTacticalDimension = ({
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         <NavigateBack
           normalText="plan.basic.info.go.back"
           linkText="plan.basic.info.link.text"
           url="/planejamento/construir-plano"
-        />
+       />
         <S.SectionWrapper>
           <S.PlanName>
             {basic_information?.title || `[Título do plano]`}
@@ -418,13 +418,13 @@ const PlanTacticalDimension = ({
                 }
               })}
               variant="small"
-            />
+           />
           </S.NavBarWrapper>
         </S.SectionWrapper>
         <S.SectionWrapper>
           <S.ListWrapper>
             <S.Header>
-              <S.ColumnText><FormattedMessage id = 'prioritized.initiatives'/></S.ColumnText>
+              <S.ColumnText><FormattedMessage id='prioritized.initiatives'/></S.ColumnText>
               <MutliDirectionArrow
                 direction={
                   typeof sorting === 'string' && sorting === 'unsorted'
@@ -434,7 +434,7 @@ const PlanTacticalDimension = ({
                     : 'down'
                 }
                 onClick={handleSortUpdate}
-              />
+             />
             </S.Header>
             {plansState.tactical_dimension.map((item: any, idx: number) => {
               return (
@@ -448,7 +448,7 @@ const PlanTacticalDimension = ({
                       <DiagnosisSummaryHeader
                         data={item}
                         fulfilled={item.fulfilled}
-                      />
+                     />
                     ),
                     summary: null,
                     content: (
@@ -475,7 +475,7 @@ const PlanTacticalDimension = ({
                           item.initiativeId
                         )}
                         onAddNewGoal={handleAddNewGoal(item.initiativeId)}
-                      />
+                     />
                     ),
                     footer: (
                       <AccordionFooter
@@ -491,7 +491,7 @@ const PlanTacticalDimension = ({
                         toggleAccordion={handleAccordionToggle(
                           item.initiativeId
                         )}
-                      />
+                     />
                     )
                   }}
                 </AccordionV2>
@@ -501,16 +501,16 @@ const PlanTacticalDimension = ({
         </S.SectionWrapper>
         <S.SectionWrapper>
           <S.TotalCostWrapper>
-            <S.TotalCostTitle><FormattedMessage id = "total.estimated.cost" /></S.TotalCostTitle>
+            <S.TotalCostTitle><FormattedMessage id="total.estimated.cost"/></S.TotalCostTitle>
             <S.TotalCostValue>
               R$ {plansState.td_total_cost || ''}
             </S.TotalCostValue>
             <S.TotalCostForecast>
-              <FormattedMessage id = "total.estimated.cost.description" />
+              <FormattedMessage id="total.estimated.cost.description"/>
             </S.TotalCostForecast>
           </S.TotalCostWrapper>
         </S.SectionWrapper>
-        <Footer />
+        <Footer/>
       </MainContainer>
 </LanguageProvider>
     </>

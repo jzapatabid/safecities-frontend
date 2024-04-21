@@ -77,7 +77,7 @@ export default function ProblemsTable({
                 indeterminate: row.getIsSomeSelected(),
                 onChange: row.getToggleSelectedHandler()
               }}
-            />
+           />
           </S.InputColumnWrapper>
         ),
         width: 70
@@ -112,7 +112,7 @@ export default function ProblemsTable({
         cell: (info) =>
           info.getValue() === true ? (
             <S.StatusWrapper>
-              <FlagFilledIcon fill={theme.colors.base.lightPure} />
+              <FlagFilledIcon fill={theme.colors.base.lightPure}/>
               {PROBLEM_STATUS.PRIORITIZED}
             </S.StatusWrapper>
           ) : (
@@ -128,7 +128,7 @@ export default function ProblemsTable({
         cell: (info) =>
           info.row.original.is_default &&
           typeof info.getValue() === 'number' ? (
-            <BulbIndicator score={info.getValue() as number} />
+            <BulbIndicator score={info.getValue() as number}/>
           ) : (
             <>-</>
           ),
@@ -144,7 +144,7 @@ export default function ProblemsTable({
         cell: (info) => {
           return info.row.original.is_default &&
             typeof info.getValue() === 'number' ? (
-            <BulbIndicator score={info.getValue() as number} />
+            <BulbIndicator score={info.getValue() as number}/>
           ) : (
             <>-</>
           )
@@ -161,7 +161,7 @@ export default function ProblemsTable({
         cell: (info) =>
           info.row.original.is_default &&
           typeof info.getValue() === 'number' ? (
-            <BulbIndicator score={info.getValue() as number} />
+            <BulbIndicator score={info.getValue() as number}/>
           ) : (
             <>-</>
           ),
@@ -177,7 +177,7 @@ export default function ProblemsTable({
         cell: (info) =>
           info.row.original.is_default &&
           typeof info.getValue() === 'number' ? (
-            <BulbIndicator score={info.getValue() as number} />
+            <BulbIndicator score={info.getValue() as number}/>
           ) : (
             <>-</>
           ),
@@ -196,7 +196,7 @@ export default function ProblemsTable({
             <TubelightIndicator
               score={((info.getValue() as number) * 10) as number}
               scale={10}
-            />
+           />
           ) : (
             <>-</>
           ),
@@ -253,7 +253,7 @@ export default function ProblemsTable({
           search,
           setGlobalSearch
         }}
-      />
+     />
     </>
   )
 }
@@ -274,5 +274,5 @@ function IndeterminateCheckbox({
     }
   }, [ref, indeterminate, rest.checked])
   // @ts-expect-error It is typescript issue
-  return <S.Input type="checkbox" ref={ref} onClick={handleClick} {...rest} />
+  return <S.Input type="checkbox" ref={ref} onClick={handleClick} {...rest}/>
 }

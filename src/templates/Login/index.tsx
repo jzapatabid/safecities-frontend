@@ -111,8 +111,8 @@ const Login = ({ email }: LoginProps) => {
           <Container>
           <S.LoginContent>
             <S.BrandContainer>
-              <S.Brand />
-              {/* <LanguageDropdown /> */}
+              <S.Brand/>
+              {/* <LanguageDropdown/> */}
             </S.BrandContainer>
             <S.HeadingWrapper>
               <Heading size="large" lineHeight="6rem">
@@ -125,7 +125,7 @@ const Login = ({ email }: LoginProps) => {
                 <S.Form onSubmit={onSubmit}>
                   {(Object.keys(errors).length > 0 || inputError) && (
                     <S.ErrorMessageWrapper>
-                      <WarningIcon fill="#FF6191" width={22} height={22} />
+                      <WarningIcon fill="#FF6191" width={22} height={22}/>
                       <S.ErrorMessage>
                         {getStaticErrorMessage(errors) || inputError}
                       </S.ErrorMessage>
@@ -139,7 +139,7 @@ const Login = ({ email }: LoginProps) => {
                       {...register('email')}
                       error={Boolean(Object.keys(errors).length) || inputError}
                       defaultValue={email}
-                    />
+                   />
                   </S.InputWrapper>
                   <S.InputWrapper>
                     <Input
@@ -147,7 +147,7 @@ const Login = ({ email }: LoginProps) => {
                       type="password"
                       {...register('password')}
                       error={Boolean(Object.keys(errors).length) || inputError}
-                    />
+                   />
                   </S.InputWrapper>
                   <S.Link onClick={onForgotPasswordClick}><FormattedMessage id='login.recover.password'/></S.Link>
                   <S.RememberUserWrapper>
@@ -157,7 +157,7 @@ const Login = ({ email }: LoginProps) => {
                       onChange={({ target: { checked } }) =>
                         (rememberUser.current = checked)
                       }
-                    />
+                   />
                     <S.RememberUserText htmlFor="rememberUser">
                       <FormattedMessage id='login.remember.username'/>
                     </S.RememberUserText>
@@ -166,8 +166,8 @@ const Login = ({ email }: LoginProps) => {
                     <FormattedMessage id='button.login'/>
                   </Button>
                 </S.Form>
-                <S.Hr />
-                <BidLogo />
+                <S.Hr/>
+                <BidLogo/>
               </S.LoginContent>
           </Container>
         </IntlProvider>

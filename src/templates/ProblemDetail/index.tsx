@@ -52,10 +52,10 @@ type ProblemDetailPropTypes = {
 const static_data: any = {
   data_viz: {
     performance: {
-      title: <FormattedMessage id = 'chart.title'/>,
+      title: <FormattedMessage id='chart.title'/>,
       count: '25,000',
       countDesc: 'Do total de ocorrências registradas na cidade',
-      footer: <FormattedMessage id = "footer" />,
+      footer: <FormattedMessage id="footer"/>,
       legends: [
         { label: 'Florianópolis', color: '#00ADD2' },
         { label: 'Santa Catarina', Icon: EditIcon }
@@ -63,7 +63,7 @@ const static_data: any = {
     },
     trend: {
       title: 'Estatísticas de tendência',
-      footer: <FormattedMessage id = "footer" />,
+      footer: <FormattedMessage id="footer"/>,
       legends: [
         { label: 'Ocorrências', color: '#00ADD2' },
         { label: 'Taxa', Icon: EditIcon }
@@ -71,41 +71,41 @@ const static_data: any = {
     },
     relativeFrequency: {
       title: 'Estatísticas de frequência relativa',
-      footer: <FormattedMessage id = "footer" />
+      footer: <FormattedMessage id="footer"/>
     }
   },
   key_variables: [
     {
       dataKey: 'performance',
-      title: <FormattedMessage id = "chart.performance"/>,
-      label: <FormattedMessage id = "chart.relation" />,
+      title: <FormattedMessage id="chart.performance"/>,
+      label: <FormattedMessage id="chart.relation"/>,
       indicators: [
-        { text: <FormattedMessage id = "chart.performance.1" /> , criticality: 'none', variant: 'up' },
-        { text: <FormattedMessage id = "chart.performance.2" />, criticality: 'none', variant: 'center' },
-        { text: <FormattedMessage id = "chart.performance.3" />, criticality: 'none', variant: 'down' }
+        { text: <FormattedMessage id="chart.performance.1"/> , criticality: 'none', variant: 'up' },
+        { text: <FormattedMessage id="chart.performance.2"/>, criticality: 'none', variant: 'center' },
+        { text: <FormattedMessage id="chart.performance.3"/>, criticality: 'none', variant: 'down' }
       ],
-      footer: <FormattedMessage id = "chart.relation.time" />
+      footer: <FormattedMessage id="chart.relation.time"/>
     },
     {
       dataKey: 'trend',
-      title: <FormattedMessage id = "chart.trend"/>,
-      label: <FormattedMessage id = "chart.trend.variation"/>,
+      title: <FormattedMessage id="chart.trend"/>,
+      label: <FormattedMessage id="chart.trend.variation"/>,
       indicators: [
-        { text: <FormattedMessage id = "chart.trend.1"/>, criticality: 'none', variant: 'up' },
-        { text: <FormattedMessage id = "chart.trend.2"/>, criticality: 'none', variant: 'center' },
-        { text: <FormattedMessage id = "chart.trend.3"/>, criticality: 'none', variant: 'down' }
+        { text: <FormattedMessage id="chart.trend.1"/>, criticality: 'none', variant: 'up' },
+        { text: <FormattedMessage id="chart.trend.2"/>, criticality: 'none', variant: 'center' },
+        { text: <FormattedMessage id="chart.trend.3"/>, criticality: 'none', variant: 'down' }
       ],
-      footer: <FormattedMessage id = "chart.trend.relation"/>
+      footer: <FormattedMessage id="chart.trend.relation"/>
     },
     {
       dataKey: 'relativeFrequency',
-      title: <FormattedMessage id = "chart.relative.frequency"/>,
+      title: <FormattedMessage id="chart.relative.frequency"/>,
       percentage: '-25%',
-      label: <FormattedMessage id = "chart.relative" />,
+      label: <FormattedMessage id="chart.relative"/>,
       neutral: true,
       indicators: [
         {
-          text: <FormattedMessage id = "chart.relative.1"/>,
+          text: <FormattedMessage id="chart.relative.1"/>,
           criticality: 'none',
           variant: 'center'
         },
@@ -120,7 +120,7 @@ const static_data: any = {
           variant: 'center'
         }
       ],
-      footer: <FormattedMessage id="chart.relative.time" />
+      footer: <FormattedMessage id="chart.relative.time"/>
     }
   ]
 }
@@ -162,7 +162,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         {backTo !== 'bktplan' ? (
           <S.GobackWrapper>
@@ -172,7 +172,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                   width={24}
                   height={24}
                   color={theme.colors.base.lightPure}
-                />
+               />
               </Link>
             </S.NavWrapper>
             <S.GoBackText>
@@ -191,13 +191,13 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                   fill={theme.colors.base.lightPure}
                   height={26}
                   width={26}
-                />
+               />
               ) : (
                 <FlagIcon
                   fill={theme.colors.base.lightPure}
                   height={26}
                   width={26}
-                />
+               />
               )}
               <S.ProblemName>{detail?.problem?.name}</S.ProblemName>
             </S.NameWrapper>
@@ -220,7 +220,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                       PROBLEMS_ACTION_MODAL_PROPS[PROBLEMS_ACTION.PRIORITIZE]
                     )
               }
-            />
+           />
           </S.NameAndActionWrapper>
           <S.DescriptionWrapper>
             <S.DescLabel><FormattedMessage id='diagnosis.desc'/></S.DescLabel>
@@ -235,7 +235,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
               totalCaus={detail.totalCauses}
               variant="small"
               trailingParam={id}
-            />
+           />
           </S.NavBarWrapper>
         ) : null}
         {_.isBoolean(detail?.problem?.hasData) &&
@@ -253,7 +253,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                         detail?.problem?.updatedAt || 'NA'
                       )}
                       count={detail[dataKey]}
-                    />
+                   />
                   )
                 )}
               </S.CSCardWrapper>
@@ -285,7 +285,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                       }}
                       setData={setChartDataKey}
                       selected={chartDataKey === data.dataKey}
-                    />
+                   />
                   ))}
                 </S.KeyVariableCardsWrapper>
                 <S.KeyVariableVisualizationWrapper>
@@ -295,7 +295,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                       data={detail.kpi?.performanceData || []}
                       problemId={detail.problem.id}
                       updatedAt={detail.problem.updatedAt || ''}
-                    />
+                   />
                   ) : null}
                   {chartDataKey === 'trend' ? (
                     <StackedBarChart
@@ -307,7 +307,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                         updatedAt: detail.problem.updatedAt || ''
                       }}
                       problemId={detail.problem.id}
-                    />
+                   />
                   ) : null}
                   {chartDataKey === 'relativeFrequency' ? (
                     <TreemapChart
@@ -321,7 +321,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                           : { name: detail?.problem?.name || '', children: [] }
                       }
                       problemId={detail.problem.id}
-                    />
+                   />
                   ) : null}
                 </S.KeyVariableVisualizationWrapper>
               </S.KeyVariableDataWrapper>
@@ -338,7 +338,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                     data={field.data}
                     icon={field.iconName || ''}
                     updatedAt={detail?.problem?.updatedAt || 'NA'}
-                  />
+                 />
                 ))}
                 {/* <S.WrapperConcentration>
                   <S.Title>Concentração</S.Title>
@@ -347,7 +347,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
                       data={detail.kpi.concentrationData}
                       legendColors={legendColor}
                       updateDate={detail.problem.updatedAt}
-                    /> 
+                   /> 
                   </S.ConcentrationContent>
                   <S.Footer>Valores de Abr/2021 a Mar/2022</S.Footer>
                 </S.WrapperConcentration> */}
@@ -358,7 +358,7 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
           <S.DisclaimerWrapper>
             <Disclaimer
               data={{ line1: <FormattedMessage id='problem.detail.no.data.found'/> }}
-            />
+           />
           </S.DisclaimerWrapper>
         )}
         {detail?.problem?.hasData && detail?.problem?.geonetLink ? (
@@ -380,11 +380,11 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
               href={detail.problem?.geonetLink || ''}
               linkExternal
               disabled={!detail?.problem?.geonetLink}
-            />
+           />
           </S.ButtonWrapper>
         </S.AccessMapWrapper>
         ) : null}
-        <Footer />
+        <Footer/>
       </MainContainer>
 </LanguageProvider>
     </>

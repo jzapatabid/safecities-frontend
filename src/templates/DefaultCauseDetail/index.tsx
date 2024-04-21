@@ -52,7 +52,7 @@ const static_data = {
   title: 'Tendência',
   count: '-50%',
   countDesc: 'Variação da taxa',
-  footer: <FormattedMessage id = "footer" />,
+  footer: <FormattedMessage id="footer"/>,
   legends: [
     { label: 'Ocorrências', color: '#00ADD2' },
     { label: 'Taxa', Icon: EditIcon }
@@ -143,7 +143,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
   return (
     <>
       <LanguageProvider>
-        <Header />
+        <Header/>
         <MainContainer>
         {problemId && problemName ? (
           <S.GobackWrapper>
@@ -155,7 +155,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                 onClick={() =>
                   router.push(`/diagnostico/causas-associadas/${problemId}`)
                 }
-              />
+             />
             </S.NavWrapper>
             <S.GoBackText>
               <FormattedMessage id='causes.associated.detail.link'/>:{' '}
@@ -181,7 +181,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                  />
+                 />
                 </S.IconWrapper>
               ) : (
                 <S.IconWrapper>
@@ -189,7 +189,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                     fill={theme.colors.base.lightPure}
                     height={26}
                     width={26}
-                  />
+                 />
                 </S.IconWrapper>
               )}
               <ButtonV2
@@ -207,12 +207,12 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                         CAUSES_ACTION_MODAL_PROPS[CAUSES_ACTION.PRIORITIZE]
                       )
                 }
-              />
+             />
             </S.BtnWrapper>
           </S.NameAndActionWrapper>
           <S.CauseInfoWrapper>
             <S.Author>
-              <Book2Icon />
+              <Book2Icon/>
               <S.CauseType>
                 {CAUSE_TYPE_LABELS[CAUSE_TYPE_ACCESSOR.DEFAULT]}
               </S.CauseType>
@@ -240,7 +240,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                 selected={selectedTab}
                 onTabClick={setSelectedTab}
                 linkText={true}
-              />
+             />
             </S.TabsWrapper>
             {!_.isEmpty(indicatorData) ? (
               <>
@@ -258,7 +258,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                             indicatorData?.updatedAt || 'NA'
                           )}
                           count={indicatorData[dataKey]}
-                        />
+                       />
                       )
                     )}
                   </S.CSCardWrapper>
@@ -288,7 +288,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                             updatedAt: indicatorData?.updatedAt || '',
                             keys: ['totalCityIncidents']
                           }}
-                        />
+                       />
                       </S.KeyVariableVisualizationWrapper>
                     </S.UnpaddedSectionWrapper>
                   )}
@@ -306,7 +306,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
                             data={field.data || undefined}
                             icon={field.iconName || ''}
                             updatedAt={indicatorData?.updatedAt || 'NA'}
-                          />
+                         />
                         )
                       )}
                     </S.CharacteristicsSectionWrapper>
@@ -316,7 +316,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
               <Disclaimer
                 data={{ line1: 'Não há dados disponíveis para este indicador' }}
                 mtOnly={true}
-              />
+             />
             )}
           </S.SectionWrapper>
         ) : (
@@ -324,11 +324,11 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
             <Disclaimer
               data={{ line1: 'Não há dados disponíveis para esta causa' }}
               mtOnly={true}
-            />
+           />
           </S.DisclaimerWrapper>
         )}
 
-        <Footer />
+        <Footer/>
       </MainContainer>
 </LanguageProvider>
     </>

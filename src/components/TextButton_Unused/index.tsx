@@ -26,9 +26,9 @@ const TextButton: React.FC<TextButtonProps> = ({
   disabled
 }) => (
   <S.Wrapper onClick={onClick}>
-    {LeadingIcon && <LeadingIcon />}
+    {LeadingIcon && <LeadingIcon/>}
     <S.ButtonText disabled={disabled}>{text}</S.ButtonText>
-    {TrailingIcon && <TrailingIcon fill="#555555" />}
+    {TrailingIcon && <TrailingIcon fill="#555555"/>}
   </S.Wrapper>
 )
 

@@ -24,7 +24,7 @@ const TrendIndicator: React.FC<TrendIndicatorPropsTypes> = ({
   const Icon = Icons[variant]
   return (
     <S.Wrapper criticality={criticality}>
-      <Icon />
+      <Icon/>
       <S.Text>{text}</S.Text>
     </S.Wrapper>
   )

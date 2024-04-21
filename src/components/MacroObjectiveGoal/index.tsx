@@ -87,7 +87,7 @@ const MacroObjectiveGoal = ({
               )[0]?.text
             }
             placeholder={'Selecionar indicador(es) de mensuração'}
-          />
+         />
           <S.LinkTextBtnWrapper>
             <TextButton
               text="Ver situação atual"
@@ -95,7 +95,7 @@ const MacroObjectiveGoal = ({
               disabled={!data.problemId}
               link
               href={`/diagnostico/detalhe-do-problema/${data.problemId}`}
-            />
+           />
           </S.LinkTextBtnWrapper>
         </S.DropdownWrapper>
       </S.ParameterGroup>
@@ -110,7 +110,7 @@ const MacroObjectiveGoal = ({
             placeholderFixed
             secondaryPlaceholder="-"
             onChange={onInitialRateUpdate(data.goalId)}
-          />
+         />
         </S.TaxaInputWrapper>
       </S.ParameterGroup>
       <S.ParameterGroup>
@@ -136,7 +136,7 @@ const MacroObjectiveGoal = ({
               })
             }
             readOnly
-          />
+         />
         </S.MetaInputWrapper>
       </S.ParameterGroup>
       <S.ParameterGroup>
@@ -152,7 +152,7 @@ const MacroObjectiveGoal = ({
                 viewBox: '0 0 13 23'
               }}
               onClick={() => onDelete(data.goalId)}
-            />
+           />
           </S.DeleteBtnWrapper>
           <S.MetaInputWrapper>
             <Input
@@ -167,7 +167,7 @@ const MacroObjectiveGoal = ({
               }
               secondaryPlaceholder="MM/AAAA"
               onChange={onDateUpdate(data.goalId)}
-            />
+           />
           </S.MetaInputWrapper>
         </S.DeleteWrapper>
       </S.ParameterGroup>

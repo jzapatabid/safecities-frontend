@@ -27,16 +27,16 @@ const ReferenceForeignlink = ({
   return (
     <S.Wrapper>
       <S.IconWrapper>
-        <LinkIcon />
+        <LinkIcon/>
       </S.IconWrapper>
       <S.LinkText onClick={openInNewTab}>{link}</S.LinkText>
       <S.ExtremeWrapper>
         <S.IconWrapper onClick={openInNewTab}>
-          <OpenInNewIcon />
+          <OpenInNewIcon/>
         </S.IconWrapper>
         {!noDelete && (
           <S.IconWrapper onClick={() => (onDelete ? onDelete(link) : null)}>
-            <DeleteIcon viewBox="0 0 14 18" />
+            <DeleteIcon viewBox="0 0 14 18"/>
           </S.IconWrapper>
         )}
       </S.ExtremeWrapper>

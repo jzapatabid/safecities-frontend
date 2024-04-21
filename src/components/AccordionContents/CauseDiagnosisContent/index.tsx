@@ -62,7 +62,7 @@ const CauseDiagnosisContent = ({
                 !assignedIndicatorIds.includes(item.cause_indicator_id)
             )
           ]}
-        />
+       />
       ))}
       <S.AddNewGoalBtnWrapper>
         <TextButton
@@ -70,7 +70,7 @@ const CauseDiagnosisContent = ({
           text="Adicionar novo indicador de mensuração"
           LeadingIcon={PlusSignIcon}
           onClick={onAddNewIndicator}
-        />
+       />
       </S.AddNewGoalBtnWrapper>
     </>
   )
