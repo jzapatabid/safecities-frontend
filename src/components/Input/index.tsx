@@ -54,7 +54,6 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   useEffect(() => {
     setIsFirefox(navigator.userAgent.includes('Firefox'))
   }, [])
-  console.log("This Is  rest:", rest)
   
   return (
     <>

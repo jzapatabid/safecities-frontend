@@ -86,7 +86,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
           url="/planejamento/construir-plano"
         />
         <S.SectionWrapper>
-          <S.PlanName>{data?.title || "[Nombre del Pan]"}
+          <S.PlanName>{data?.title || "[Nombre del Plan]"}
           </S.PlanName>
           <S.PlanDates>{`De ${data?.startAt || '[Data de inicio]'} a ${
             data?.endAt || '[Data de término]'

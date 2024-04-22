@@ -214,8 +214,8 @@ const PlanCausesDiagnosticSummary = ({
         <Header />
         <MainContainer>
         <NavigateBack
-          normalText="Volte à"
-          linkText="Construir plano"
+          normalText="plan.basic.info.go.back"
+          linkText="plan.basic.info.link.text"
           url="/planejamento/construir-plano"
         />
         <S.SectionWrapper>

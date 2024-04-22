@@ -27,16 +27,9 @@ const StatCard: React.FC<StatCardProps> = ({
   link = '',
   iniciativasCard = false
 }) => {
-  console.log("This Is  label:", label)
-  console.log("This Is  label2:", label2)
-
   const intl = useIntl()
 
   const innerLabel = "Ver más"
-  
-
-
- 
 
   return (
     <S.Wrapper type={type} withLabel2={Boolean(innerLabel)}>

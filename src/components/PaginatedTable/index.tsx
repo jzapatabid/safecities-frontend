@@ -72,6 +72,8 @@ export default function Table({
     manualSorting: true
   })
   const rows = table.getRowModel().rows.length
+  // console.log("This Is  table.getRowModel():", table.getRowModel())
+  // console.log("This Is  rows:", rows)
 
   const items_info = `${
     totalItems !== 0
@@ -114,7 +116,6 @@ export default function Table({
     table.resetRowSelection(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pagination.state.pageIndex])
-    console.log("This Is  table:", table.getRowModel())
 
   return (
     <S.Wrapper>

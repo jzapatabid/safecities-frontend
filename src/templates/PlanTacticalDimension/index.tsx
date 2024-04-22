@@ -403,7 +403,7 @@ const PlanTacticalDimension = ({
         />
         <S.SectionWrapper>
           <S.PlanName>
-            {basic_information?.title || `[${<FormattedMessage id='edit.plan.title.label' />}]`}
+            {basic_information?.title || "[Nombre del Plan]"}
           </S.PlanName>
           <S.PlanDates>{`De ${
             basic_information?.startAt || '[Data de inicio]'

@@ -11,8 +11,6 @@ const useModal = () => useContext(ModalContext)
 
 const ModalProvider: React.FC = ({ children }) => {
   const [modalState, setModalState] = useState({} as ModalStateTypes)
-  console.log("This Is  modalState:", modalState)
-
   return (
     <LanguageProvider>
       <ModalContext.Provider value={{ modalState, setModalState }}>
