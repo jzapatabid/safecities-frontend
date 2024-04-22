@@ -22,6 +22,7 @@ import MainContainer from 'components/MainContainer'
 import NavBarGeneric from 'components/NavBarGeneric'
 import NavigateBack from 'components/NavigateBack'
 import LanguageProvider from 'contexts/LanguageSelector'
+import { FormattedMessage } from 'react-intl'
 
 type PlanProblemsDiagnosticSummaryPageProps = {
   basic_information: any
@@ -122,7 +123,7 @@ const PlanProblemsDiagnosticSummary = ({
         />
         <S.SectionWrapper>
           <S.PlanName>
-            {basic_information?.title || `[Título do plano]`}
+            {basic_information?.title || `[${<FormattedMessage id='edit.plan.title.label' />}]`}
           </S.PlanName>
           <S.PlanDates>{`De ${
             basic_information?.startAt || '[Data de inicio]'

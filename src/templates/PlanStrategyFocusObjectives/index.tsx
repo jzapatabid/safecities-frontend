@@ -401,7 +401,7 @@ const PlanStrategyFocusObjectives = ({
         />
         <S.SectionWrapper>
           <S.PlanName>
-            {basic_information?.title || `[Título do plano]`}
+            {basic_information?.title || `[${<FormattedMessage id='edit.plan.title.label' />}]`}
           </S.PlanName>
           <S.PlanDates>{`De ${
             basic_information?.startAt || '[Data de inicio]'

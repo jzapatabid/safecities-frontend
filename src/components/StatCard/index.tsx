@@ -27,10 +27,11 @@ const StatCard: React.FC<StatCardProps> = ({
   link = '',
   iniciativasCard = false
 }) => {
+  console.log("This Is  label2:", label2)
 
   const intl = useIntl()
 
-  const innerLabel = intl.formatMessage({ id: 'diagnosis.associated.card'})
+  const innerLabel = intl.formatMessage({ id:'diagnosis.associated.card'})
   
 
 
@@ -61,7 +62,7 @@ const StatCard: React.FC<StatCardProps> = ({
               (!label2.toLowerCase().startsWith("ver") && !label2.toLowerCase().startsWith("see")) && iniciativasCard
                 ? label2.replace('XX', count2.toString())
                 : ''
-            } ${iniciativasCard ? '' : label2}`}</S.IndicatorText>
+            } ${iniciativasCard ? '' : <FormattedMessage id={label2}/>}`}</S.IndicatorText>
           )}
         </S.IndicatorInfoWrapper>
       )}

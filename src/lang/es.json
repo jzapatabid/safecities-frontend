@@ -19,6 +19,10 @@
     "button.problem.detail.map.acces": "Accede al mapa",
     "button.problem.detail.chart.download": "Descargar datos",
 
+    "notification.message.invite": "Enviaste la invitación correctamente",
+
+    "user.table.name": "Nombre",
+
     "table.pager.items.per.page": "Artículos por página",
     "table.pager.of": "De",
     "table.pager.items": "Items",

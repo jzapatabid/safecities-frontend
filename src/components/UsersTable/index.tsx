@@ -17,6 +17,7 @@ import * as S from './styles'
 
 import PaginationTable from 'components/PaginatedTable'
 import TagV2 from 'components/Tag'
+import { FormattedMessage } from 'react-intl'
 
 export default function UsersTable({ users }: { users?: UserModel[] }) {
   const { adminState, setAdminState } = useAdminData()
@@ -92,19 +93,19 @@ export default function UsersTable({ users }: { users?: UserModel[] }) {
         accessorFn: (row) => row[USER.NAME] + ' ' + row[USER.LAST_NAME],
         id: `${USER.NAME}-${TABLE_COLUMN_VARIANT.SORTING}`,
         cell: (info) => info.getValue(),
-        header: () => <span>Nome</span>
+        header: () => <span><FormattedMessage id='user.table.name'/></span>
       },
       {
         accessorFn: (row) => row.email,
         id: USER.EMAIL,
         cell: (info) => info.getValue(),
-        header: () => <span>E-mail</span>
+        header: () => <span><FormattedMessage id='login.email.label'/></span>
       },
       {
         accessorFn: (row) => row.isActive,
         id: `${USER.STATUS}-${TABLE_COLUMN_VARIANT.SORTING}`,
         cell: (info) => <TagV2 label={info.getValue() ? 'Ativo' : 'Inativa'} />,
-        header: () => <span>Status</span>
+        header: () => <span><FormattedMessage id='diagnosis.problem.table.status'/></span>
       }
     ],
     []

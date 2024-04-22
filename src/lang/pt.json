@@ -19,6 +19,10 @@
     "button.problem.detail.map.acces": "Acesse o mapa",
     "button.problem.detail.chart.download": "Baixar dados",
 
+    "notification.message.invite": "Enviou corretamente o convite",
+
+    "user.table.name": "Nome",
+
     "table.pager.items.per.page": "Itens por página",
     "table.pager.of": "De",
     "table.pager.items": "Itens",
@@ -182,7 +186,7 @@
 
     "edit.plan.go.back.title": "Plano de reconstrução",
     "edit.plan.title": "Plano Local de Prevenção da Violência", 
-    "edit.plan.title.label": "Título do plano",
+    "edit.plan.title.label": "${<FormattedMessage id='edit.plan.title.label' />}",
     "edit.start.date.label": "Data de início*",
     "edit.finish.date.label": "Data do termino*",
     "edit.problems.form.indicator.title": "Indicador",

@@ -22,6 +22,10 @@
     "button.problem.detail.map.acces": "Access the map",
     "button.problem.detail.chart.download": "Download data",
 
+    "notification.message.invite": "You sent the invitation correctly",
+
+    "user.table.name": "Name",
+
     "table.pager.items.per.page": "Items per page",
     "table.pager.of": "Of",
     "table.pager.items": "Items",

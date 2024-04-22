@@ -25,6 +25,7 @@ import LanguageProvider from 'contexts/LanguageSelector'
 
 
 
+
 type PlanBasicInfoPageProps = {
   data: any
 }
@@ -74,7 +75,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
       console.log(e)
     }
   }
-
+  console.log("This Is  data:", data)
   return (
     <>
       <LanguageProvider>
@@ -86,7 +87,8 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
           url="/planejamento/construir-plano"
         />
         <S.SectionWrapper>
-          <S.PlanName>{data?.title || `[Título do plano]`}</S.PlanName>
+          <S.PlanName>{data?.title || [<FormattedMessage id='edit.plan.title.label' />]}
+          </S.PlanName>
           <S.PlanDates>{`De ${data?.startAt || '[Data de inicio]'} a ${
             data?.endAt || '[Data de término]'
           }`}</S.PlanDates>

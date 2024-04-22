@@ -17,6 +17,7 @@ import * as S from './styles'
 import WarningIcon from 'components/icons/WarningIcon'
 import Input from 'components/Input'
 import Notifications from 'components/Notifications'
+import { FormattedMessage } from 'react-intl'
 
 type Inputs = {
   firstname: string
@@ -74,7 +75,7 @@ const NewInviteModalContent = () => {
             toast.custom((t) => (
               <Notifications
                 id={t.id}
-                text={'Enviou corretamente o convite!'}
+                text={<FormattedMessage id='notification.message.invite'/>}
                 variant="success"
               />
             ))

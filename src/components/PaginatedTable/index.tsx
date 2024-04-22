@@ -114,14 +114,15 @@ export default function Table({
     table.resetRowSelection(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pagination.state.pageIndex])
+    console.log("This Is  table:", table.getRowModel())
 
   return (
     <S.Wrapper>
       <S.Table>
         <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
+          {table.getHeaderGroups().map((headerGroup:any) => (
             <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
+              {headerGroup.headers.map((header:any) => {
                 return (
                   <S.TableHeadCell
                     key={header.id}
@@ -158,7 +159,7 @@ export default function Table({
           ))}
         </thead>
         <S.Tbody>
-          {table.getRowModel().rows.map((row) => {
+          {table.getRowModel().rows.map((row:any) => {
             return (
               <S.TableRow
                 key={row.id}
@@ -166,7 +167,7 @@ export default function Table({
                   .map((id) => Number(id))
                   .includes(Number(row.id))}
               >
-                {row.getVisibleCells().map((cell) => {
+                {row.getVisibleCells().map((cell:any) => {
                   return (
                     <S.TableDataCell key={cell.id}>
                       <S.TableDataCellWrapper>
@@ -197,8 +198,8 @@ export default function Table({
           <S.ItemsInfo>{items_info} <FormattedMessage id='table.pager.of'/> {totalItems} <FormattedMessage id='table.pager.items'/></S.ItemsInfo>
           <S.PageSize
             value={pagination.state.pageSize}
-            onChange={(e) =>
-              pagination.setPagination((state) => ({
+            onChange={(e:any) =>
+              pagination.setPagination((state:any) => ({
                 ...state,
                 pageSize: Number(e.target.value)
               }))

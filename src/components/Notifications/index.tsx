@@ -8,7 +8,7 @@ import ToastSuccessIcon from 'components/icons/ToastSuccessIcon'
 import ToastWarningIcon from 'components/icons/ToastWarningIcon'
 
 type NotificationProps = {
-  text: string
+  text: string | any
   id: string
   variant: string
 }

@@ -54,6 +54,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   useEffect(() => {
     setIsFirefox(navigator.userAgent.includes('Firefox'))
   }, [])
+  console.log("This Is  rest:", rest)
   
   return (
     <>
@@ -61,7 +62,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         name={name}
         error={!!error}
         ref={ref}
-        id={rest.placeholder!.props.id}
+        id={rest.placeholder}
         placeholderFixed
         type={showText ? 'text' : 'password'}
         trailingAction={trailingAction}

@@ -73,7 +73,7 @@ const Header = () => {
                   toast.custom((t) => (
                     <NotificationFranco
                     id={t.id}
-                      text="Enviou corretamente o convite"
+                      text={<FormattedMessage id='notification.message.invite'/>}
                       variant="success"
                       />
                     ))

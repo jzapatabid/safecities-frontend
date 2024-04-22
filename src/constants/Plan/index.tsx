@@ -4,7 +4,6 @@
 
 import { InitiativesSummaryFieldPropsTypes } from 'types/Initiatives'
 import { FormattedMessage }  from 'react-intl'
-import { useIntl } from 'react-intl';
 
 
 
@@ -53,7 +52,6 @@ const CONSTRUCT_PLAN_DISCLAIMER = {
 
 
 const INITIATIVES_SUMMARY_FIELDS_NAME = {
- 
   TOTAL_PRIORITIZED_CAUSES: 'planning.prioritized.causes.card',
   TOTAL_PRIORITIZED_PROBLEMS:  'diagnosis.prioritized.problems.card',
   TOTAL_ASSOCIATED: 'diagnosis.associated.card',
