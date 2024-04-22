@@ -27,11 +27,12 @@ const StatCard: React.FC<StatCardProps> = ({
   link = '',
   iniciativasCard = false
 }) => {
+  console.log("This Is  label:", label)
   console.log("This Is  label2:", label2)
 
   const intl = useIntl()
 
-  const innerLabel = intl.formatMessage({ id:'diagnosis.associated.card'})
+  const innerLabel = "Ver más"
   
 
 
@@ -53,16 +54,16 @@ const StatCard: React.FC<StatCardProps> = ({
           {link ? (
             <Link href={link} passHref>
               <S.IndicatorText link>{`${
-                (!innerLabel.toLowerCase().startsWith("ver") && !innerLabel.toLowerCase().startsWith("see")) ? count2 : ''
+                (!innerLabel.toLowerCase().startsWith("ver") && !innerLabel.toLowerCase().startsWith("see")) ? count2 > 0 && count2 : ''
               } ${innerLabel}`}</S.IndicatorText>
             </Link>
           ) : (
-            // (!label2.toLowerCase().startsWith("ver") && !label2.toLowerCase().startsWith("see")) ? count2 : ''
-            <S.IndicatorText>{`${
-              (!label2.toLowerCase().startsWith("ver") && !label2.toLowerCase().startsWith("see")) && iniciativasCard
-                ? label2.replace('XX', count2.toString())
-                : ''
-            } ${iniciativasCard ? '' : <FormattedMessage id={label2}/>}`}</S.IndicatorText>
+            <>
+            <S.IndicatorText>{
+              (!label2.toLowerCase().startsWith("ver") && !label2.toLowerCase().startsWith("see")) ? <>{count2 > 0 && count2}</> : ''}
+              {!iniciativasCard && innerLabel
+            }</S.IndicatorText>
+            </>
           )}
         </S.IndicatorInfoWrapper>
       )}

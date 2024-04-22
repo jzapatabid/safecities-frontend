@@ -54,7 +54,7 @@ const CONSTRUCT_PLAN_DISCLAIMER = {
 const INITIATIVES_SUMMARY_FIELDS_NAME = {
   TOTAL_PRIORITIZED_CAUSES: 'planning.prioritized.causes.card',
   TOTAL_PRIORITIZED_PROBLEMS:  'diagnosis.prioritized.problems.card',
-  TOTAL_ASSOCIATED: 'diagnosis.associated.card',
+  TOTAL_ASSOCIATED: 'Ver más',
 } as const
 
 const INITIATIVES_ACTION_MODAL_PROPS = {

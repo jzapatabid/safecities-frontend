@@ -75,7 +75,6 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
       console.log(e)
     }
   }
-  console.log("This Is  data:", data)
   return (
     <>
       <LanguageProvider>
@@ -87,7 +86,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
           url="/planejamento/construir-plano"
         />
         <S.SectionWrapper>
-          <S.PlanName>{data?.title || [<FormattedMessage id='edit.plan.title.label' />]}
+          <S.PlanName>{data?.title || "[Nombre del Pan]"}
           </S.PlanName>
           <S.PlanDates>{`De ${data?.startAt || '[Data de inicio]'} a ${
             data?.endAt || '[Data de término]'
@@ -96,7 +95,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
         <S.SectionWrapper>
           <S.NavBarWrapper>
             <NavBarGeneric
-              links={PLAN_PRINARY_NAV_LINKS.map((linkProps) => {
+              links={PLAN_PRINARY_NAV_LINKS.map((linkProps:any) => {
                 return {
                   ...linkProps
                 }
