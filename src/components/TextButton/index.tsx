@@ -37,6 +37,7 @@ const TextButton: React.FC<TextButtonProps> = ({
 
   const intl = useIntl()
   const formattedText = intl.formatMessage({id: text})
+  console.log("This Is  formattedText:", formattedText)
 
 
   return <S.Wrapper onClick={onClick} disabled={disabled}>

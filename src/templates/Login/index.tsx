@@ -104,7 +104,7 @@ const Login = ({ email }: LoginProps) => {
   return (
     <S.Wrapper>
       {state && (
-        <IntlProvider messages={state.messages} locale="pt" defaultLocale="pt">
+        <IntlProvider messages={state.messages} locale="es" defaultLocale="es">
             {userBlocked && (
               <UserBlockedModal email={watchEmail} setUserBlocked={setUserBlocked}/>
             )}

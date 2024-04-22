@@ -32,7 +32,6 @@ const FileDropzone = ({
   const [uploading, setUploading] = useState(false)
   const [uploadProgress, setUploadProgress] = useState(10)
   const onDrop = (acceptedFiles: any, fileRejections: any) => {
-    console.log('Rejected Files', fileRejections)
     setFiles(acceptedFiles)
     setUploadProgress(10)
   }

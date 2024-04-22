@@ -1,4 +1,5 @@
 {
+    "defaultMessage": "foo",
     "button.save": "Guardar",
     "button.cancel": "Cancelar",
     "button.login": "Iniciar sesión",
@@ -109,6 +110,7 @@
     "causes.disclaimer.line.2": "La plataforma soporta una parte importante, pero no todas las actividades necesarias.",
     "causes.summary.name.maped": "Causas mapeadas",
     "causes.summary.name.relevant": "Causas relevantes",
+    "causes.no.data": "No hay datos disponibles para esta causa",
 
     "planning.associate.initiatives.title" : "Asociar iniciativas",
     "planning.build.plan.title" : "Construir plan",
@@ -284,6 +286,7 @@
     "text.kpi.details": "Ver detalles",
     "text.kpi.analisis": "Analisis descriptivo",
     "text.indicator.analisis": "Indicador",
+    "text.indicator.1": "No hay datos disponibles para este indicador.",
 
     "chart.title": "Estadisticas de desempeño",
     "population.rate": "Tasa por 100.000 habitantes",

@@ -46,7 +46,6 @@ const ConsentrationBarChart: React.FC<BarChartProps> = ({
   const spaceBetweenBars = 50
 // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-   console.log("updatedData.....",updatedData); 
    if (!svgRef.current) return
 
     const svg = d3.select(svgRef.current)

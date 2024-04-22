@@ -35,7 +35,6 @@ export default function AddCauseForm(CauseProps: any) {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault()
-
     const baseURL = process.env.NEXT_PUBLIC_API_URL
     const response = await fetch(
       `${baseURL}/city/${1}/problem/${CauseProps.problemId}/cause`,

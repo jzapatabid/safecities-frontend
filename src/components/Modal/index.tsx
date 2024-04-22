@@ -1,13 +1,14 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 
 import { useModal } from 'contexts/Modal'
 
 import * as S from './styles'
 
-// import ButtonV2 from 'components/ButtonV2'
 import DefaultModalTemplate from 'components/DefaultModalTemplate'
-// import CrossIcon from 'components/icons/CrossIcon'
 import SidesheetModalTemplate from 'components/SidesheetModalTemplate'
+import LanguageProvider from 'contexts/LanguageSelector'
+import { IntlProvider } from 'react-intl'
+import { LanguageContext } from 'contexts/LanguageSelector/context'
 
 export enum MODAL_TYPE {
   SIDESHEET = 'sidesheet'
@@ -44,11 +45,13 @@ const Modal: React.FC<ModalPropTypes> = ({ type }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
+  const { state } = useContext(LanguageContext);
   return (
-    <S.Dialog ref={dialogRef} type={type}>
-      <Template />
-    </S.Dialog>
+    <IntlProvider messages={state.messages} locale="pt" defaultLocale="pt">
+      <S.Dialog ref={dialogRef} type={type}>
+        <Template />
+      </S.Dialog>
+    </IntlProvider>
   )
 }
 

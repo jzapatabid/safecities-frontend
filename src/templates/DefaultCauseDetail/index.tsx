@@ -314,7 +314,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
               </>
             ) : (
               <Disclaimer
-                data={{ line1: 'Não há dados disponíveis para este indicador' }}
+                data={{ line1: 'text.indicator.1' }}
                 mtOnly={true}
               />
             )}
@@ -322,7 +322,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
         ) : (
           <S.DisclaimerWrapper>
             <Disclaimer
-              data={{ line1: 'Não há dados disponíveis para esta causa' }}
+              data={{ line1: 'causes.no.data' }}
               mtOnly={true}
             />
           </S.DisclaimerWrapper>

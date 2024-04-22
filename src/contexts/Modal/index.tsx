@@ -11,16 +11,15 @@ const useModal = () => useContext(ModalContext)
 
 const ModalProvider: React.FC = ({ children }) => {
   const [modalState, setModalState] = useState({} as ModalStateTypes)
+  console.log("This Is  modalState:", modalState)
 
   return (
-    <ModalContext.Provider value={{ modalState, setModalState }}>
-      <LanguageProvider>
-        {children}
-        <Modal type={modalState.type} />
-      </LanguageProvider>
-
-      
-    </ModalContext.Provider>
+    <LanguageProvider>
+      <ModalContext.Provider value={{ modalState, setModalState }}>
+          {children}
+          <Modal type={modalState.type} />
+      </ModalContext.Provider>
+    </LanguageProvider>
   )
 }
 

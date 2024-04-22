@@ -47,7 +47,7 @@ const MainContainer = ({ children }: ContainerProps) => {
   
   return (
       state && (
-        <IntlProvider messages={state.messages} locale="pt" defaultLocale="pt">
+        <IntlProvider messages={state.messages} locale="es" defaultLocale="es">
           <S.Container>
             <S.SideNavBarWrapper>
               <SideNavBar links={links} variant="small" />

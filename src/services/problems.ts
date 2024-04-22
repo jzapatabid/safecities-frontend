@@ -137,7 +137,6 @@ export const getAssociatedCausesForProblem = async (
     const response = await api.get(
       `/problems/${problem_id}/causes?order_field=${order_field}&page_size=${page_size}&page=${page}&sort_type=${sort_type}`
     )
-
     const data = {
       items: response.data.data.results,
       totalItems: response.data.data.totalItems,

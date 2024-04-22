@@ -26,7 +26,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "eslint-plugin-import-helpers"],
+  "plugins": ["react", "formatjs", "react-hooks", "@typescript-eslint", "eslint-plugin-import-helpers", "eslint-plugin-formatjs", "babel-plugin-formatjs"],
   "rules": {
     "import-helpers/order-imports": [
       "warn",
@@ -58,6 +58,8 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "no-useless-catch": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "prettier/prettier": "off"
+    "prettier/prettier": "off",
+    "formatjs/no-offset": "off",
+    "formatjs/enforce-id": "off"
   }
 }

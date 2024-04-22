@@ -130,7 +130,6 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
   id,
   backTo
 }) => {
-  console.log("This Is  detail:", detail)
   const router = useRouter()
   const [chartDataKey, setChartDataKey] = useState('performance')
   const { setModalState } = useModal()
@@ -158,7 +157,6 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
       detail.problem && detail.problem.polarity ? detail.problem.polarity : '',
     trendValue: detail.kpi && detail.kpi.trend ? detail.kpi.trend : ''
   }
-
   return (
     <>
       <LanguageProvider>
@@ -205,8 +203,8 @@ const ProblemDetail: React.FC<ProblemDetailPropTypes> = ({
               loading={false}
               text={
                 detail?.problem?.prioritized
-                  ? <FormattedMessage id='button.diagnosis.prioritize.problem'/>
-                  : <FormattedMessage id='button.diagnosis.deprioritize.problem'/>
+                  ? <FormattedMessage id='button.diagnosis.deprioritize.problem'/>
+                  : <FormattedMessage id='button.diagnosis.prioritize.problem'/>
               }
               LeadingIcon={
                 detail?.problem?.prioritized ? FlagIcon : FlagFilledIcon

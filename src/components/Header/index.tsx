@@ -62,7 +62,7 @@ const Header = () => {
     <S.Wrapper fixed={!scrollUp}>
       {
         state && (
-        <IntlProvider messages={state.messages} locale="pt" defaultLocale="pt">
+        <IntlProvider messages={state.messages} locale="es" defaultLocale="es">
           <Container>
             <SafeCitiesBrand
               onClick={() => router.push(`/diagnostico/problemas-potenciais`)}

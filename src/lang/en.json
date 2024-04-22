@@ -1,4 +1,8 @@
 {
+    "foo": {
+        "id": "19shaf",
+        "defaultMessage": "{var, plural, one{one} other{other}}"
+      },
     "button.save": "Save",
     "button.cancel": "Cancel",
     "button.login": "Log in",
@@ -109,6 +113,7 @@
     "causes.disclaimer.line.2": "The platform supports an important part, but not all of the necessary activities.",
     "causes.summary.name.maped": "Mapped causes",
     "causes.summary.name.relevant": "Relevant causes",
+    "causes.no.data": "No data available for this cause",
 
     "planning.associate.initiatives.title" : "Associate initiatives",
     "planning.build.plan.title" : "Build plan",
@@ -284,6 +289,7 @@
     "text.kpi.details": "See details",
     "text.kpi.analisis": "Descriptive analysis",
     "text.indicator.analisis": "Indicator",
+    "text.indicator.1": "There is no data available for this indicator",
 
     
     "chart.title": "Performance statistics",

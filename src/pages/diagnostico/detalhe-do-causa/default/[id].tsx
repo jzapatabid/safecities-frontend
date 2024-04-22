@@ -1,7 +1,3 @@
-// import { problemDetailPageMockData } from 'contexts/Problems/initialState'
-
-// import { defaultCauseDetailWithMockData } from 'contexts/Causes/initialState'
-
 import { getAPIClient } from 'services/axios'
 import {
   getDeafultCauseIndicatorDetails,
@@ -9,9 +5,6 @@ import {
 } from 'services/causes'
 import DefaultCauseDetail from 'templates/DefaultCauseDetail'
 import { withSSRAuth } from 'utils/withSSRAuth'
-
-// import { getAPIClient } from 'services/axios'
-// import { getProblemDetail } from 'services/problems'
 
 type CauseDetailPageProps = {
   id: number

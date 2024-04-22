@@ -1,12 +1,7 @@
-// import { problemDetailPageMockData } from 'contexts/Problems/initialState'
-
 import { getAPIClient } from 'services/axios'
 import { getPersonalizedCauseDetail } from 'services/causes'
 import PersonalizedCauseDetail from 'templates/PersonalizedCauseDetail'
 import { withSSRAuth } from 'utils/withSSRAuth'
-
-// import { getAPIClient } from 'services/axios'
-// import { getProblemDetail } from 'services/problems'
 
 type CauseDetailPageProps = {
   id: number

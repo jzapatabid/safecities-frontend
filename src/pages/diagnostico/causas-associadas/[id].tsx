@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 
 import { useProblems } from 'contexts/Problems'
-// import { problemDetailPageMockData } from 'contexts/Problems/initialState'
 
 import { getAPIClient } from 'services/axios'
 import {

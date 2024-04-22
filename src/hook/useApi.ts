@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://4.153.179.70:5000/'
+  baseURL: 'https://safecities-backend.sinapsisdev.com/'
 })
 
 export const useApi = () => ({

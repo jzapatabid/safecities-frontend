@@ -1,4 +1,5 @@
 {
+    "defaultMessage": "foo",
     "button.save": "Salvar",
     "button.cancel": "Cancelar",
     "button.login": "Entrar",
@@ -101,7 +102,7 @@
     "causes.detail.actual.situation.label.1": "Ocorrências",
     "causes.detail.actual.situation.data.2": "Taxa da cidade",
     "causes.detail.actual.situation.label.2": "Taxa por 100.000 habitantes",
-    "causes.posible.table.prioritized.problem.name": "Problema priorizado",
+    "causes.posible.table.prioritized.name": "Problema priorizado",
     "causes.posible.table.associated.name": "Causas possíveis associadas",
     "causes.posible.table.prioritized.cause.name": "Causas priorizadas associadas",
     "causes.associated.table.author.name": "Autor",
@@ -109,6 +110,7 @@
     "causes.disclaimer.line.2": "A plataforma suporta uma parte importante, mas não todas as atividades necessárias.",
     "causes.summary.name.maped": "Causas mapeadas",
     "causes.summary.name.relevant": "Causas relevantes",
+    "causes.no.data": "Não há dados disponíveis para esta causa",
 
     "planning.associate.initiatives.title" : "Associar iniciativas",
     "planning.build.plan.title" : "Construir plano",
@@ -284,6 +286,7 @@
     "text.kpi.details": "Ver detalhes",
     "text.kpi.analisis": "Análise descritiva",
     "text.indicator.analisis": "Indicador",
+    "text.indicator.1": "Não há dados disponíveis para este indicador",
 
     "chart.title": "Estatísticas de desempenho",
     "population.rate": "Taxa por 100.000 habitantes",

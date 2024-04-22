@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { render, screen } from 'utils/test-utils'
 
-import Header from '.'
 import LanguageProvider from 'contexts/LanguageSelector'
+import Header from '.'
 
 jest.mock('contexts/AuthContext', () => {
   return {
