@@ -70,19 +70,19 @@ const PROBLEMS_DISCLAIMER = {
 const PROBLEMS_ACTION_MODAL_PROPS = {
   [PROBLEMS_ACTION.PRIORITIZE]: {
     open: true,
-    title: 'diagnosis.prioritize.problem.title',
-    desc: 'diagnosis.prioritize.problem.desc',
-    cancelBtn: 'button.cancel',
-    confirmBtn: 'button.diagnosis.prioritize.problem',
+    title: 'Priorizar los problemas',
+    desc: '¿Está seguro de que desea Priorizar el siguiente problema?',
+    cancelBtn: 'Cancelar',
+    confirmBtn: 'Priorizar Problema',
     actionType: PROBLEMS_ACTION.PRIORITIZE,
     Content: ProblemsModalContent
   },
   [PROBLEMS_ACTION.DEPRIORITIZE]: {
     open: true,
-    title: 'diagnosis.deprioritize.problem.title',
-    desc: 'diagnosis.deprioritize.problem.desc',
-    cancelBtn: 'button.cancel',
-    confirmBtn: 'button.diagnosis.deprioritize.problem',
+    title: 'Despriorizar los problemas',
+    desc: '¿Está seguro de que desea despriorizar el siguiente problema?',
+    cancelBtn: 'Cancelar',
+    confirmBtn: 'Despriorizar problema',
     actionType: PROBLEMS_ACTION.DEPRIORITIZE,
     Content: ProblemsModalContent
   }

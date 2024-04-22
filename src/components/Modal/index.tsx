@@ -6,7 +6,6 @@ import * as S from './styles'
 
 import DefaultModalTemplate from 'components/DefaultModalTemplate'
 import SidesheetModalTemplate from 'components/SidesheetModalTemplate'
-import LanguageProvider from 'contexts/LanguageSelector'
 import { IntlProvider } from 'react-intl'
 import { LanguageContext } from 'contexts/LanguageSelector/context'
 

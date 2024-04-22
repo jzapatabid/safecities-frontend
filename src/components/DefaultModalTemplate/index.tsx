@@ -29,35 +29,35 @@ const DefaultModalTemplate = () => {
         state && (
           <IntlProvider messages={state.messages} locale="es" defaultLocale="es">
         <S.Header>
-          {/* <S.Title>{<FormattedMessage defaultMessage="Default Message" id={modalState.title}/>}</S.Title> */}
+          <S.Title>{modalState.title}</S.Title>
           <S.DismissWrapper tabIndex={0} onClick={onClose}>
             <CrossIcon height={16} width={16} fill="#FFFFFF" />
           </S.DismissWrapper>
         </S.Header>
         <S.ContentWrapper>
-          {/* <S.Description>{<FormattedMessage defaultMessage="Default Message" id={modalState.desc}/>}</S.Description> */}
+          <S.Description>{modalState.desc}</S.Description>
           {Content && <Content {...modalState.contentProps} />}
         </S.ContentWrapper>
         <S.Footer>
           {modalState.cancelBtn && (
             <S.BtnWrapper>
-              {/* <ButtonV2
+              <ButtonV2
                 loading={false}
                 variant="outline"
                 onClick={onClose}
-                text={<FormattedMessage defaultMessage="Default Message" id={modalState.cancelBtn}/>}
-              /> */}
+                text={modalState.cancelBtn}
+              />
             </S.BtnWrapper>
           )}
           {modalState.confirmBtn && (
             <S.BtnWrapper>
-              {/* <ButtonV2
+              <ButtonV2
                 loading={false}
                 disabled={modalState.disableConfirm}
                 onClick={modalState.onConfirm}
-                text={<FormattedMessage defaultMessage="Default Message" id={modalState.confirmBtn}/>}
+                text={modalState.confirmBtn}
                 LeadingIcon={getConfirmBtnIcon(modalState.confirmBtn)}
-              /> */}
+              />
             </S.BtnWrapper>
           )}
         </S.Footer>

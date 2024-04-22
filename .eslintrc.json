@@ -26,7 +26,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "formatjs", "react-hooks", "@typescript-eslint", "eslint-plugin-import-helpers", "eslint-plugin-formatjs", "babel-plugin-formatjs"],
+  "plugins": ["react", "formatjs", "react-hooks", "@typescript-eslint", "eslint-plugin-import-helpers", "eslint-plugin-formatjs"],
   "rules": {
     "import-helpers/order-imports": [
       "warn",
