@@ -72,9 +72,6 @@ export default function Table({
     manualSorting: true
   })
   const rows = table.getRowModel().rows.length
-  // console.log("This Is  table.getRowModel():", table.getRowModel())
-  // console.log("This Is  rows:", rows)
-
   const items_info = `${
     totalItems !== 0
       ? (pagination.state.pageIndex - 1) * pagination.state.pageSize + 1

@@ -136,7 +136,7 @@ export default function InitiativesTable({
         },
         header: () => (
           <S.ColumnName>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.NAME} /> || <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.NAME}/>}
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.NAME} />}
           </S.ColumnName>
         )
       },
@@ -176,8 +176,7 @@ export default function InitiativesTable({
         ),
         header: () => (
           <S.ColumnRelations>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.PROBLEMS} /> ||
-              <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.PERFORMANCE}/>}
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.PROBLEMS} />}
           </S.ColumnRelations>
         )
       },
@@ -195,7 +194,7 @@ export default function InitiativesTable({
         ),
         header: () => (
           <S.ColumnTrend>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.ESTIMATED} /> || <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.RECENT_TREND}/>}
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.ESTIMATED} />}
           </S.ColumnTrend>
         )
       },
@@ -215,8 +214,7 @@ export default function InitiativesTable({
         ),
         header: () => (
           <S.ColumnEffectiveness>
-            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.EFFECTYIVENESS} /> ||
-              <FormattedMessage id={PROBLEMS_TABLE_COLUMNS_NAMES.CRITITCALITY_LEVEL}/>}
+            {<FormattedMessage id={INITIATIVES_TABLE_COLUMNS_NAMES.EFFECTYIVENESS}/>}
           </S.ColumnEffectiveness>
         )
       }
