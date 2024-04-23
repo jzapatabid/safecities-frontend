@@ -13,6 +13,7 @@ import IconButton from 'components/IconButton'
 import AddCircleOutlineIcon from 'components/icons/AddCircleOutlineIcon'
 import EyeIcon from 'components/icons/EyeIcon'
 import EyeOpenIcon from 'components/icons/EyeOpenIcon'
+import { FormattedMessage } from 'react-intl'
 
 export type InputProps = {
   error?: string | boolean
@@ -71,7 +72,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         onKeyDown={handleKeyDown}
       />
       <S.Placeholder htmlFor={rest.placeholder} placeholderFixed>
-        {rest.placeholder}
+        {<FormattedMessage id={rest.placeholder}/>}
       </S.Placeholder>
       {type === 'password' && (
         <S.IconWrapper onClick={() => setShowText((value) => !value)}>
