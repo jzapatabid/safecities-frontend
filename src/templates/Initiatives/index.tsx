@@ -88,7 +88,7 @@ const Initiatives = () => {
       }
     })
   }
-
+  const date = new Date()
   return (
     <>
       <LanguageProvider>
@@ -141,7 +141,7 @@ const Initiatives = () => {
           <ButtonV2
             loading={btn1Loading}
             variant="outline"
-            text={<FormattedMessage id ='button.diagnosis.deprioritize.problem' />}
+            text={<FormattedMessage id='button.planning.deprioritize.initiative'/>}
             LeadingIcon={FlagIcon}
             disabled={disableDeprioritize}
             onClick={() =>
@@ -152,7 +152,7 @@ const Initiatives = () => {
           />
           <ButtonV2
             loading={btn2Loading}
-            text={<FormattedMessage id ='button.diagnosis.prioritize.problem' />}
+            text={<FormattedMessage id='button.planning.prioritize.initiative' />}
             LeadingIcon={FlagFilledIcon}
             disabled={disablePrioritize}
             onClick={() =>
@@ -163,7 +163,7 @@ const Initiatives = () => {
           />
         </S.ActionsWrapper>
         <InitiativesTable problems={initiativesState.problems} />
-        <S.Text>{<FormattedMessage id ='last.update.footer.text' />}: 23 de junho de 2023</S.Text> 
+        <S.Text>{<FormattedMessage id ='last.update.footer.text' />}: {date.toLocaleDateString()}</S.Text> 
         <Footer />
       </MainContainer>
 </LanguageProvider>

@@ -135,7 +135,7 @@ const Initiatives = () => {
         <S.Text>
           <FormattedMessage id='last.update.footer.text' />
           {
-          date.toUTCString()
+          date.toLocaleDateString()
           }
         </S.Text>
         <Footer />

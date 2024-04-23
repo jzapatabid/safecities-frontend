@@ -74,7 +74,7 @@ const Causes = () => {
             (problem) => problem.prioritized
           )}
         />
-        <S.Text><FormattedMessage id='last.update.footer.text'/> {date.toUTCString()}</S.Text>
+        <S.Text><FormattedMessage id='last.update.footer.text'/> {date.toLocaleDateString()}</S.Text>
         <Footer />
       </MainContainer>
 </LanguageProvider>
