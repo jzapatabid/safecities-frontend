@@ -9,6 +9,7 @@ import LeftArrow from 'components/icons/LeftArrow'
 
 const SidesheetModalTemplate = () => {
   const { modalState, setModalState } = useModal()
+  console.log("This Is  modalState:", modalState)
   const Content = modalState.Content
   const onClose = () => setModalState({ open: false })
 

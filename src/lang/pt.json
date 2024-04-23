@@ -77,6 +77,7 @@
     "diagnosis.deprioritize.problem.desc": "Você tem certeza de que deseja depriorizar o problema a seguir?",
     "diagnosis.disclaimer.link": "Clique aqui para saber mais",
     "diagnosis.desc": "Descrição",
+    "diagnosis.chart.rate": "Taxa de ocorrências",
     
     "problem.detail.current.situation": "Situação atual",
     "problem.detail.key.variables": "Variáveis-chave para dimensionamento do problema",
@@ -271,6 +272,7 @@
     "chart.trend.1": "Aumento",
     "chart.trend.2": "Estável",
     "chart.trend.3": "Redução",
+    "chart.taxa": "Taxa",
     "chart.trend.variation": "Variação da taxa",
     "chart.trend.relation": "Em relação aos últimos 5 anos",
     "chart.relative.frequency": "Frequência relativa",
@@ -285,12 +287,22 @@
     "date.to": "a",
     "text.problems": "Problemas",
     "text.causes": "Causas",
-
+    "text.for": "Para",
+    "text.goal": "Meta",
+    "text.until": "Até",
+    "text.data": "Data",
+    "text.base.line": "Linha de base (situação atual)",
+    "text.ref.year": "Ano de referência*",
+    "text.value.numer": "Valor numérico*",
     "text.kpi": "Selecione pelo menos um KPI de análise quantitativa",
     "text.kpi.details": "Ver detalhes",
     "text.kpi.analisis": "Análise descritiva",
     "text.indicator.analisis": "Indicador",
     "text.indicator.1": "Não há dados disponíveis para este indicador",
+
+    "modal.title.continue": "Tem certeza que deseja continuar?",
+    "modal.desc.continue": "Atenção. Ao alterar o prazo geral de seu plano, você precisará atualizar as metas de impacto, resultado e produto, bem como a programação financeira do seu plano.",
+
 
     "chart.title": "Estatísticas de desempenho",
     "population.rate": "Taxa por 100.000 habitantes",

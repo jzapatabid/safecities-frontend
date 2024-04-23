@@ -235,7 +235,7 @@ const BarLineChartSorted = ({
         .attr('y', 0 - margin.left - 2)
         .attr('x', 0 - height / 2)
         .attr('dy', '1em')
-        .text('Taxa de ocorrências')
+        .text('Tasa de ocurrencia')
 
       svg
         .append('g')

@@ -80,6 +80,7 @@
     "diagnosis.deprioritize.problem.desc": "Are you sure you want to deprioritize the next problem?",
     "diagnosis.disclaimer.link": "Click here to learn more",
     "diagnosis.desc": "Description",
+    "diagnosis.chart.rate": "Occurrence rate",
 
     "problem.detail.current.situation": "Current situation",
     "problem.detail.key.variables": "Key variables for sizing the problem",
@@ -274,6 +275,7 @@
     "chart.trend.1": "Increase",
     "chart.trend.2": "Stable",
     "chart.trend.3": "Reduction",
+    "chart.taxa": "Rate",
     "chart.trend.variation": "Rate variation",
     "chart.trend.relation": "In relation to the last 5 years",
     "chart.relative.frequency": "Relative frequency",
@@ -288,14 +290,22 @@
     "date.to": "To",
     "text.problems": "Problems",
     "text.causes": "Causes",
-
+    "text.for": "For",
+    "text.goal": "Goal",
+    "text.until": "Until",
+    "text.data": "Data",
+    "text.base.line": "Baseline (current situation)",
+    "text.ref.year": "Reference year*",
+    "text.value.numer": "Numerical value*",
     "text.kpi": "Select at least one quantitative analysis KPI",
     "text.kpi.details": "See details",
     "text.kpi.analisis": "Descriptive analysis",
     "text.indicator.analisis": "Indicator",
     "text.indicator.1": "There is no data available for this indicator",
 
-    
+    "modal.title.continue": "Are you sure you want to continue?",
+    "modal.desc.continue": "Attention. When you change the overall timeframe of your plan, you will need to update the impact, outcome, and product goals, as well as your plan's financial schedule.",
+
     "chart.title": "Performance statistics",
     "population.rate": "Rate per 100,000 inhabitants",
     "occurrences.text": "Occurrences",

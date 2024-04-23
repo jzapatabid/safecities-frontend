@@ -77,7 +77,7 @@ const ProblemDiagnosisContent = ({
           <Input
             readOnly
             autoComplete="off"
-            placeholder="Nome do problema"
+            placeholder={<FormattedMessage id='edit.problems.form.indicator.title.label'/>}
             type="text"
             value={
               data?.problem_name?.slice(0, 1)?.toUpperCase() +

@@ -12,11 +12,11 @@ import { LanguageContext } from 'contexts/LanguageSelector/context'
 
 const getConfirmBtnIcon = (text: string) => {
   const negativeActions = 'despriorizar'
-  if (text.toLowerCase().includes(negativeActions)) {
-    return FlagIcon
-  } else {
-    return FlagFilledIcon
-  }
+  // if (text.toLowerCase().includes(negativeActions)) {
+  //   return FlagIcon
+  // } else {
+  //   return FlagFilledIcon
+  // }
 }
 const DefaultModalTemplate = () => {
   const { state } = useContext(LanguageContext);

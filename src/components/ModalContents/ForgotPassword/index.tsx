@@ -12,6 +12,7 @@ import * as S from './styles'
 
 import WarningIcon from 'components/icons/WarningIcon'
 import Input from 'components/Input'
+import { FormattedMessage } from 'react-intl'
 
 type Inputs = {
   email: string
@@ -78,7 +79,7 @@ const ForgotPasswordModalContent = () => {
         <Input
           autoComplete="off"
           type="text"
-          placeholder="Email"
+          placeholder={<FormattedMessage id='login.email.label'/>}
           {...register('email')}
           error={inputError}
           onChange={handleChange}

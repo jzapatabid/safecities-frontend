@@ -108,7 +108,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
           <S.TitleWrapper>
             <Input
               autoComplete="off"
-              placeholder="plan.form.title.placeholder"
+              placeholder={<FormattedMessage id='plan.form.title.placeholder'/>}
               type="text"
               placeholderFixed
               value={plansState.basic_information.title || ''}
@@ -120,7 +120,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
             <S.DateInputWrapper>
               <Input
                 autoComplete="off"
-                placeholder="edit.start.date.label"
+                placeholder={<FormattedMessage id='edit.start.date.label'/>}
                 type="text"
                 placeholderFixed
                 value={plansState.basic_information.startAt || ''}
@@ -131,7 +131,7 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
             <S.DateInputWrapper>
               <Input
                 autoComplete="off"
-                placeholder="edit.finish.date.label"
+                placeholder={<FormattedMessage id='edit.finish.date.label'/>}
                 type="text"
                 placeholderFixed
                 value={plansState.basic_information.endAt || ''}
@@ -159,11 +159,11 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
                   onClick={() =>
                     setModalState({
                       open: true,
-                      title: 'Tem certeza que deseja continuar?',
-                      desc: 'Atenção. Ao alterar o prazo geral de seu plano, você precisará atualizar as metas de impacto, resultado e produto, bem como a programação financeira do seu plano.',
+                      title: <FormattedMessage id='modal.title.continue'/>,
+                      desc: <FormattedMessage id='modal.desc.continue'/>,
                       onConfirm: handleSave,
-                      confirmBtn: 'step.by.step.continue.button',
-                      cancelBtn: 'add.initiative.cancel.button'
+                      confirmBtn: <FormattedMessage id='button.step.by.step.continue'/>,
+                      cancelBtn: <FormattedMessage id='button.cancel'/>
                     })
                   }
                   text={ <FormattedMessage id='button.save' />}
@@ -174,7 +174,6 @@ const PlanBasicInfo = ({ data }: PlanBasicInfoPageProps) => {
               <S.BtnWrapper>
                 <ButtonV2
                   loading={false}
-                  // disabled={modalState.disableConfirm}
                   onClick={() =>
                     router.push('/planejamento/plan-strategy-dimension')
                   }

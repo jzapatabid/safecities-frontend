@@ -153,7 +153,7 @@ const TacticalDimensionContent = ({
           <S.DateInputWrapper>
             <Input
               autoComplete="off"
-              placeholder = 'edit.start.date.label' 
+              placeholder={<FormattedMessage id='edit.start.date.label'/>} 
               type="text"
               placeholderFixed
               value={data?.tactical_dimension?.start_at || ''}
@@ -164,7 +164,7 @@ const TacticalDimensionContent = ({
           <S.DateInputWrapper>
             <Input
               autoComplete="off"
-              placeholder="edit.finish.date.label"
+              placeholder={<FormattedMessage id='edit.finish.date.label'/>}
               type="text"
               placeholderFixed
               value={data?.tactical_dimension?.end_at || ''}
@@ -265,7 +265,7 @@ const TacticalDimensionContent = ({
           <S.DashInputWrapper>
             <Input
               autoComplete="off"
-              placeholder="form.total.label"
+              placeholder={<FormattedMessage id='form.total.label'/>}
               type="text"
               numericOnly={true}
               placeholderFixed

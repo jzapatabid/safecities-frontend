@@ -16,6 +16,7 @@ import BarChartIcon from 'components/icons/BarChartIcon'
 import DeleteIcon from 'components/icons/DeleteIcon'
 import Input from 'components/Input'
 import TextButton from 'components/TextButton'
+import { FormattedMessage } from 'react-intl'
 
 type MacroObjectiveGoalPropsTypes = {
   data: any
@@ -100,11 +101,11 @@ const MacroObjectiveGoal = ({
         </S.DropdownWrapper>
       </S.ParameterGroup>
       <S.ParameterGroup>
-        <S.ParamterText>de</S.ParamterText>
+        <S.ParamterText>{<FormattedMessage id='table.pager.of'/>}</S.ParamterText>
         <S.TaxaInputWrapper>
           <Input
             autoComplete="off"
-            placeholder="Taxa"
+            placeholder={<FormattedMessage id='chart.taxa'/>}
             type="text"
             value={data.initialRate}
             placeholderFixed
@@ -114,11 +115,11 @@ const MacroObjectiveGoal = ({
         </S.TaxaInputWrapper>
       </S.ParameterGroup>
       <S.ParameterGroup>
-        <S.ParamterText>para</S.ParamterText>
+        <S.ParamterText>{<FormattedMessage id='text.for'/>}</S.ParamterText>
         <S.MetaInputWrapper>
           <Input
             autoComplete="off"
-            placeholder="Meta"
+            placeholder={<FormattedMessage id='text.goal'/>}
             type="text"
             value={typeof data.goalValue === 'number' ? data.goalValue : ''}
             placeholderFixed
@@ -140,7 +141,7 @@ const MacroObjectiveGoal = ({
         </S.MetaInputWrapper>
       </S.ParameterGroup>
       <S.ParameterGroup>
-        <S.ParamterText>até</S.ParamterText>
+        <S.ParamterText>{<FormattedMessage id='text.until'/>}</S.ParamterText>
         <S.DeleteWrapper>
           <S.DeleteBtnWrapper>
             <TextButton
@@ -157,7 +158,7 @@ const MacroObjectiveGoal = ({
           <S.MetaInputWrapper>
             <Input
               autoComplete="off"
-              placeholder="Data"
+              placeholder={<FormattedMessage id='text.data'/>}
               type="text"
               placeholderFixed
               value={

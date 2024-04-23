@@ -14,6 +14,7 @@ import * as S from './styles'
 import Disclaimer from 'components/Disclaimer'
 import Input from 'components/Input'
 import MultilineInput from 'components/MultilineInput'
+import { FormattedMessage } from 'react-intl'
 
 type NewIndicatorProps = {
   onConfirm: (indicator: any) => void
@@ -136,24 +137,24 @@ const NewIndicator = ({ onConfirm }: NewIndicatorProps) => {
         />
       </S.JustificationInputWrapper>
       <S.ActualSituationLabel>
-        Linha de base (situação stual)
+      <FormattedMessage id='text.base.line'/>
       </S.ActualSituationLabel>
       <S.DatesWrapper>
         <S.DateInputWrapper>
           <Input
             autoComplete="off"
-            placeholder="Valor numérico*"
+            placeholder={<FormattedMessage id='text.value.numer'/>}
             type="text"
             placeholderFixed
             value={indicatorData.baselineValue}
             secondaryPlaceholder="00"
             onChange={updateMetaData('baselineValue')}
-          />
+            />
         </S.DateInputWrapper>
         <S.DateInputWrapper>
           <Input
             autoComplete="off"
-            placeholder="Ano de referência*"
+            placeholder={<FormattedMessage id='text.ref.year'/>}
             type="text"
             placeholderFixed
             value={indicatorData.baselineYear}

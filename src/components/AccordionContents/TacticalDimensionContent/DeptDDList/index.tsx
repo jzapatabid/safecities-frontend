@@ -4,6 +4,7 @@ import * as S from './styles'
 
 import Dropdown from 'components/Dropdown'
 import Input from 'components/Input'
+import { FormattedMessage } from 'react-intl'
 
 const DeptDDList = ({
   options,
@@ -46,7 +47,7 @@ const DeptDDList = ({
       <S.DashInputWrapper>
         <Input
           autoComplete="off"
-          placeholder="form.orgs.label"
+          placeholder={<FormattedMessage id='form.orgs.label'/>}
           type="text"
           placeholderFixed
           secondaryPlaceholder="-"
@@ -59,7 +60,7 @@ const DeptDDList = ({
         <S.DashInputWrapper>
           <Input
             autoComplete="off"
-            placeholder="date.month.year"
+            placeholder={<FormattedMessage id='date.month.year'/>}
             type="text"
             placeholderFixed
             secondaryPlaceholder="MM/AAAA"

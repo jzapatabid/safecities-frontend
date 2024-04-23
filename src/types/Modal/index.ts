@@ -6,13 +6,13 @@ export type ModalContextProps = {
 }
 
 export type ModalStateTypes = {
-  title?: string
-  desc?: string
+  title?: string | any
+  desc?: string | any
   open?: boolean
   Content?: React.ComponentType<any>
   confirmIcon?: any
-  confirmBtn?: string
-  cancelBtn?: string
+  confirmBtn?: string | any
+  cancelBtn?: string | any
   onConfirm?: (...args: any[]) => any
   onCancel?: () => void
   actions?: any
