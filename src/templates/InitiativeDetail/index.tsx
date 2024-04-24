@@ -280,9 +280,7 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
           <S.ConnectionsDetailsWrapper>
             <ToastSuccessIcon />
             <S.EvidenceText onClick={() => handleShowRelations(cause.id)}>
-              {`${cause?.totalProblems || 0} Problemas e ${
-                cause?.totalCauses || 0
-              } Causas prioritário(a)s`}
+              {cause?.totalProblems || 0} <FormattedMessage id='diagnosis.problems.and'/> {cause?.totalCauses || 0} <FormattedMessage id='diagnosis.problems.priority.causes'/>
             </S.EvidenceText>
           </S.ConnectionsDetailsWrapper>
         </S.SectionWrapper>

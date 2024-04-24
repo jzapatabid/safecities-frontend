@@ -62,6 +62,8 @@
     "diagnosis.associated.card": "See more",
     "diagnosis.info.section.line1": "The process of identifying, analyzing and prioritizing problems is highly complex.",
     "diagnosis.info.section.line2": "The platform supports an important part, but not all the necessary activities.",
+    "diagnosis.problems.and": "Problems and",
+    "diagnosis.problems.priority.causes": "Priority Causes",
     "diagnosis.critical.problems.card": "Critical problems",
     "diagnosis.prioritized.problems.card": "Prioritized problems",
     "diagnosis.problem.table.name": "Potential problem",
