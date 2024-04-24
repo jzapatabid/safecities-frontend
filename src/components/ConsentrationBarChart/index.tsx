@@ -226,6 +226,7 @@ const ConsentrationBarChart: React.FC<BarChartProps> = ({
       .style('font-family', 'Poppins')  
       .style('font-size', '12px')       
       .style('font-weight', '500')
+      .style('transform', 'translateX(15%)')
       .attr('fill', '#fff')
       .text((d) => d.name)
   }, [legendColors,updatedData])
