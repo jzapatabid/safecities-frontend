@@ -27,6 +27,7 @@ import MultilineInput from 'components/MultilineInput'
 import Notifications from 'components/Notifications'
 import ReferenceForeignlink from 'components/ReferenceForeignlink'
 import TextButton from 'components/TextButton'
+import { FormattedMessage } from 'react-intl'
 
 type PersonalizedProblemPropTypes = {
   cause?: any
@@ -269,26 +270,26 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
         <MultilineInput
           spellCheck={false}
           autoComplete="off"
-          placeholder="Título do problema*"
+          placeholder={<FormattedMessage id = "problem.title" />}
           type="text"
           value={causeData.name}
           onChange={onTitleChange}
-          restrictionLabel="Insira até 200 caracteres"
+          restrictionLabel={<FormattedMessage id = "add.initiative.title.char.counter"/>}
         />
       </S.CauseTitleInputWrapper>
       <S.EvidenceInputWrapper>
         <MultilineInput
           spellCheck={false}
           autoComplete="off"
-          placeholder="Descrição do problema*"
+          placeholder={<FormattedMessage id = "problem.description"/>}
           value={causeData.description}
           onChange={onDescriptionChange}
-          restrictionLabel="Insira até 1000 caracteres"
+          restrictionLabel={<FormattedMessage id = "add.initiative.summary.char.counter"/>}
         />
       </S.EvidenceInputWrapper>
       <S.AttachmentsWrapper>
         <S.AttachmentsTitle>
-          Anexos
+          <FormattedMessage id = "anexos"/>
           <S.IconWrapper>
             <InfoIcon height={20} width={20} />
             <S.InfoTooltip>
@@ -304,9 +305,9 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
         />
       </S.AttachmentsWrapper>
       <S.ReferencesWrapper>
-        <S.AttachmentsTitle>Referências</S.AttachmentsTitle>
+        <S.AttachmentsTitle><FormattedMessage id = "asociate.initiatives.references" /></S.AttachmentsTitle>
         <S.ReferencesDesc>
-          Certifique-se que todos possam ter acesso a URL adicionada
+        <FormattedMessage id = "form.url.description" />
         </S.ReferencesDesc>
         {causeData.references?.length
           ? causeData.references.map((link: any, idx: number) => (
@@ -321,7 +322,7 @@ const PersonalizedProblem = ({ cause }: PersonalizedProblemPropTypes) => {
           <S.ReferencesInputWrapper>
             <Input
               autoComplete="off"
-              placeholder="Adicione URL"
+              placeholder={<FormattedMessage id = "form.add.url" />}
               type="text"
               trailingAction={addNewLink}
               value={causeData.newLink}

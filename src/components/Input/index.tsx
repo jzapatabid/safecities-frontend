@@ -81,7 +81,7 @@ const Input: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
       )}
       {trailingAction && (
         <S.ButtonWrapper onClick={trailingAction}>
-          <ButtonV2 loading={false} variant="outline" text="Carregar" />
+          <ButtonV2 loading={false} variant="outline" text={<FormattedMessage id = "button.add.initiative.external.references" />}/>
         </S.ButtonWrapper>
       )}
       {endIconAction && (

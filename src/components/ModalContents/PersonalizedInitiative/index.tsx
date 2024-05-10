@@ -31,6 +31,8 @@ import MultilineInput from 'components/MultilineInput'
 import Notifications from 'components/Notifications'
 import ReferenceForeignlink from 'components/ReferenceForeignlink'
 import TextButton from 'components/TextButton'
+import { FormattedMessage } from 'react-intl'
+import {useIntl} from 'react-intl'
 
 type PersonalizedCausePropTypes = {
   cause?: any
@@ -475,17 +477,22 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const intl = useIntl()
+  
+
+  
+
   return (
     <>
       <S.CauseTitleInputWrapper>
         <MultilineInput
           spellCheck={false}
           autoComplete="off"
-          placeholder="Título da nova iniciativa*"
+          placeholder= {<FormattedMessage id = "add.initiative.title.label"/>}
           type="text"
           value={causeData.name}
           onChange={onTitleChange}
-          restrictionLabel="Insira até 200 caracteres"
+          restrictionLabel={<FormattedMessage id = "add.initiative.title.char.counter"/>}
         />
       </S.CauseTitleInputWrapper>
       <S.DropdownWrapper>
@@ -527,7 +534,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                   .join(', ')
           }
           placeholder={
-            'Selecione uma causa ao qual a nova inciativa será associada*'
+            <FormattedMessage id = "add.initiative.cause.selector"/>
           }
         />
       </S.DropdownWrapper>
@@ -535,10 +542,10 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
         <MultilineInput
           spellCheck={false}
           autoComplete="off"
-          placeholder="Descrição*"
+          placeholder={<FormattedMessage id = "diagnosis.desc"/>}
           value={causeData.justification}
           onChange={onDescriptionChange}
-          restrictionLabel="Insira até 1000 caracteres"
+          restrictionLabel={<FormattedMessage id = "form.char.max"/>}
         />
       </S.JustificationInputWrapper>
       <S.DropdownWrapper>
@@ -568,7 +575,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                     ? new_initiative.costs.filter(
                         (cost: any) => cost.checked
                       )[0].text
-                    : 'Nível de custo'
+                    : intl.formatMessage({id: "add.initiative.cost.selector" })
                 }`
           }
         />
@@ -604,7 +611,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                     ? new_initiative.efficiencies.filter(
                         (efficiency: any) => efficiency.checked
                       )[0].text
-                    : 'Nível de eficácia'
+                    : intl.formatMessage({id: "initiatives.effectiveness.level" })
                 }`
           }
         />
@@ -661,15 +668,15 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
         <MultilineInput
           spellCheck={false}
           autoComplete="off"
-          placeholder="Resumo das evidências"
+          placeholder= {< FormattedMessage id = "form.summary.evidences" />}
           value={causeData.evidences}
           onChange={onEvidenceChange}
-          restrictionLabel="Insira até 1000 caracteres"
+          restrictionLabel={<FormattedMessage id = "form.char.max"/>}
         />
       </S.EvidenceInputWrapper>
       <S.AttachmentsWrapper>
         <S.AttachmentsTitle>
-          Anexar referências de evidências de arquivos
+          <FormattedMessage id = "form.add.references"/>
           <S.IconWrapper>
             <InfoIcon height={20} width={20} />
             <S.InfoTooltip>
@@ -685,9 +692,9 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
         />
       </S.AttachmentsWrapper>
       <S.ReferencesWrapper>
-        <S.AttachmentsTitle>Referências externas</S.AttachmentsTitle>
+        <S.AttachmentsTitle><FormattedMessage id = "add.initiative.external.references.title"/></S.AttachmentsTitle>
         <S.ReferencesDesc>
-          Certifique-se que todos possam ter acesso a URL adicionada
+          <FormattedMessage id = "form.url.description"/>
         </S.ReferencesDesc>
         {causeData.references?.map((link: any, idx: number) => (
           <ReferenceForeignlink
@@ -700,7 +707,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
           <S.ReferencesInputWrapper>
             <Input
               autoComplete="off"
-              placeholder="Adicione URL"
+              placeholder={<FormattedMessage id = "form.add.url"/>}
               type="text"
               trailingAction={addNewLink}
               value={causeData.newLink}

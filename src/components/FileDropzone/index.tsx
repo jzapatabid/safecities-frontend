@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDropzone } from 'react-dropzone'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import * as S from './styles'
 
@@ -84,6 +85,8 @@ const FileDropzone = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uploadedFiles])
 
+  const intl = useIntl();
+
   return (
     <>
       {!onlyFilesList && (
@@ -95,10 +98,10 @@ const FileDropzone = ({
               <S.DropzoneTitle>
                 {isDragActive
                   ? 'Solte os arquivos aqui'
-                  : 'Clique para carregar ou arraste e solte os arquivos aqui'}
+                  : intl.formatMessage({id: "form.drop.files"})}
               </S.DropzoneTitle>
               <S.DropzoneSizeRestriction>
-                Máximo de 5 MB
+                <FormattedMessage id = "form.max.size"/>
               </S.DropzoneSizeRestriction>
             </S.DropzoneWrapper>
           ) : (

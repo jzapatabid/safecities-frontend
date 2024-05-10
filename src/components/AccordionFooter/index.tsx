@@ -2,6 +2,7 @@ import * as S from './styles'
 
 import ButtonV2 from 'components/ButtonV2'
 import FlagFilledIcon from 'components/icons/FlagFilledIcon'
+import { FormattedMessage } from 'react-intl'
 
 type AccordionFooterProps = {
   onSave: () => void
@@ -21,7 +22,7 @@ const AccordionFooter = ({
           loading={false}
           variant="outline"
           onClick={toggleAccordion}
-          text="Cancelar"
+          text={<FormattedMessage id = "button.cancel" />}
         />
       </S.ButtonWrapper>
       <S.ButtonWrapper>
@@ -29,7 +30,7 @@ const AccordionFooter = ({
           disabled={disableSave}
           loading={false}
           onClick={onSave}
-          text="Salvar"
+          text={<FormattedMessage id = "button.save" />}
           LeadingIcon={FlagFilledIcon}
         />
       </S.ButtonWrapper>

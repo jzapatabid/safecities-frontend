@@ -53,7 +53,7 @@ const MacroObjectiveContent = ({
         ))}
         <S.AddNewGoalBtnWrapper>
           <TextButton
-            text="Adicionar novo indicador de mensuração"
+            text="add.new.measure.indicator"
             LeadingIcon={PlusSignIcon}
             onClick={onAddNewGoal}
           />

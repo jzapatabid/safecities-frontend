@@ -59,7 +59,7 @@ const MacroObjectiveGoal = ({
   return (
     <S.Goal>
       <S.ParameterGroup>
-        <S.ParamterText>Reduzir a</S.ParamterText>
+        <S.ParamterText><FormattedMessage id= "goal.reduce"/></S.ParamterText>
         <S.DropdownWrapper>
           <Dropdown
             addNewLabel="Adicionar novo indicador"
@@ -91,7 +91,7 @@ const MacroObjectiveGoal = ({
           />
           <S.LinkTextBtnWrapper>
             <TextButton
-              text="Ver situação atual"
+              text="current.situation"
               LeadingIcon={BarChartIcon}
               disabled={!data.problemId}
               link

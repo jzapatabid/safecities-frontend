@@ -4,6 +4,7 @@ import ProblemDiagnosisContent from '../ProblemDiagnosisContent'
 
 import PlusSignIcon from 'components/icons/PlusSignIcon'
 import TextButton from 'components/TextButton'
+import { FormattedMessage } from 'react-intl'
 
 type CauseDiagnosisContentProps = {
   data: any
@@ -67,7 +68,7 @@ const CauseDiagnosisContent = ({
       <S.AddNewGoalBtnWrapper>
         <TextButton
           disabled={data.cause_indicators?.length === data.diagnoses?.length}
-          text="Adicionar novo indicador de mensuração"
+          text="add.new.measure.indicator"
           LeadingIcon={PlusSignIcon}
           onClick={onAddNewIndicator}
         />

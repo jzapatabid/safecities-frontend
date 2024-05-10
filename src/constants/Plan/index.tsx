@@ -170,9 +170,9 @@ const INITIATIVES_TABLE_WIDTH_CONFIG = {
 const NEW_PERSONALIZED_INITIATIVE_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
-  title: '<FormattedMessage id="add.initiative.title"/>',
-  cancelBtn: 'Cancelar',
-  confirmBtn: 'Salvar',
+  title: <FormattedMessage id='add.initiative.title'/>,
+  cancelBtn: <FormattedMessage id='button.cancel'/>,
+  confirmBtn: <FormattedMessage id='button.save'/>,
   Content: PersonalizedInitiative
 }
 

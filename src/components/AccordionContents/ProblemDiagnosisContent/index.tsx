@@ -98,7 +98,7 @@ const ProblemDiagnosisContent = ({
               .filter((option: any) => option.checked)
               .map((option: any) => option.text)
               .join(', ')}
-            placeholder={'Selecione o KPI e gráfico a ser exibido'}
+            placeholder={<FormattedMessage id = "kpi.placeholder"/>}
           />
         </S.DropdownWrapper>
         {detail_url ? (
@@ -112,10 +112,10 @@ const ProblemDiagnosisContent = ({
         <MultilineInput
           spellCheck={false}
           autoComplete="off"
-          placeholder="Forneça os detalhes da sua análise*"
+          placeholder={<FormattedMessage id = "details.placeholder" />}
           value={data.diagnosis ? data.diagnosis : ''}
           onChange={onAnalysisUpdate}
-          restrictionLabel="Insira até 1000 caracteres"
+          restrictionLabel={<FormattedMessage id = "add.initiative.summary.char.counter" />}
         />
       </S.AnalysisInputWrapper>
     </S.Wrapper>

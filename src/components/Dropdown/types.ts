@@ -7,7 +7,7 @@ export type DropdownTypes = {
   setOpen: Dispatch<SetStateAction<boolean>>
   onOptionClick: (option: any) => void
   selectedText?: string
-  placeholder?: string
+  placeholder?: any
   addNewLabel?: string
   onAdd?: () => void
 }

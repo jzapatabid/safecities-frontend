@@ -7,6 +7,8 @@ import { DropdownTypes } from './types'
 import CheckboxV2 from 'components/CheckboxV2'
 import PlusSignIcon from 'components/icons/PlusSignIcon'
 
+import { useIntl } from 'react-intl'
+
 const Dropdown: React.FC<DropdownTypes> = ({
   singleSelect,
   options,
@@ -38,7 +40,12 @@ const Dropdown: React.FC<DropdownTypes> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open])
 
+  
+
   return (
+
+    
+    
     <S.Wrapper
       ref={dropdownRef}
       onClick={() => {

@@ -258,6 +258,25 @@
     "inititatives.table.estimated": "Cost Estimate",
     "initiatives.effectiveness.level": "Level of effectiveness",
 
+    "form.summary.evidences" : "Summary of evidence",
+    "form.add.references" : "Attach archival evidence references",
+    "form.drop.files": "Click to upload or drag and drop files here",
+    "form.max.size": "Maximum 5 MB",
+    "form.url.description": "Make sure everyone can access the added URL",
+    "form.add.url": "Add URL",
+
+    "goal.reduce": "Reduce to",
+
+    "kpi.placeholder": "Select the KPI and graph to be displayed",
+    "details.placeholder": "Provide details of your analysis*",
+    "add.new.measure.indicator" : "Add new measurement indicator",
+    "current.situation": "See current situation",
+    "problem.title": "Problem title*",
+    "problem.description": "Problem description*",
+    "anexos": "Attachments",
+
+
+
     "asociate.initiatives.justfication": "Justification",
     "asociate.initiatives.current.sitation": "Current situation",
     "asociate.initiatives.cost": "Cost Estimation",

@@ -255,6 +255,25 @@
     "inititatives.table.estimated": "Costo estimado",
     "initiatives.effectiveness.level": "Nivel de efectividad",
 
+    "form.summary.evidences" : "Resumen de las evidencias",
+    "form.add.references" : "Adjunte referencias de evidencia de archivo",
+    "form.drop.files": "Haga clic para cargar o arrastrar y soltar archivos aquí",
+    "form.max.size": "Máximo 5 MB",
+    "form.url.description": "Asegúrese de que todos puedan acceder a la URL agregada",
+    "form.add.url": "Agregue URL",
+
+    "goal.reduce": "Reducido a",
+
+    "kpi.placeholder": "Seleccione el KPI y el gráfico que se mostrarán",
+    "details.placeholder": "Proporcione detalles de su análisis*",   
+    "add.new.measure.indicator" : "Agregar nuevo indicador de medición",
+    "current.situation": "Ver situación actual",
+
+    "problem.title": "Titulo del problema*",
+    "problem.description": "Descripcion del problema*",
+
+    "anexos": "Archivos adjuntos",
+
     "asociate.initiatives.justfication": "Justificación",
     "asociate.initiatives.current.sitation": "Situación actual",
     "asociate.initiatives.cost": "Estimación de costos",
