@@ -8,6 +8,6 @@ export type DropdownTypes = {
   onOptionClick: (option: any) => void
   selectedText?: string
   placeholder?: any
-  addNewLabel?: string
+  addNewLabel?: string | any
   onAdd?: () => void
 }

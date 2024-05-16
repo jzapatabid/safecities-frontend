@@ -567,7 +567,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                       }`
                     : edit_initiative.costs?.filter(
                         (option: any) => option.id === edit_initiative.costLevel
-                      )[0]?.text || 'Nível de custo'
+                      )[0]?.text || 'Nível de costo'
                 }`
               : `${
                   new_initiative.costs.filter((cost: any) => cost.checked)
@@ -618,7 +618,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
       </S.DropdownWrapper>
       <S.InfoLabel onClick={handleShowEfficiencyInfoClick}>
         <InfoIcon color={theme.colors.feedback.informativePure} />
-        <S.InfoText>Informações sobre eficácia</S.InfoText>
+        <S.InfoText><FormattedMessage id='initiative.Effectiveness'/></S.InfoText>
       </S.InfoLabel>
       <S.DropdownWrapper>
         <Dropdown
@@ -661,7 +661,7 @@ const PersonalizedInitiative = ({ cause }: PersonalizedCausePropTypes) => {
                   .map((option: any) => option.text)
                   .join(', ')
           }
-          placeholder={'Departamentos envolvidos*'}
+          placeholder={'Departamentos envueltos*'}
         />
       </S.DropdownWrapper>
       <S.EvidenceInputWrapper>

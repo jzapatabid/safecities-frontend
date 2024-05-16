@@ -12,17 +12,17 @@ import { camelToSnake } from 'utils'
 
 // Temp constants
 export const INITIATIVE_COSTS = [
-  { id: 1, text: 'Baixo', checked: false },
+  { id: 1, text: 'Bajo', checked: false },
   { id: 2, text: 'Médio', checked: false },
   { id: 3, text: 'Alto', checked: false }
 ] as const
 
 export const INITIATIVE_EFFICIENCIES = [
-  { id: 1, text: 'Efeito negativo', checked: false },
-  { id: 2, text: 'Sem efeitos', checked: false },
-  { id: 3, text: 'Evidência mista', checked: false },
-  { id: 4, text: 'Promissora', checked: false },
-  { id: 5, text: 'Efetiva', checked: false }
+  { id: 1, text: 'Efecto negativo', checked: false },
+  { id: 2, text: 'Sin efectos', checked: false },
+  { id: 3, text: 'Evidencia mixta', checked: false },
+  { id: 4, text: 'Prometedor', checked: false },
+  { id: 5, text: 'Efectiva', checked: false }
 ] as const
 
 export const NEW_PERSONALIZED_INITIATIVE_DEFAULT_FIELDS = {

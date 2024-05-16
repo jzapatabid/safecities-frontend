@@ -141,11 +141,11 @@ const CAUSE_TYPE_LABELS = {
 const DEFAULT_CAUSE_DETAIL_ACTUAL_SITUATION_FIELDS = [
   {
     dataKey: 'totalCityIncidents',
-    label: 'Ocorrências'
+    label: 'occurrences.text'
   },
   {
     dataKey: 'cityRate',
-    label: 'Taxa por 100.000 habitantes'
+    label: 'problem.detail.actual.situation.label.2'
   }
 ]
 

@@ -42,7 +42,7 @@ import TubelightIndicator from 'components/TubelightIndicator'
 import { FormattedMessage } from 'react-intl'
 
 export const getCostLabel: { [key: number]: string } = {
-  1: 'Baixo',
+  1: 'Bajo',
   2: 'Médio',
   3: 'Alto'
 }

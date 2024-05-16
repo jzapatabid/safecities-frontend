@@ -8,6 +8,7 @@
     "button.diagnosis.prioritize.cause": "Priorizar causa",
     "button.diagnosis.deprioritize.cause": "Despriorizar causa",
     "button.planning.add.new.initiative": "Agregar nueva iniciativa",
+    "button.add.new.indicator": "Agregar nuevo indicador",
     "button.diagnosis.add.problem": "Agregar nuevo problema",
     "button.causes.add.new.cause": "Agregar nueva causa",
     "button.planning.deprioritize.initiative": "Despriorizar iniciativa",
@@ -131,6 +132,9 @@
     "causes.modal.prioritize.desc": "¿Está seguro de que desea priorizar las causas siguientes?",
     "causes.title.edit": "Editar causa",
     "causes.title.exclude": "Excluir causa",
+    "exclude.initiative": "Excluir iniciativa",
+    "edit.initiative": "Editar iniciativa",
+    "initiative.Effectiveness": "Información de efectividad",
     "causes.title.add": "Agregar nueva causa",
 
     "planning.associate.initiatives.title" : "Asociar iniciativas",
@@ -185,6 +189,7 @@
     "plan.section.cards.title": "Has llegado hasta aquí",
     "plan.section.card.prioritized.inititives.title": "Iniciativas priorizadas",
     "plan.build.plan.section" : "Construcción del plan paso a paso",
+    "plan.build.dimension.placeholder" : "Seleccionar indicador(es) de medición",
     
     "invitation.text":"Invitacion enviada con exito",
 

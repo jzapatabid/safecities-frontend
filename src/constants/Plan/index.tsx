@@ -170,24 +170,24 @@ const INITIATIVES_TABLE_WIDTH_CONFIG = {
 const NEW_PERSONALIZED_INITIATIVE_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
-  title: <FormattedMessage id='add.initiative.title'/>,
-  cancelBtn: <FormattedMessage id='button.cancel'/>,
-  confirmBtn: <FormattedMessage id='button.save'/>,
+  title: 'add.initiative.title',
+  cancelBtn: 'button.cancel',
+  confirmBtn: 'button.save',
   Content: PersonalizedInitiative
 }
 
 const EDIT_PERSONALIZED_INITIATIVE_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
-  title: 'Editar iniciativa',
+  title: 'edit.initiative',
   cancelBtn: 'button.cancel',
-  confirmBtn: 'Salvar',
-  dangerBtn: 'Excluir iniciativa',
+  confirmBtn: 'button.save',
+  dangerBtn: 'causes.title.exclude.initiative',
   Content: PersonalizedInitiative
 }
 
 const INITIATIVE_STATUS = {
-  PRIORITIZED: <FormattedMessage id='prioritized.text'/>,
+  PRIORITIZED: 'prioritized.text',
   NOT_PRIORITIZED: ''
 } as const
 
@@ -346,12 +346,12 @@ const PLAN_DISGNOSIS_SUMMARY_NAV_LINKS = [
 ] as const
 
 const PROBLEM_KPI_OPTIONS = [
-  { text: 'Desempenho', dataKey: 'performance' },
-  { text: 'Tendência', dataKey: 'trend' },
-  { text: 'Frequência relativa', dataKey: 'relative_frequency' }
+  { text: 'Desempeño', dataKey: 'performance' },
+  { text: 'Tendencia', dataKey: 'trend' },
+  { text: 'Frequencia relativa', dataKey: 'relative_frequency' }
 ]
 
-const CAUSE_KPI_OPTIONS = [{ text: 'Tendência', dataKey: 'trend' }]
+const CAUSE_KPI_OPTIONS = [{ text: 'Tendencia', dataKey: 'trend' }]
 
 export {
   PROBLEM_KPI_OPTIONS,

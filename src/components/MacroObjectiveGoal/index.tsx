@@ -59,10 +59,10 @@ const MacroObjectiveGoal = ({
   return (
     <S.Goal>
       <S.ParameterGroup>
-        <S.ParamterText><FormattedMessage id= "goal.reduce"/></S.ParamterText>
+        <S.ParamterText><FormattedMessage id="goal.reduce"/></S.ParamterText>
         <S.DropdownWrapper>
           <Dropdown
-            addNewLabel="Adicionar novo indicador"
+            addNewLabel={<FormattedMessage id='button.add.new.indicator'/>}
             onAdd={() =>
               setModalState({
                 ...ADD_NEW_INDICATOR_MODAL_PROPS,
@@ -87,7 +87,7 @@ const MacroObjectiveGoal = ({
                   option.id === data.causeIndicatorId
               )[0]?.text
             }
-            placeholder={'Selecionar indicador(es) de mensuração'}
+            placeholder={<FormattedMessage id='plan.build.dimension.placeholder'/>}
           />
           <S.LinkTextBtnWrapper>
             <TextButton

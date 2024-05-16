@@ -342,12 +342,12 @@ const PLAN_DISGNOSIS_SUMMARY_NAV_LINKS = [
 ] as const
 
 const PROBLEM_KPI_OPTIONS = [
-  { text: 'Desempenho', dataKey: 'performance' },
-  { text: 'Tendência', dataKey: 'trend' },
-  { text: 'Frequência relativa', dataKey: 'relative_frequency' }
+  { text: 'Desempeño', dataKey: 'performance' },
+  { text: 'Tendencia', dataKey: 'trend' },
+  { text: 'Frequencia relativa', dataKey: 'relative_frequency' }
 ]
 
-const CAUSE_KPI_OPTIONS = [{ text: 'Tendência', dataKey: 'trend' }]
+const CAUSE_KPI_OPTIONS = [{ text: 'Tendencia', dataKey: 'trend' }]
 
 export {
   PROBLEM_KPI_OPTIONS,

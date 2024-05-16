@@ -118,7 +118,7 @@ const TacticalDimensionContent = ({
                 plansState.neighborhoods.filter(
                   (option: any) =>
                     option?.id === data.tactical_dimension.neighborhood_id
-                )[0]?.text || 'Selecionar bairros'
+                )[0]?.text || 'Seleccionar vecindarios'
               }
             />
           </S.DropdownWrapper>
