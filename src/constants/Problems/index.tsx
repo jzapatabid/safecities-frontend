@@ -167,9 +167,9 @@ const PROBLEM_DETAIL_CHARACTERISTICS_FIELDS = [
 const NEW_PERSONALIZED_PROBLEM_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
-  title: <FormattedMessage id = "button.diagnosis.add.problem"/>,
-  cancelBtn: <FormattedMessage id = "button.cancel"/>,
-  confirmBtn: <FormattedMessage id = "button.save"/>,
+  title:"button.diagnosis.add.problem",
+  cancelBtn:"button.cancel",
+  confirmBtn:"button.save",
   Content: PersonalizedProblem
 }
 
