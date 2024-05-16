@@ -3,7 +3,6 @@ import Link from 'next/link'
 import * as S from './styles'
 
 import { ButtonProps } from './types'
-import { FormattedMessage } from 'react-intl'
 
 const ButtonV2: React.FC<ButtonProps> = ({
   text,

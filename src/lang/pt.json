@@ -80,6 +80,8 @@
     "diagnosis.disclaimer.link": "Clique aqui para saber mais",
     "diagnosis.desc": "Descrição",
     "diagnosis.chart.rate": "Taxa de ocorrências",
+    "diagnosis.chart.relative": "Estatísticas de frequência relativa",
+    "diagnosis.chart.trend": "Estatísticas de tendência",
     
     "problem.detail.current.situation": "Situação atual",
     "problem.detail.key.variables": "Variáveis-chave para dimensionamento do problema",
@@ -118,6 +120,18 @@
     "causes.summary.name.maped": "Causas mapeadas",
     "causes.summary.name.relevant": "Causas relevantes",
     "causes.no.data": "Não há dados disponíveis para esta causa",
+    "causes.table.posible": "Causa possíveis",
+    "causes.table.prioritized": "Causa priorizadas",
+    "causes.table.literature": "Causa de la literatura",
+    "causes.table.personalized": "Causa personalizada",
+    "causes.modal.deprioritize.title": "Despriorizar os causa(s)",
+    "causes.modal.deprioritize.disclaimer": "Por favor, primeiro selecione uma causa para definir os problemas a serem priorizados com esta iniciativa.",
+    "causes.modal.deprioritize.desc": "Você tem certeza de que deseja despriorizar os causa(s) a seguir?",
+    "causes.modal.prioritize.title": "Priorizar o causa(s)",
+    "causes.modal.prioritize.desc": "Você tem certeza de que deseja priorizar a(s) causa(s) a seguir?",
+    "causes.title.edit": "Editar causa",
+    "causes.title.exclude": "Excluir causa",
+    "causes.title.add": "Adicionar nova causa",
 
     "planning.associate.initiatives.title" : "Associar iniciativas",
     "planning.build.plan.title" : "Construir plano",
@@ -126,6 +140,8 @@
     "planning.add.new.initiative.button": "Adicionar nova iniciativa",
     "planning.deprioritize.initiative.button": "Despriorizar iniciativa",
     "planning.prioritize.initiative.button": "Priorizar iniciativa",
+    "planning.deprioritize.desc": "Você tem certeza de que deseja despriorizar esta iniciativa?",
+    "planning.prioritize.desc": "Você tem certeza de que deseja priorizar esta iniciativa?",
     "planning.subtitle": "Você fez até agora",
     "planning.step.by.step": "Passo-a-passo da construção do plano",
 
@@ -181,10 +197,9 @@
     "second.step.title": "Construa a síntese do diagnóstico.",
     "second.step.subtitle": "Onde estamos? Resumo executivo dos principais problemas atuais e suas causas.",
 
-    "third.step.title": "Construir a dimensão estratégica do plano.",
+    "third.step.title": "Construir a dimensão estratégica do plano",
     "third.step.subtitle": "Para onde queremos ir? Macroobjetivos e abordagens estratégicas do plano",
 
-    "fourth.step.title": "Construa a dimensão tática do plano.",
     "fourth.step.subtitle": "Como é que vamos chegar lá? Detalhes de iniciativas estratégicas",
 
     "edit.plan.go.back.title": "Plano de reconstrução",
@@ -207,7 +222,6 @@
     "add.new.macro": "Adicionar novo macro objetivo",
     "macro.objectives.description.2": "Os macrobjetivos constituem os impactos quantitativos prioritários que devem ser alcançados ou mantidos no horizonte do plano, considerando a resolução (ou mitigação) dos problemas prioritáriosidentificados no diagnóstico.",
 
-    "tactical.dimension.title": "Construa a dimensão tática do plano.",
     "tactical.dimension.content.title": "Iniciativas anteriormente priorizadas",
     "tactical.dimension.dropdown.title": "Regulamentação de armas de fogo",
     "tactical.dimension.dropdown.subtitle": "Ligação estratégica",
@@ -293,7 +307,7 @@
     "chart.trend.1": "Aumento",
     "chart.trend.2": "Estável",
     "chart.trend.3": "Redução",
-    "chart.taxa": "Taxa",
+    "chart.tasa": "Taxa",
     "chart.trend.variation": "Variação da taxa",
     "chart.trend.relation": "Em relação aos últimos 5 anos",
     "chart.relative.frequency": "Frequência relativa",
@@ -303,6 +317,7 @@
     "chart.relative": "Do total de ocorrências registradas na cidade",
     "chart.relative.time": "Em relação ao último ano",
     "chart.caracteristics":"Características-chave do problema",
+    "chart.ocurrence.number":"Número de ocorrências",
     
     "date.from": "Dez",
     "date.to": "a",

@@ -22,8 +22,8 @@ const PlanProgressCard = ({ detail, data }: { detail: any; data: any }) => {
 
 
   const [year = '', month = '', date = ''] = data.lastUpdate
-    ? data.lastUpdate.split('T')[0].split('-')
-    : ''
+  ? data.lastUpdate.split('T')[0].split('-')
+  : ''
 
   return (
     <S.Wrapper>
@@ -41,7 +41,7 @@ const PlanProgressCard = ({ detail, data }: { detail: any; data: any }) => {
       <S.DetailsWrapper>
         <S.Title>{<FormattedMessage id={detail.title} />}</S.Title>
         <S.DateInfo>{`${lastUpdateF} ${date} de ${
-          PORTUGESE_MONTH_MAPPING[month] as string
+          PORTUGESE_MONTH_MAPPING[Number(month) < 10 && month[1]] as string
         } de ${year}`}</S.DateInfo>
         <S.Description>{<FormattedMessage id={detail.description} />}</S.Description>
         <S.ProgressWrapper>

@@ -49,20 +49,20 @@ type DefaultCauseDetailPropTypes = {
 }
 
 const static_data = {
-  title: 'Tendência',
+  title: <FormattedMessage id='chart.trend'/>,
   count: '-50%',
-  countDesc: 'Variação da taxa',
+  countDesc: <FormattedMessage id='chart.trend.variation'/>,
   footer: <FormattedMessage id="footer" />,
   legends: [
-    { label: 'Ocorrências', color: '#00ADD2' },
-    { label: 'Taxa', Icon: EditIcon }
+    { label: <FormattedMessage id='problem.detail.actual.situation.label.1'/>, color: '#00ADD2' },
+    { label: <FormattedMessage id="chart.tasa" />, Icon: EditIcon }
   ],
   indicators: [
-    { text: 'Aumento', criticality: 'none', variant: 'up' },
-    { text: 'Estável', criticality: 'none', variant: 'center' },
-    { text: 'Redução', criticality: 'none', variant: 'down' }
+    { text: <FormattedMessage id='chart.trend.1'/>, criticality: 'none', variant: 'up' },
+    { text: <FormattedMessage id='chart.trend.2'/>, criticality: 'none', variant: 'center' },
+    { text: <FormattedMessage id='chart.trend.3'/>, criticality: 'none', variant: 'down' }
   ],
-  dataDateRange: 'Em relação aos últimos 5 anos'
+  dataDateRange: <FormattedMessage id='chart.trend.relation'/>
 }
 
 const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
@@ -214,7 +214,7 @@ const DefaultCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
             <S.Author>
               <Book2Icon />
               <S.CauseType>
-                {CAUSE_TYPE_LABELS[CAUSE_TYPE_ACCESSOR.DEFAULT]}
+                <FormattedMessage id={CAUSE_TYPE_LABELS[CAUSE_TYPE_ACCESSOR.DEFAULT]}/>
               </S.CauseType>
             </S.Author>
             {/* <S.CauseInfoItemWrapper>

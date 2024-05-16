@@ -168,7 +168,7 @@ export default function AssociatedCausesTable({
               <Book2Icon />
             )}
             <S.AuthorText>
-              {CAUSE_TYPE_LABELS[`${info.getValue() as CauseTypeModel}`]}
+              <FormattedMessage id={CAUSE_TYPE_LABELS[`${info.getValue() as CauseTypeModel}`]}/>
             </S.AuthorText>
           </S.Author>
         ),

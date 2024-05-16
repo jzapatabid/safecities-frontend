@@ -27,25 +27,25 @@ const getRequestFeedbackMessages = (type?: string, cause?: any) => {
   if (cause) {
     if (type === CAUSES_ACTION.PRIORITIZE) {
       return {
-        successMsg: `A causa foi priorizada para o(s) problema(s) selecionado(s) com sucesso.`,
-        warningMsg: `Erro ao priorizar a causa para o(s) problema(s) selecionado(s), tente novamente em alguns minutos.`
+        successMsg: `Una causa fue priorizada con exito para el/los problema(s) seleccionado(s).`,
+        warningMsg: `Error al priorizar la causa para el/los problema(s) seleccionado(s), intente de nuevo en unos minutos.`
       }
     } else if (type === CAUSES_ACTION.DEPRIORITIZE) {
       return {
-        successMsg: `A causa foi despriorizada para o(s) problema(s) selecionado(s) com sucesso.`,
-        warningMsg: `Erro ao despriorizar a causa para o(s) problema(s) selecionado(s), tente novamente em alguns minutos.`
+        successMsg: `Una causa fue despriorizada con exito para el/los problema(s) seleccionado(s)`,
+        warningMsg: `Error al despriorizar la causa para el/los problema(s) seleccionado(s), intente de nuevo en unos minutos.`
       }
     }
   } else {
     if (type === CAUSES_ACTION.PRIORITIZE) {
       return {
-        successMsg: `As causas foram priorizadas para o(s) problema(s) selecionado(s) com sucesso.`,
-        warningMsg: `Erro ao priorizar as causas para o(s) problema(s) selecionado(s), tente novamente em alguns minutos.`
+        successMsg: `Una causa fue priorizada con exito para el/los problema(s) seleccionado(s).`,
+        warningMsg: `Error al priorizar la causa para el/los problema(s) seleccionado(s), intente de nuevo en unos minutos.`
       }
     } else if (type === CAUSES_ACTION.DEPRIORITIZE) {
       return {
-        successMsg: `As causas foram despriorizadas para o(s) problema(s) selecionado(s) com sucesso.`,
-        warningMsg: `Erro ao despriorizar as causas para o(s) problema(s) selecionado(s), tente novamente em alguns minutos.`
+        successMsg: `Una causa fue despriorizada con exito para el/los problema(s) seleccionado(s)`,
+        warningMsg: `Error al despriorizar la causa para el/los problema(s) seleccionado(s), intente de nuevo en unos minutos.`
       }
     }
   }

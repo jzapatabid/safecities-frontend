@@ -1,6 +1,3 @@
-// import { CAUSE_TYPE_LABELS, CAUSES_ACTION_MODAL_PROPS } from 'constants/Causes'
-// import { PROBLEM_DETAIL_ACTUAL_SITUATION_FIELDS } from 'constants/Problems'
-
 import { useState } from 'react'
 
 import {
@@ -15,11 +12,6 @@ import {
   INITIATIVE_EFFICIENCIES
 } from 'contexts/Initiatives/initialState'
 import { useModal } from 'contexts/Modal'
-
-// import { CausesActionModalPropsTypes } from 'types/Causes'
-
-// import { CAUSE_TYPE_ACCESSOR, CAUSES_ACTION } from 'enums/Causes'
-
 import { INITIATIVES_ACTION } from 'enums/Plan'
 
 import { useRouter } from 'next/router'
@@ -30,41 +22,24 @@ import * as S from './styles'
 import theme from 'styles/theme'
 
 import ButtonV2 from 'components/ButtonV2'
-// import DetailCardV1 from 'components/DetailCardV1'
 import DepartmentCard from 'components/DepartmentCard'
 import FileDropzone from 'components/FileDropzone'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
-// import EditIcon from 'components/icons/EditIcon'
 import EditIcon from 'components/icons/EditIcon'
 import FlagFilledIcon from 'components/icons/FlagFilledIcon'
 import FlagIcon from 'components/icons/FlagOutlineIcon'
 import LeftArrow from 'components/icons/LeftArrow'
-// import RecordVoiceIcon from 'components/icons/RecordVoiceIcon'
 import ToastSuccessIcon from 'components/icons/ToastSuccessIcon'
 import { getCostLabel, getEfficiencyLabel } from 'components/InitiativesTable'
 import MainContainer from 'components/MainContainer'
 import ReferenceForeignlink from 'components/ReferenceForeignlink'
 import { FormattedMessage } from 'react-intl'
 import LanguageProvider from 'contexts/LanguageSelector'
-// import NavBar from 'components/NavBar'
-// import StackedBarChart from 'components/StackedBarChart'
-
 type InitiativeDetailPropTypes = {
   detail: any
   id: number
 }
-
-// const static_data = {
-//   title: 'Tendência',
-//   count: '-50%',
-//   countDesc: 'Variação da taxa',
-//   footer: 'Fonte: Secretaria Municipal/Estadual de Segurança Pública',
-//   legends: [
-//     { label: 'Ocorrências', color: '#00ADD2' },
-//     { label: 'Taxa', Icon: EditIcon }
-//   ]
-// }
 
 const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
   detail: cause
@@ -122,12 +97,6 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
       contentProps: {
         cause: {
           ...cause,
-          // problems: SAMPLE_ALL_PROBLEMS.map((problem) => {
-          //   if (cause.problems.includes(problem.id)) {
-          //     return { ...problem, checked: true }
-          //   }
-          //   return problem
-          // }),
           causes: cause?.causes
             ? cause.causes.map((cause: any) => cause.id)
             : [],
@@ -149,7 +118,7 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
       document.body.removeChild(link)
     }
   }
-
+  const date = new Date()
   return (
     <>
       <LanguageProvider>
@@ -223,7 +192,7 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
           <S.CauseInfoWrapper>
             <S.CauseInfoItemWrapper>
               <S.CauseInfoItemKey><FormattedMessage id="last.update.footer.text" /></S.CauseInfoItemKey>
-              <S.CauseInfoItemValue>4 de julho de 2023</S.CauseInfoItemValue>
+              <S.CauseInfoItemValue>{date.toLocaleDateString()}</S.CauseInfoItemValue>
             </S.CauseInfoItemWrapper>
           </S.CauseInfoWrapper>
           {!cause?.isDefault ? (

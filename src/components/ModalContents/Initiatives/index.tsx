@@ -26,13 +26,13 @@ type CausesContentPropsTypes = {
 const getRequestFeedbackMessages = (count: number, type: string) => {
   if (type === INITIATIVES_ACTION.PRIORITIZE) {
     return {
-      successMsg: `${count} iniciativas foram priorizadas com sucesso por algumas causas e problemas`,
-      warningMsg: `Ocorreu um erro no processo de priorização de ${count} iniciativas. Por favor, tente novamente mais tarde.`
+      successMsg: `${count} iniciativas fueron priorizadas con exito para algunas causas y problemas`,
+      warningMsg: `Ocurrio un error en el proceso de priorización de ${count} iniciativas. Por favor intente de nuevo más tarde.`
     }
   } else if (type === INITIATIVES_ACTION.DEPRIORITIZE) {
     return {
-      successMsg: `${count} iniciativas foram despriorizadas com sucesso por algumas causas e problemas`,
-      warningMsg: `Ocorreu um erro no processo de despriorização de ${count} iniciativas. Por favor, tente novamente mais tarde.`
+      successMsg: `${count} iniciativas fueron despriorizadas con exito para algunas causas y problemas`,
+      warningMsg: `Ocurrio un error en el proceso de priorización de ${count} iniciativas. Por favor intente de nuevo más tarde.`
     }
   }
 }

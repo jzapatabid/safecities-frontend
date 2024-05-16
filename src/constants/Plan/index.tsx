@@ -60,20 +60,20 @@ const INITIATIVES_SUMMARY_FIELDS_NAME = {
 const INITIATIVES_ACTION_MODAL_PROPS = {
   [INITIATIVES_ACTION.PRIORITIZE]: {
     open: true,
-    title: 'Priorizar a inciativa',
-    desc: 'Você tem certeza de que deseja priorizar esta iniciativa?',
-    cancelBtn: 'Cancelar',
-    confirmBtn: 'Priorizar iniciativa',
+    title: 'planning.prioritize.initiative.button',
+    desc: 'planning.prioritize.desc',
+    cancelBtn: 'button.cancel',
+    confirmBtn: 'planning.prioritize.initiative.button',
     actionType: INITIATIVES_ACTION.PRIORITIZE,
     Content: InitiativesModalContent,
     type: MODAL_TYPE.SIDESHEET
   },
   [INITIATIVES_ACTION.DEPRIORITIZE]: {
     open: true,
-    title: 'Despriorizar a inciativa',
-    desc: 'Você tem certeza de que deseja despriorizar esta iniciativa?',
-    cancelBtn: 'Cancelar',
-    confirmBtn: 'Despriorizar iniciativa',
+    title: 'planning.deprioritize.initiative.button',
+    desc: 'planning.deprioritize.desc',
+    cancelBtn: 'button.cancel',
+    confirmBtn: 'planning.deprioritize.initiative.button',
     actionType: INITIATIVES_ACTION.DEPRIORITIZE,
     Content: InitiativesModalContent,
     type: MODAL_TYPE.SIDESHEET
@@ -91,7 +91,7 @@ const INITIATIVE_RELATIONSHIPS_MODAL_PROPS = {
 
 const INITIATIVES_PRIORITIZATION_DISCLAIMER = {
   line1:
-    'Por favor, primeiro selecione uma causa para definir os problemas a serem priorizados com esta iniciativa.'
+    'causes.modal.deprioritize.disclaimer'
 } as const
 
 const PLANS_TEMP_SUMMARY_FIELDS = [
@@ -180,7 +180,7 @@ const EDIT_PERSONALIZED_INITIATIVE_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
   title: 'Editar iniciativa',
-  cancelBtn: 'Cancelar',
+  cancelBtn: 'button.cancel',
   confirmBtn: 'Salvar',
   dangerBtn: 'Excluir iniciativa',
   Content: PersonalizedInitiative
@@ -244,7 +244,7 @@ const ADD_NEW_INDICATOR_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
   title: 'Adicionar novo indicador',
-  cancelBtn: 'Cancelar',
+  cancelBtn: 'button.cancel',
   confirmBtn: 'Adicionar novo indicador',
   confirmIcon: PlusSignIcon,
   Content: NewIndicator
@@ -269,7 +269,7 @@ const ADD_NEW_PLAN_META_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
   title: 'Adicionar nova meta',
-  cancelBtn: 'Cancelar',
+  cancelBtn: 'button.cancel',
   confirmBtn: 'Adicionar nova meta',
   confirmIcon: PlusSignIcon,
   Content: NewPlanMeta

@@ -200,7 +200,7 @@ const PersonalizedCauseDetail: React.FC<DefaultCauseDetailPropTypes> = ({
             <S.Author>
               <RecordVoiceIcon />
               <S.CauseType>
-                {CAUSE_TYPE_LABELS[CAUSE_TYPE_ACCESSOR.PERSONALIZED]}
+                <FormattedMessage id={CAUSE_TYPE_LABELS[CAUSE_TYPE_ACCESSOR.PERSONALIZED]}/>
               </S.CauseType>
             </S.Author>
             {/* <S.CauseInfoItemWrapper>

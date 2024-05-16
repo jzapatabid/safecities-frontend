@@ -85,39 +85,39 @@ const NEW_PERSONALIZED_CAUSE_DEFAULT_FIELDS = {
 const NEW_PERSONALIZED_CAUSE_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
-  title: 'Adicionar nova causa',
-  cancelBtn: 'Cancelar',
-  confirmBtn: 'Salvar',
+  title: 'causes.title.add',
+  cancelBtn: 'button.cancel',
+  confirmBtn: 'button.save',
   Content: PersonalizedCause
 }
 
 const EDIT_PERSONALIZED_CAUSE_MODAL_PROPS = {
   type: MODAL_TYPE.SIDESHEET,
   open: true,
-  title: 'Editar causa',
-  cancelBtn: 'Cancelar',
-  confirmBtn: 'Salvar',
-  dangerBtn: 'Excluir causa',
+  title: 'causes.title.edit',
+  cancelBtn: 'button.cancel',
+  confirmBtn: 'button.save',
+  dangerBtn: 'causes.title.exclude',
   Content: PersonalizedCause
 }
 
 const CAUSES_ACTION_MODAL_PROPS = {
   [CAUSES_ACTION.PRIORITIZE]: {
     open: true,
-    title: 'Priorizar o causa(s)',
-    desc: 'Você tem certeza de que deseja priorizar a(s) causa(s) a seguir?',
-    cancelBtn: 'Cancelar',
-    confirmBtn: 'Priorizar causa(s)',
+    title: 'causes.modal.prioritize.title',
+    desc: 'causes.modal.prioritize.desc',
+    cancelBtn: 'button.cancel',
+    confirmBtn: 'button.diagnosis.prioritize.cause',
     actionType: CAUSES_ACTION.PRIORITIZE,
     Content: CausesModalContent,
     type: MODAL_TYPE.SIDESHEET
   },
   [CAUSES_ACTION.DEPRIORITIZE]: {
     open: true,
-    title: 'Despriorizar os causa(s)',
-    desc: 'Você tem certeza de que deseja despriorizar os causa(s) a seguir?',
-    cancelBtn: 'Cancelar',
-    confirmBtn: 'Despriorizar causa(s)',
+    title: 'causes.modal.deprioritize.title',
+    desc: 'causes.modal.deprioritize.desc',
+    cancelBtn: 'button.cancel',
+    confirmBtn: 'button.diagnosis.deprioritize.cause',
     actionType: CAUSES_ACTION.DEPRIORITIZE,
     Content: CausesModalContent,
     type: MODAL_TYPE.SIDESHEET
@@ -125,8 +125,8 @@ const CAUSES_ACTION_MODAL_PROPS = {
 } as const
 
 const CAUSE_TYPE_LABELS = {
-  [CAUSE_TYPE_ACCESSOR.DEFAULT]: 'Causa da literatura',
-  [CAUSE_TYPE_ACCESSOR.PERSONALIZED]: 'Causa personalizada'
+  [CAUSE_TYPE_ACCESSOR.DEFAULT]: 'causes.table.literature',
+  [CAUSE_TYPE_ACCESSOR.PERSONALIZED]: 'causes.table.personalized'
 }
 // const DEFAULT_CAUSE_DETAIL_ACTUAL_SITUATION_FIELDS = [
 //   {
@@ -151,7 +151,7 @@ const DEFAULT_CAUSE_DETAIL_ACTUAL_SITUATION_FIELDS = [
 
 const CAUSES_PRIORITIZATION_DISCLAIMER = {
   line1:
-    'Por favor, primeiro selecione uma causa para definir os problemas a serem priorizados com esta iniciativa.'
+    'causes.modal.deprioritize.disclaimer'
 } as const
 
 export {

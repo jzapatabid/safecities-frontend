@@ -208,7 +208,7 @@ const StackedBarChart = ({
         .attr('class', dataVizStyles.y_axis_label)
         .attr('x', -45)
         .attr('y', height / 1.66)
-        .text('Número de ocorrências')
+        .text('Número de ocurrencias')
     }
 
     const yAxisLabelLinePlot = (g: any) => {

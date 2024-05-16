@@ -6,10 +6,10 @@ import ButtonV2 from 'components/ButtonV2'
 import DeleteIcon from 'components/icons/DeleteIcon'
 import FlagFilledIcon from 'components/icons/FlagFilledIcon'
 import LeftArrow from 'components/icons/LeftArrow'
+import { FormattedMessage } from 'react-intl'
 
 const SidesheetModalTemplate = () => {
   const { modalState, setModalState } = useModal()
-  console.log("This Is  modalState:", modalState)
   const Content = modalState.Content
   const onClose = () => setModalState({ open: false })
 
@@ -23,13 +23,13 @@ const SidesheetModalTemplate = () => {
             onClick={modalState.onGoBack}
             strokeWidth={3}
           />
-          <S.BackNavText>{modalState.backBtn}</S.BackNavText>
+          <S.BackNavText><FormattedMessage id={modalState.backBtn} /></S.BackNavText>
         </S.BackNavigationWrapper>
       )}
       <S.Header>
-        <S.Title>{modalState.title}</S.Title>
+        <S.Title><FormattedMessage id={modalState.title} /></S.Title>
         {modalState.desc ? (
-          <S.Description>{modalState.desc}</S.Description>
+          <S.Description><FormattedMessage id={modalState.desc} /></S.Description>
         ) : null}
       </S.Header>
       <S.ContentWrapper>
@@ -44,7 +44,7 @@ const SidesheetModalTemplate = () => {
                 variant="outline"
                 btnType="danger"
                 onClick={modalState.onDanger}
-                text={modalState.dangerBtn}
+                text={<FormattedMessage id={modalState.dangerBtn} />}
                 LeadingIcon={DeleteIcon}
               />
             </S.DangerBtnWrapper>
@@ -56,7 +56,7 @@ const SidesheetModalTemplate = () => {
                   loading={false}
                   variant="outline"
                   onClick={modalState.onCancel || onClose}
-                  text={modalState.cancelBtn}
+                  text={<FormattedMessage id={modalState.cancelBtn} />}
                 />
               </S.BtnWrapper>
             )}
@@ -66,7 +66,7 @@ const SidesheetModalTemplate = () => {
                   loading={false}
                   disabled={modalState.disableConfirm}
                   onClick={modalState.onConfirm}
-                  text={modalState.confirmBtn}
+                  text={<FormattedMessage id={modalState.confirmBtn} />}
                   LeadingIcon={
                     modalState.confirmIcon === 'NoIcon'
                       ? null

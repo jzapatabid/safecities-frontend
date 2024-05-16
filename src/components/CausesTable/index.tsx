@@ -80,7 +80,7 @@ export default function CausesTable({
         accessorFn: (row) => row[CAUSE.ASSOCIATED_CAUSES],
         id: `${CAUSES_TABLE_COLUMNS_IDS.ASSOCIATED_CAUSES}-${TABLE_COLUMN_VARIANT.SORTING}`,
         cell: (info) => (
-          <S.CountText>{`${info.getValue()} Causa possíveis`}</S.CountText>
+          <S.CountText>{`${info.getValue()}`} <FormattedMessage id='causes.table.posible'/></S.CountText>
         ),
         header: () => (
           <S.ColumnTrend>
@@ -92,7 +92,7 @@ export default function CausesTable({
         accessorFn: (row) => row[CAUSE.PRIORITIZED_ASSOCIATED_CAUSES],
         id: `${CAUSES_TABLE_COLUMNS_IDS.PRIORITIZED_ASSOCIATED_CAUSES}-${TABLE_COLUMN_VARIANT.SORTING}`,
         cell: (info) => (
-          <S.CountText>{`${info.getValue()} Causa priorizadas`}</S.CountText>
+          <S.CountText>{`${info.getValue()}`} <FormattedMessage id='causes.table.prioritized'/></S.CountText>
         ),
         header: () => (
           <S.ColumnCriticality>

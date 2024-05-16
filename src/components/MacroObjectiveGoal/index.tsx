@@ -105,7 +105,7 @@ const MacroObjectiveGoal = ({
         <S.TaxaInputWrapper>
           <Input
             autoComplete="off"
-            placeholder={<FormattedMessage id='chart.taxa'/>}
+            placeholder={<FormattedMessage id='chart.tasa'/>}
             type="text"
             value={data.initialRate}
             placeholderFixed

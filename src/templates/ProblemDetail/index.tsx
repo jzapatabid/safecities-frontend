@@ -62,15 +62,15 @@ const static_data: any = {
       ]
     },
     trend: {
-      title: 'Estatísticas de tendência',
+      title: <FormattedMessage id="diagnosis.chart.trend" />,
       footer: <FormattedMessage id="footer" />,
       legends: [
-        { label: 'Ocorrências', color: '#00ADD2' },
+        { label: <FormattedMessage id="problem.detail.actual.situation.label.1" />, color: '#00ADD2' },
         { label: 'Taxa', Icon: EditIcon }
       ]
     },
     relativeFrequency: {
-      title: 'Estatísticas de frequência relativa',
+      title: <FormattedMessage id="diagnosis.chart.relative" />,
       footer: <FormattedMessage id="footer" />
     }
   },

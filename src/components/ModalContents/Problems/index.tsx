@@ -27,19 +27,19 @@ const getRequestInfo = (type?: string, count?: number) => {
         service: prioritizeProblems,
         successMsg: `${
           count === 1 ? `${count} problema` : `${count} problemas`
-        } foi priorizado corretamente`,
-        warningMsg: `Prioritization request for ${
-          count === 1 ? `${count} problem` : `${count} problems`
-        } failed. Please try again in sometime!!`
+        } fue priorizado con exito`,
+        warningMsg: `la priorización para ${
+          count === 1 ? `${count} problema` : `${count} problemas`
+        } falló. por favor intente de nuevo en un tiempo!!`
       }
     : {
         service: deprioritizeProblems,
         successMsg: `${
           count === 1 ? `${count} problema` : `${count} problemas`
-        } foi despriorizado com sucesso`,
-        warningMsg: `Deprioritization request for ${
-          count === 1 ? `${count} problem` : `${count} problems`
-        } failed. Please try again in sometime!!`
+        } fue despriorizado con exito`,
+        warningMsg: `la despriorización para ${
+          count === 1 ? `${count} problema` : `${count} problemas`
+        } falló. por favor intente de nuevo en un tiempo!!`
       }
 }
 
