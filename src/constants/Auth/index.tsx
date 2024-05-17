@@ -2,6 +2,8 @@ import { BACKEND_ERROR } from 'enums/Global'
 
 import ForgotPasswordModalContent from 'components/ModalContents/ForgotPassword'
 
+import { FormattedMessage } from 'react-intl'
+
 const SET_NEW_PW_SUCCESS_MESSAGE = {
   FirstAccess: 'Senha definida com sucesso.',
   PasswordChangeRequest: 'A redefinição de senha foi bem-sucedida.'
@@ -9,18 +11,20 @@ const SET_NEW_PW_SUCCESS_MESSAGE = {
 
 const FORGOT_PASSWORD_STATIC_MODAL_PROPS = {
   open: true,
-  title: 'Esqueceu sua senha?',
-  desc: 'Indique o e-mail com o qual você se registrou e enviaremos um link para redefinir sua senha',
+  title: <FormattedMessage id = "login.recover.password"/>,
+  desc: <FormattedMessage id = "login.recover.email"/>,
   Content: ForgotPasswordModalContent,
-  confirmBtn: 'Entendido',
-  cancelBtn: 'Volte ao login',
+  confirmBtn: <FormattedMessage id = "button.ok"/>,
+  cancelBtn: <FormattedMessage id = "button.back.to.login"/>,
   disableConfirm: true
 }
+
 
 const TOKEN_EXPIRED_BACKEND_ERROR_MESSAGE = 'Token already used or expired'
 
 const PASSWORD_ALREADY_USED_BACKEND_ERROR_MESSAGE =
   "New password shouldn't be used previously"
+  
 
 const TOKEN_EXPIRED_DETAILED_ERROR_MESSAGE_OBJECT = {
   title: 'Desculpe, ocorreu um erro',
