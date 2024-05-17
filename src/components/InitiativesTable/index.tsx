@@ -147,7 +147,7 @@ export default function InitiativesTable({
           info.getValue() === true ? (
             <S.StatusWrapper>
               <FlagFilledIcon fill={theme.colors.base.lightPure} />
-              {INITIATIVE_STATUS.PRIORITIZED}
+              <FormattedMessage id={INITIATIVE_STATUS.PRIORITIZED} />
             </S.StatusWrapper>
           ) : (
             INITIATIVE_STATUS.NOT_PRIORITIZED
