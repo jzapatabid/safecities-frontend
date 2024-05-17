@@ -17,6 +17,8 @@ import NewIndicator from 'components/ModalContents/NewIndicator'
 import NewPlanMeta from 'components/ModalContents/NewPlanMeta'
 import PersonalizedInitiative from 'components/ModalContents/PersonalizedInitiative'
 
+import { FormattedMessage } from 'react-intl'
+
 const PLAN_NAV_LINKS = [
   {
     id: 1,

@@ -19,6 +19,8 @@
     "button.step.by.step.continue": "Continuar",
     "button.problem.detail.map.acces": "Accede al mapa",
     "button.problem.detail.chart.download": "Descargar datos",
+    "button.ok": "Entendido",
+    "button.back.to.login": "Volver a iniciar sesión",
 
     "notification.message.invite": "Enviaste la invitación correctamente",
 
@@ -33,6 +35,7 @@
     "login.email.label": "Correo",
     "login.password.label": "Contraseña",
     "login.recover.password": "¿Olvidó su contraseña?",
+    "login.recover.email":"Ingresa el correo electrónico con el que te registraste y te enviaremos un enlace para restablecer tu contraseña" ,
     "login.remember.username": "Recordar mi nombre de usuario",
 
     "sidebar.home.text": "Inicio",

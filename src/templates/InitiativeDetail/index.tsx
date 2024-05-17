@@ -169,8 +169,8 @@ const InitiativeDetail: React.FC<InitiativeDetailPropTypes> = ({
                 loading={btnLoading}
                 text={
                   cause?.prioritized
-                    ? 'Despriorizar iniciativa'
-                    : 'Priorizar iniciativa'
+                    ? <FormattedMessage id = "button.planning.deprioritize.initiative" />
+                    : <FormattedMessage id = "button.planning.prioritize.initiative" />
                 }
                 LeadingIcon={cause?.prioritized ? FlagIcon : FlagFilledIcon}
                 onClick={() =>

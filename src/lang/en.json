@@ -22,6 +22,8 @@
     "button.step.by.step.continue": "Continue",
     "button.problem.detail.map.acces": "Access the map",
     "button.problem.detail.chart.download": "Download data",
+    "button.ok": "Ok",
+    "button.back.to.login": "Back to login",
 
     "notification.message.invite": "You sent the invitation correctly",
 
@@ -36,6 +38,7 @@
     "login.email.label": "Email",
     "login.password.label": "Password",
     "login.recover.password": "Forgot your password?",
+    "login.recover.email": "Enter the email you registered with and we will send you a link to reset your password",
     "login.remember.username": "Remember my username",
 
     "sidebar.home.text": "Home",
