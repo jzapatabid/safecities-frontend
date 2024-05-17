@@ -28,7 +28,7 @@
     "table.pager.of": "De",
     "table.pager.items": "Items",
 
-    "login.title": "Plataforma de ciudades seguras",
+    "login.title": "Plataforma ciudades seguras",
     "login.description": "Una herramienta para preparar diagnósticos basados en datos y desarrollar planes de seguridad ciudadana basados en evidencia.",
     "login.email.label": "Correo",
     "login.password.label": "Contraseña",
@@ -46,7 +46,7 @@
     "home.footer.text": "Gestión de Seguridad Pública de la Alcaldía de Florianópolis",
 
     "home.welcome.message": "Bienvenido",
-    "home.welcome.message.complement": "a la plataforma de ciudades seguras",
+    "home.welcome.message.complement": "a la plataforma ciudades seguras",
     "home.description" : "En esta plataforma podrás encontrar diversas herramientas que te permitirán conocer, entender y priorizar los diversos problemas de seguridad de tu ciudad, asociar causas y elaborar planes a partir de la selección de soluciones basadas en evidencia.",
     "home.link.text.one": "Descarga el manual de usuario aquí.",
     "home.link.text.two": "Descarga el manual metodológico aquí.",
@@ -203,7 +203,7 @@
     "second.step.subtitle": "¿Dónde estamos? Resumen ejecutivo de los principales problemas actuales y sus causas.",
 
     "third.step.title": "Construir la dimensión estratégica del plan",
-    "third.step.subtitle": "¿A dónde queremos llegar? Macroobjetivos y enfoques estratégicos del plan",
+    "third.step.subtitle": "¿A dónde queremos llegar? Macro objetivos y enfoques estratégicos del plan",
 
     "fourth.step.subtitle": "¿Cómo vamos a llegar allá? Detalles de iniciativas estratégicas",
 
@@ -345,7 +345,7 @@
     "modal.desc.continue": "Atención. Cuando cambie el cronograma general de su plan, deberá actualizar el impacto, los resultados y los objetivos del producto, así como el cronograma financiero de su plan.",
 
 
-    "chart.title": "Estadisticas de desempeño",
+    "chart.title": "Estadisticas de rendimiento",
     "population.rate": "Tasa por 100.000 habitantes",
     "occurrences.text": "Ocurrencias",
     "prioritized.text": "Priorizado",
