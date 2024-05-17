@@ -66,7 +66,7 @@ const static_data: any = {
       footer: <FormattedMessage id="footer" />,
       legends: [
         { label: <FormattedMessage id="problem.detail.actual.situation.label.1" />, color: '#00ADD2' },
-        { label: 'Taxa', Icon: EditIcon }
+        { label: <FormattedMessage id="chart.tasa" />, Icon: EditIcon }
       ]
     },
     relativeFrequency: {
